@@ -1,0 +1,51 @@
+// --------------------------------------------------
+//  compnonent: tourItem
+// --------------------------------------------------
+@media all {
+
+  .c-tourItem {
+    $c: &;
+
+    #{$c}__inner {
+      position: relative;
+      //background-color: $lightGrey;
+      z-index: $zIndex-6;
+      padding: 4rem 0;
+    }
+    #{$c}__title {
+      //margin: 0 auto;
+      position: relative;
+      //background-color: $lightGrey;
+    }
+    #{$c}__headline {}
+
+    &--grey {
+      background-color: $lightGrey;
+    }
+  }
+}
+@media (min-width: $viewport-mobile) {}
+@media (min-width: $viewport-tablet) {
+
+  .c-tourItem {
+    $c: &;
+
+    #{$c}__title {
+      width: colWidth(10);
+    }
+  }
+}
+@media (min-width: $viewport-desktop) {
+
+  .c-tourItem {
+    $c: &;
+
+    #{$c}__inner {}
+
+    #{$c}__title {
+      width: colWidth(12);
+    //  padding: 6rem 0;
+    }
+  }
+}
+@media (min-width: $viewport-desktop-lg) {}

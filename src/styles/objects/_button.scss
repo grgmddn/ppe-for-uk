@@ -74,6 +74,14 @@
         }
       }
     }
+    &--red {
+
+      #{$c}__label {
+        background-color: $white;
+        color: $brand;
+        border-color: $brand;
+      }
+    }
     &--small {
 
       #{$c}__label {
@@ -105,7 +113,7 @@
 
         #{$c}__label {
         //  background-color: $brand-hover;
-          color: $brand-hover;
+          color: $brand;
           border-color: $brand;
         }
       }

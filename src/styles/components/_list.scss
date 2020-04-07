@@ -1,0 +1,73 @@
+//  component: banner
+// --------------------------------------------------
+.c-list {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+
+    #{$c}__item {
+      box-sizing: border-box;
+    }
+
+    &--boxes {
+
+      #{$c}__item {
+        border: 1px solid $lightGrey;
+        padding: 2rem 2rem 4rem;
+        font-size: $small;
+        line-height: 1.5em;
+
+        &:before {
+          content: counter(countz);
+          font-weight: bold;
+          font-size: $medium;
+          margin: 2rem auto;
+          line-height: 1rem;
+          display: block;
+        }
+
+        &:nth-child(even) {
+          background-color: $lightGrey;
+        }
+      }
+    }
+    &--faq {
+
+      #{$c}__item {
+        min-height: 1rem;
+        position: relative;
+        box-sizing: border-box;
+        padding: 2rem 0;
+        background-color: $white;
+        border: 1px solid $lightGrey;
+        margin-bottom: 1rem;
+        line-height: 2em;
+        vertical-align: center;
+      }
+    }
+  }
+  @media (min-width: $screen-sm) {}
+  @media (min-width: $screen-md) {
+    
+    &--boxes {
+      display: flex;
+
+      #{$c}__item {
+        width: colWidth(4);
+        float: left;
+
+        &:before {}
+      }
+    }
+  }
+  @media (min-width: $screen-lg) {}  
+}
+
+ol.c-list {
+  counter-reset: countz;
+
+  li {
+    counter-increment: countz;
+  }
+}

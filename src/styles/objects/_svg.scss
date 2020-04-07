@@ -1,0 +1,29 @@
+// --------------------------------------------------
+//  Object: svg
+// --------------------------------------------------
+@media all {
+
+  .o-svg {
+    $o: &;
+
+    display: block;
+    margin: auto;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+
+    &:before, &:after {
+      display: table;
+      content: " ";
+      box-sizing: border-box;
+    }
+    &:after {
+      clear: both;
+    }
+
+    #{$o}__asset {
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.c-tour {
+  $c: &;
+
+	@media all {
+
+    display: block;
+    position: relative;
+    min-height: 4rem;
+    //padding: 4rem 0;
+    
+    #{$c}__title {
+      text-align: center;
+    }
+    #{$c}__headline {
+      //font-size: $small;
+    }
+    #{$c}__byline {
+      //font-size: $small;
+    }
+    #{$c}__item {
+      position: relative;
+
+      &--sticky {
+        //height: 100vh;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+	@media (min-width: $viewport-tablet) {
+    min-height: 6rem;
+    
+    #{$c}__title {}
+    #{$c}__headline {}
+    #{$c}__byline {}
+    #{$c}__item {}
+  }
+  @media (min-width: $viewport-desktop) {}
+	@media (min-width: $viewport-desktop-lg) {}
+}

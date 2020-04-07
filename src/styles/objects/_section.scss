@@ -1,37 +1,17 @@
 .o-section {
-	$o: &;
+  $o: &;
 
-	@media all {
-		background-color: transparent;
-		width: 100%;
-		overflow: hidden;
+  @media all {
+    background-color: transparent;
+    width: 100%;
+    overflow: hidden;
 
-		&--text,
-		&--orange {
-			padding: 4rem 0;
-		}
-		&--orange {
-			background-color: $brand-second;
-			color: $white;
-		}
-		&--centered {
-			text-align: center;
-		}
-	}
-	@media (min-width: $viewport-mobile) {
-
-		&--text,
-		&--orange {
-			padding: 8rem 0;
-		}
-	}
-	@media (min-width: $viewport-tablet) {
-
-		&--text,
-		&--orange {
-			padding: 12rem 0;
-		}
-	}
-	@media (min-width: $viewport-desktop) {}
-	@media (min-width: $viewport-desktop-lg) {}
+    &--centered {
+      text-align: center;
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {}
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
 }

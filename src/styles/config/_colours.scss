@@ -7,6 +7,8 @@ $line-grey: #636363 !default;
 $grey: #9B9B9B;
 $light-grey: lighten($grey, 35%) !default;
 
-$brand: $black !default;
+$brand: #FF0F28 !default;
 $brand-hover: lighten($brand, 30%) !default;
 $brand-second: $black;
+
+$lightGrey: $light-grey !default;

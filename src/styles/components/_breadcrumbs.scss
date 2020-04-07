@@ -1,0 +1,33 @@
+//  component: breadcrumbs
+// --------------------------------------------------
+.c-breadcrumbs {
+  $c: &;
+
+  @media all {
+    font-size: 1rem;
+    background: transparent;
+    box-sizing: border-box;
+
+    #{$c}__item {
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      box-sizing: border-box;
+
+      &:before {
+        content: "›";
+        display: inline-block;
+        margin: 0 $base-em/2;
+        @include fontDisplay;
+        font-weight: 500;
+      }
+
+      &:first-child {
+        //border-bottom: none;
+      }
+    }
+  }
+  @media (min-width: $screen-sm) {}
+  @media (min-width: $screen-md) {}
+  @media (min-width: $screen-lg) {}  
+}

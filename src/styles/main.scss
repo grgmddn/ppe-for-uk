@@ -1,0 +1,24 @@
+@import "_base";
+
+@media all {
+ 
+  .o-site {
+    $o: &;
+
+    width: 100%;
+    height: 100%;
+
+    @include fontBase;
+
+    #{$o}__inner {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

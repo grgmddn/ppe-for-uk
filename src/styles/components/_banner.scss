@@ -1,0 +1,47 @@
+//  component: banner
+// --------------------------------------------------
+.c-banner {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+    background-color: $brand-second;
+    color: $white;
+    padding: 2rem 0;
+
+    #{$c}__title {}
+    #{$c}__inlineLink {
+      border-bottom: 1px dotted $white;
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+    }
+
+    &--temp {
+      background-color: $dark;
+    }
+    &--narrow {
+      padding: 0.5rem 0;
+
+      #{$c}__title,
+      #{$c}__headline {
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (min-width: $screen-sm) {
+    padding: 4rem 0;
+
+    &--narrow {
+      padding: 1rem 0;
+
+      #{$c}__title,
+      #{$c}__headline {
+        margin: 0 auto;
+      }
+    }
+  }
+  @media (min-width: $screen-md) {}
+  @media (min-width: $screen-lg) {}  
+}

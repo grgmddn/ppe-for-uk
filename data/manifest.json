@@ -1,0 +1,13 @@
+{
+  "siteTitle": "ppe-for-uk",
+  "title": "Static Landing Page for PPE",
+  "author": "ppe-for-uk",
+  "description": "Site description",
+  "keywords": ["ppe", "covid-19", "aid"],
+  "previewImageUrl": "",
+  "siteUrl": "",
+  "publicPath": {
+    "production": "/" ,
+    "development": "/"
+  }
+}

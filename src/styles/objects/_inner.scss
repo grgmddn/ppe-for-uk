@@ -1,0 +1,21 @@
+// --------------------------------------------------
+//  object: inner
+// --------------------------------------------------
+@media all {
+
+  .o-inner {
+    margin: 0 $base-em*2;
+  }
+}
+@media (min-width: $viewport-mobile) {
+
+  .o-inner {
+  //  margin: 0 $base-em;
+  }
+}
+@media (min-width: $viewport-tablet) {
+
+  .o-inner {
+    //margin: 0 $base-em;
+  }
+}

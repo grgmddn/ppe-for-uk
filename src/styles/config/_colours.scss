@@ -1,0 +1,12 @@
+//  Colours
+// --------------------------------------------------
+$white: #fff;
+$black: #000;
+$dark: lighten($black, 6%) !default;
+$line-grey: #636363 !default;
+$grey: #9B9B9B;
+$light-grey: lighten($grey, 35%) !default;
+
+$brand: $black !default;
+$brand-hover: lighten($brand, 30%) !default;
+$brand-second: $black;

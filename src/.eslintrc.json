@@ -1,0 +1,23 @@
+{
+  "extends": "../.eslintrc.json",
+  "env": {
+    "node": false,
+    "browser": true,
+    "jquery": false,
+    "commonjs": false,
+    "es6": true
+  },
+  "globals": {
+    "angular": false,
+    "google": false,
+    "ga": false,
+    "AWS": false
+  },
+  "rules": {
+    "no-console": 0
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  }
+}

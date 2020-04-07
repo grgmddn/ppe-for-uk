@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= siteData.siteTitle %></title>
+    <meta name="description" content="<%= siteData.description %>">
+    <meta name="viewport" content="width=device-width">
+    <meta name="theme-color" content="#18183C">
+    <meta name="author" content="<%= siteData.author %>">
+    <meta name="keywords" content="<%= siteData.keywords %>">
+    <meta property="og:url" content="<%= siteData.siteUrl %>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<%= siteData.siteTitle %>">
+    <% if (siteData.previewImageUrl) { %>
+    <meta property="og:image" content="<%= siteData.previewImageUrl %>">
+    <% } %>
+    <meta property="og:description" content="<%= siteData.description %>">
+    <meta property="og:site_name" content="<%= siteData.siteTitle %>">
+    <meta property="og:locale" content="en_US">
+    <meta property="article:author" content="<%= siteData.author %>">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="<%= siteData.siteUrl %>">
+    <meta name="twitter:title" content="<%= siteData.siteTitle %>">
+    <meta name="twitter:description" content="<%= siteData.description %>">
+    <% if (siteData.previewImageUrl) { %>
+    <meta name="twitter:image" content="<%= siteData.previewImageUrl %>">
+    <% } %>
+  </head>
+  <body class="o-site">
+
+    <div class="o-site__inner">
+
+      <%= require('ejs-loader!../components/pageHeader.html')({ siteData: siteData }) %>
+
+      <section class="o-section c-masthead">
+        <div class="c-masthead__overlay">
+            <div class="o-title o-title--large c-masthead__title c-masthead__title--lead">
+              <div class="o-block">
+                <div class="o-inner">
+                  <h2 class="o-title__headline c-masthead__headline">NHS staff need protective equipment. You can help us deliver it.</h2>
+                  <p class="o-title__byline c-masthead__byline">Help us raise the money to get frontline NHS workers the equipment they need.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+
+      <div class="o-section">
+        <div class="o-block">
+          <div class="o-inner">
+            <div class="o-title">
+              <h3 class="o-title__headline c-masthead__headline">Section 2</h3>
+              <p class="o-title__byline c-masthead__byline">Help us raise the money to get frontline NHS workers the equipment they need.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>

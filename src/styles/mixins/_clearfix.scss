@@ -1,0 +1,13 @@
+// --------------------------------------------------
+//  clearFix
+// --------------------------------------------------
+@mixin clearFix() {
+  &:before, &:after {
+    display: table;
+    content: " ";
+    box-sizing: border-box;
+  }
+  &:after {
+    clear: both;
+  }
+}

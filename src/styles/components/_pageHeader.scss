@@ -1,0 +1,73 @@
+// --------------------------------------------------
+//  component: pageHeader
+// --------------------------------------------------
+@media all {
+
+  .c-pageHeader { 
+    $c: &;
+
+    width: 100%;
+    position: relative;
+    z-index: $zIndex-6;
+    //height: 5rem;
+    line-height: 5rem;
+    box-sizing: border-box;
+    background-color: $brand;
+    color: $white;
+
+    @include antialias;
+
+    #{$c}__left {
+      float: left;
+    }
+    #{$c}__right {
+      float: right;
+    }
+
+    #{$c}__brand {
+      color: inherit;
+      font-size: $base-em;
+      letter-spacing: 0.02em;
+      line-height: inherit;
+      display: inline-block;
+      position: relative;
+      text-decoration: none;
+      text-transform: lowercase;
+      float: left;
+      font-weight: 500;
+    }
+    #{$c}__navigation {}
+    #{$c}__breadcrumbs {
+    	float: left;
+    	display: inline-block;
+    }
+
+    &--white {
+      color: $black;
+    }
+  }
+}
+@media (min-width: $viewport-mobile) {}
+@media (min-width: $viewport-tablet) {}
+@media (min-width: $viewport-desktop) {
+
+  .c-pageHeader {
+    $c: &;
+
+    height: 6rem;
+    line-height: 6rem;
+    @include clearFix;
+
+    #{$c}__left {
+      float: left;
+    }
+    #{$c}__right {
+      float: right;
+    }
+    #{$c}__navigation {
+      width: auto;
+      display: block;
+    }
+  }
+}
+@media (min-width: $viewport-desktop-lg) {}

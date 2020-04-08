@@ -34,10 +34,12 @@
       letter-spacing: 0.02em;
       border-radius: 0;
       line-height: 1em;
+      text-transform: uppercase;
       //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
 
       @include antialias;
     }
+    + #{$c} {}
     &:active,
     &:focus,
     &:hover {
@@ -52,9 +54,9 @@
     &:active:hover {
 
       #{$c}__label {
-        background-color: $white;
-        border-color: $white;
-        color: $brand;
+        background-color: $black;
+        border-color: #ffdd00;
+        color: $white;
       }
     }
     &[disabled] {
@@ -104,17 +106,22 @@
     &--fill {
 
       #{$c}__label {
-        background-color: $brand;
-        color: $white;
-        border-color: $brand;
+        background-color: $white;
+        color: $brand;
+        border-color: $white;
       }
 
       &:hover {
 
         #{$c}__label {
-        //  background-color: $brand-hover;
-          color: $brand;
-          border-color: $brand;
+          background-color: $brand-hover;
+          color: $white;
+          border-color: $brand-hover;
+        }
+      }
+      &:active:hover {
+
+        #{$c}__label {
         }
       }
       &[disabled] {
@@ -134,7 +141,15 @@
           }
         }
       }
-    } 
+    }
+    &--fill#{$c}--red {
+
+      #{$c}__label {
+        background-color: $brand;
+        color: $white;
+        border-color: $brand;
+      }
+    }
     &--blue {
 
       #{$c}__label {

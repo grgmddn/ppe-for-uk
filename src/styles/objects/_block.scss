@@ -112,7 +112,7 @@
   .o-block {
     $o: &;
 
-    max-width: 980px;
+    max-width: 1080px;
   }
 }
 @media (min-width: $viewport-desktop-lg) {
@@ -120,6 +120,6 @@
   .o-block {
   	$o: &;
 
-    max-width: 980px;
+    max-width: 1080px;
   }
 }

@@ -5,3 +5,11 @@
 @import "_section";
 @import "_button";
 @import "_svg";
+@import "_inlineLink";
+
+.o-note {
+  color: $grey;
+}
+.o-em {
+  color: $brand;
+}

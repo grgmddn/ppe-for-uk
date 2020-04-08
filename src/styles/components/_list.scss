@@ -1,29 +1,60 @@
-//  component: banner
+//  component: list
 // --------------------------------------------------
 .c-list {
   $c: &;
 
   @media all {
     box-sizing: border-box;
+    
 
     #{$c}__item {
       box-sizing: border-box;
     }
+    #{$c}__itemTitle {
+      display: inline-block;
+    }
 
+    &--bullets {
+
+      #{$c}__item {
+        box-sizing: border-box;
+        margin: 1rem 1rem 0 2rem;
+        position: relative;
+
+        &:before {
+          width: 0.5rem;
+          height: 0.5rem;
+          //border-radius: 1rem;
+          background-color: $black;
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          margin-left: -2rem;
+          margin-top: 0.25rem;
+        }
+        #{$c}__itemTitle {
+          line-height: 1rem;
+          margin-bottom: 0.5rem;
+        }
+      } 
+    }
     &--boxes {
 
       #{$c}__item {
+        box-sizing: border-box;
         border: 1px solid $lightGrey;
         padding: 2rem 2rem 4rem;
         font-size: $small;
         line-height: 1.5em;
 
         &:before {
-          content: counter(countz);
-          font-weight: bold;
-          font-size: $medium;
-          margin: 2rem auto;
-          line-height: 1rem;
+          width: 1rem;
+          height: 1rem;
+          margin-bottom: 1rem;
+          border-radius: 1rem;
+          background-color: $brand;
+          //content: "";
           display: block;
         }
 
@@ -31,19 +62,35 @@
           background-color: $lightGrey;
         }
       }
+      #{$c}__itemTitle {
+        display: inline-block;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
     }
     &--faq {
+      background-color: $lightGrey;
+      padding: 2rem 0;
 
+      #{$c}__title {
+        margin-bottom: 2rem;
+      }
       #{$c}__item {
         min-height: 1rem;
         position: relative;
         box-sizing: border-box;
         padding: 2rem 0;
-        background-color: $white;
-        border: 1px solid $lightGrey;
-        margin-bottom: 1rem;
+        //background-color: $lightGrey;
+        //border: 1px solid $grey;
+        margin-bottom: 2rem;
         line-height: 2em;
         vertical-align: center;
+        border-bottom: 1px solid $grey;
+
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
       }
     }
   }

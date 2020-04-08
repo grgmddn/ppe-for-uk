@@ -1,0 +1,15 @@
+.o-inlineLink {
+  $o: &;
+
+  @media all {
+    border-bottom: 1px dotted $black;
+
+    &:hover {
+      border-style: solid;
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {}
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+}

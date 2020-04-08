@@ -39,7 +39,7 @@
         font-size: $small;
       }
       #{$o}__byline {
-        font-size: $small;
+        font-size: $base-em;
       }
     }
     &--large {
@@ -49,7 +49,7 @@
         margin-bottom: 1em;
       }
       #{$o}__byline {
-        font-size: $small;
+        font-size: $medium;
       }
     }
     &--centered {
@@ -97,6 +97,9 @@
       #{$o}__headline {
         font-size: $extraLarge;
         margin-bottom: 0.67em;
+      }
+      #{$o}__byline {
+        font-size: $large;
       }
     }
   }

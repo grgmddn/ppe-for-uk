@@ -7,7 +7,7 @@
     $c: &;
 
     background: transparent;
-    padding: 0;
+    padding-bottom: 1rem;
 
     #{$c}__title {
       margin: 0 auto;
@@ -46,6 +46,8 @@
   .c-cta {
     $c: &;
 
+    padding-bottom: 2rem;
+
     #{$c}__title {
       //max-width: colWidth(8);
     }
@@ -73,6 +75,8 @@
 
   .c-cta {
     $c: &;
+
+    padding-bottom: 4rem;
 
     #{$c}__title {}
 

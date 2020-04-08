@@ -22,10 +22,8 @@
     }
     #{$c}__title {
       position: relative;
+      margin: 1rem auto 2rem;
 
-      &--lead {
-        margin: 6rem auto 6rem;
-      }
       &--centered {
         text-align: center;
       }
@@ -37,6 +35,7 @@
       }
     }
     #{$c}__byline {
+      margin-bottom: 2rem;
 
       em {
         color: $brand-hover;
@@ -49,18 +48,22 @@
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {
     #{$c}__overlay {
-      width: colWidth(10);}
-    #{$c}__title {}
+      //width: colWidth(10);
+    }
+    #{$c}__title {
+      margin: 4rem auto 6rem;
+    }
     #{$c}__headline {}
     #{$c}__byline {
-      font-size: $medium;
-      line-height: 1.8em;
-      max-width: colWidth(8);
+      margin-bottom: 2.5rem;
+      //font-size: $medium;
+      //line-height: 1.8em;
+      //max-width: colWidth(8);
     }
   }
   @media (min-width: $viewport-desktop) {
     #{$c}__overlay {
-      width: colWidth(10);
+      //width: colWidth(10);
     }
     #{$c}__title {}
     #{$c}__headline {}
@@ -68,7 +71,7 @@
   }
   @media (min-width: $viewport-desktop-lg) {
     #{$c}__overlay {
-      width: colWidth(12);
+      //width: colWidth(12);
     }
     #{$c}__title {}
     #{$c}__headline {}

@@ -22,6 +22,12 @@
     &--grey {
       background-color: $lightGrey;
     }
+    &--faq {
+
+      #{$c}__inner {
+        padding-top: 0;
+      }
+    }
   }
 }
 @media (min-width: $viewport-mobile) {}
@@ -31,7 +37,7 @@
     $c: &;
 
     #{$c}__title {
-      width: colWidth(10);
+      //width: colWidth(10);
     }
   }
 }
@@ -43,7 +49,7 @@
     #{$c}__inner {}
 
     #{$c}__title {
-      width: colWidth(12);
+      //width: colWidth(12);
     //  padding: 6rem 0;
     }
   }

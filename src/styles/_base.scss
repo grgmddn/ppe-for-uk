@@ -33,23 +33,26 @@
 // --------------------------------------------------
 //  Utilities
 // --------------------------------------------------
-.u-hidden {
+.u-visuallyHidden {
   display: none !important;
   visibility: hidden !important;
 }
 @media (max-width: $viewport-tablet) {
 
-  .u-hiddenMobile {
+  .u-visuallyHiddenMobile {
     display: none !important;
     visibility: hidden !important;
   }
 }
 @media (min-width: $viewport-tablet) {
 
-  .u-hiddenTablet {
+  .u-visuallyHiddenTablet {
     display: none !important;
     visibility: hidden !important;
   }
+}
+.u-centered {
+  text-align: center !important;
 }
 
 // --------------------------------------------------

@@ -37,7 +37,7 @@
   display: none !important;
   visibility: hidden !important;
 }
-@media (max-width: $viewport-tablet) {
+@media (max-width: $viewport-tablet - 1) {
 
   .u-visuallyHiddenMobile {
     display: none !important;

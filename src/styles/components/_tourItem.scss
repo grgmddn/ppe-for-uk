@@ -10,11 +10,12 @@
       position: relative;
       //background-color: $lightGrey;
       z-index: $zIndex-6;
-      padding: 4rem 0;
+      padding: ($base-em * 2) 0;
     }
     #{$c}__title {
       //margin: 0 auto;
       position: relative;
+      margin-bottom: 0.5rem;
       //background-color: $lightGrey;
     }
     #{$c}__headline {}
@@ -36,8 +37,12 @@
   .c-tourItem {
     $c: &;
 
+    #{$c}__inner {
+      padding: ($base-em * 4) 0
+    }
     #{$c}__title {
       //width: colWidth(10);
+      margin-bottom: 2rem;
     }
   }
 }

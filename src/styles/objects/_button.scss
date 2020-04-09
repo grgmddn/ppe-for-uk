@@ -5,7 +5,7 @@
 
   .o-button {
     $c: &;
-    display: inline-block;
+    display: block;
     padding: 0;
     margin: 0;
     outline: none;
@@ -25,7 +25,7 @@
       font-weight: 500;
       cursor: pointer;
       line-height: 1.375em;
-      display: inline-block;
+      display: block;
       padding: 0.6875em 1.275em 0.6875em;
       box-sizing: border-box;
       border-width: 2px;
@@ -35,11 +35,14 @@
       border-radius: 0;
       line-height: 1em;
       text-transform: uppercase;
+      text-align: center;
       //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
 
       @include antialias;
     }
-    + #{$c} {}
+    + #{$c} {
+      margin-top: 0.5rem;
+    }
     &:active,
     &:focus,
     &:hover {
@@ -217,9 +220,16 @@
   .o-button {
     $c: &;
 
+    display: inline-block;
+
     &__input {}
     &__label {
     //  font-size: $small;
+      display: inline-block;
+    }
+
+    + #{$c} {
+      margin-top: 0;
     }
 
     &--large {

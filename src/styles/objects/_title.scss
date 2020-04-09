@@ -9,13 +9,12 @@
     #{$o}__headline {
       //  font-size: $small;
       line-height: 1.32em;
-      margin-bottom: 0.6em;
+      margin-bottom: 0.5rem;
       white-space: pre-line;
       //letter-spacing: -0.01em;
       // text-transform: uppercase;
 
       font-size: $large;
-      margin-bottom: 1.5rem;
 
       @include fontDisplay;
       @include antialias;
@@ -25,7 +24,7 @@
       line-height: 1.32em;
       white-space: pre-line;
       //color: $line-grey;
-      //margin-bottom: 1.33em;
+      margin-bottom: 0.5rem;
 
       //color: inherit;
 
@@ -46,7 +45,7 @@
 
       #{$o}__headline {
         font-size: $large;
-        margin-bottom: 1em;
+        margin-bottom: 0.67rem;
       }
       #{$o}__byline {
         font-size: $medium;

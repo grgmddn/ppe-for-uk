@@ -8,7 +8,7 @@
     
     #{$o}__headline {
       //  font-size: $small;
-      line-height: 1.32em;
+      line-height: normal;
       margin-bottom: 0.5rem;
       white-space: pre-line;
       //letter-spacing: -0.01em;
@@ -44,11 +44,12 @@
     &--large {
 
       #{$o}__headline {
-        font-size: $large;
-        margin-bottom: 0.67rem;
+        //font-size: $large;
+        margin-bottom: 2rem;
       }
       #{$o}__byline {
         font-size: $medium;
+        margin-bottom: 2rem;
       }
     }
     &--centered {
@@ -98,7 +99,7 @@
         margin-bottom: 0.67em;
       }
       #{$o}__byline {
-        font-size: $large;
+        font-size: $medium;
       }
     }
   }

@@ -12,6 +12,9 @@
     #{$c}__title {
       margin: 0 auto;
     }
+    #{$c}__headline {
+      //font-size: $large;
+    }
 
     &--centered {
       text-align: center;
@@ -82,7 +85,9 @@
 
     &--centered {
 
-      #{$c}__title {}
+      #{$c}__title {
+        max-width: colWidth(10);
+      }
       #{$c}__headline {}
       #{$c}__byline {
         display: inline-block;
@@ -100,7 +105,9 @@
 
     &--centered {
 
-      #{$c}__title {}
+      #{$c}__title {
+        max-width: colWidth(8);
+      }
       #{$c}__headline {}
       #{$c}__byline {}
       #{$c}__section {}

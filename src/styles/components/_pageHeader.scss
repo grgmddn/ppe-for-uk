@@ -12,9 +12,9 @@
     top: 0;
     z-index: $zIndex-8;
     //height: 5rem;
-    line-height: 5rem;
+    line-height: 3rem;
     box-sizing: border-box;
-    background-color: $brand;
+    background-color: $brandSecond;
     color: $white;
 
     @include antialias;
@@ -53,21 +53,14 @@
 
   .c-pageHeader {
     $c: &;
+
+    height: 5rem;
+    line-height: 5rem;
+    @include clearFix;
     
     #{$c}__brand {
       font-size: $medium;
     }
-  }
-}
-@media (min-width: $viewport-desktop) {
-
-  .c-pageHeader {
-    $c: &;
-
-    height: 6rem;
-    line-height: 6rem;
-    @include clearFix;
-
     #{$c}__left {
       float: left;
     }
@@ -78,6 +71,13 @@
       width: auto;
       display: block;
     }
+  }
+}
+@media (min-width: $viewport-desktop) {
+
+  .c-pageHeader {
+    $c: &;
+
   }
 }
 @media (min-width: $viewport-desktop-lg) {}

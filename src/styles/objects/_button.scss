@@ -8,7 +8,7 @@
     display: block;
     padding: 0;
     margin: 0;
-    outline: none;
+    //outline: none;
     border: 0;
     background-color: transparent;
     color: inherit;
@@ -54,11 +54,14 @@
       //  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
       }
     }
-    &:active:hover {
+    &:active:hover,
+    &:active:hover:focus
+    &:hover:focus
+    &:active:focus {
 
       #{$c}__label {
         background-color: $black;
-        border-color: #ffdd00;
+        border-color: $warning;
         color: $white;
       }
     }
@@ -102,8 +105,6 @@
 
       #{$c}__label {
         font-size: $small;
-        //border-radius: 1.275em * 2;
-      //  padding: 1.22em 2.365em 1.22em;
       }
     }
     &--fill {
@@ -117,31 +118,9 @@
       &:hover {
 
         #{$c}__label {
-          background-color: $brand-hover;
+          background-color: $nhsBlue;
           color: $white;
-          border-color: $brand-hover;
-        }
-      }
-      &:active:hover {
-
-        #{$c}__label {
-        }
-      }
-      &[disabled] {
-
-        #{$c}__label {
-          background-color: $light-grey;
-            border-color: $light-grey;
-            color: $grey;
-        }
-        &:hover,
-        &:active:hover {
-
-          #{$c}__label {
-            background-color: $light-grey;
-            border-color: $light-grey;
-            color: $grey;
-          }
+          border-color: $nhsBlue;
         }
       }
     }
@@ -152,48 +131,14 @@
         color: $white;
         border-color: $brand;
       }
-    }
-    &--blue {
 
-      #{$c}__label {
-        color: $brand;
-        border-color: $brand;
-      }
       &:hover {
 
         #{$c}__label {
-          color: $brand-hover;
-          border-color: $brand-hover;
-        }
-      }
-      #{$c}--fill {
-
-        #{$c}__label {
-          background-color: $brand;
+          background-color: $nhsBlue;
           color: $white;
-          border-color: $brand;
+          border-color: $nhsBlue;
         }
-
-        &:hover {
-
-          #{$c}__label {
-            background-color: $brand-hover;
-            color: $white;
-            border-color: $brand-hover;
-          }
-        }
-      }
-    }
-    &--device {}
-    &--inputSubmit {
-
-      #{$c}__label {}
-    }
-    &--cta {
-
-      #{$c}__label {
-        border-radius: 2em;
-        font-size: $medium;
       }
     }
   }

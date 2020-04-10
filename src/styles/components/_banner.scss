@@ -5,6 +5,8 @@
 
   @media all {
     box-sizing: border-box;
+    position: relative;
+    display: block;
     background-color: $brand-second;
     color: $white;
     padding: 2rem 0;
@@ -17,6 +19,43 @@
         border-bottom-style: solid;
       }
     }
+    #{$c}__close {
+      display: block;
+      position: absolute;
+      width: $base-em;
+      height: $base-em;
+      right: $base-em;
+      top: 50%;
+      height: 2px;
+      background-color: $white;
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+      }
+      &:before {
+        top: -6px;
+      }
+      &:after {
+        bottom: -6px;
+      }
+      background-color: transparent;
+
+      &:after {
+        transform: rotate(-45deg);
+        bottom: 0;
+      }
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+    }
 
     &--temp {
       background-color: $dark;
@@ -24,24 +63,43 @@
     &--narrow {
       padding: 1rem 0;
 
-      #{$c}__title,
+      #{$c}__title {
+        margin: 0;
+        width: 80%;
+      }
       #{$c}__headline {
         margin: 0 auto;
+        font-size: $base-em;
+      }
+      #{$c}__byline {
+        margin: 0 auto;
+        font-size: $base-em;
       }
     }
   }
-  @media (min-width: $screen-sm) {
+  @media (min-width: $viewport-mobile) {
     padding: 4rem 0;
 
     &--narrow {
       padding: 1rem 0;
+    }
+  }
+  @media (min-width: $viewport-tablet) {
+
+    #{$c}__close {
+      right: ($base-em * 2);
+    }
+    
+    &--narrow {
+      padding: 2rem 0;
 
       #{$c}__title,
       #{$c}__headline {
         margin: 0 auto;
-      }
+        width: auto;
+      }      
     }
   }
-  @media (min-width: $screen-md) {}
-  @media (min-width: $screen-lg) {}  
+  @media (min-width: $viewport-desktop) {}  
+  @media (min-width: $viewport-desktop-lg) {}
 }

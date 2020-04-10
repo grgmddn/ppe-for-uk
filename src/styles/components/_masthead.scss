@@ -7,7 +7,7 @@
     display: block;
     margin: auto;
     z-index: $zIndex-3;
-    background-color: $brand;
+    background-color: $brandSecond;
     color: $white;
 
     #{$c}__overlay {
@@ -22,7 +22,7 @@
     }
     #{$c}__title {
       position: relative;
-      margin: 1rem auto 2rem;
+      margin: 2rem auto 2rem;
 
       &--centered {
         text-align: center;
@@ -56,6 +56,7 @@
     #{$c}__headline {}
     #{$c}__byline {
       margin-bottom: 2.5rem;
+      width: colWidth(8);
       //font-size: $medium;
       //line-height: 1.8em;
       //max-width: colWidth(8);
@@ -73,8 +74,11 @@
     #{$c}__overlay {
       //width: colWidth(12);
     }
-    #{$c}__title {}
+    #{$c}__title {
+    }
     #{$c}__headline {}
-    #{$c}__byline {}
+    #{$c}__byline {
+
+    }
   }
 }

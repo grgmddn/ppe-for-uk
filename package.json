@@ -53,6 +53,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "js-cookie": "^2.2.1",
     "reset-css": "^5.0.1"
   }
 }

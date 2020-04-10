@@ -6,8 +6,8 @@
     var title = 'Share the message';
   }
   var twitterUri = encodeURI('https://twitter.com/intent/tweet?text=' + siteData.shareMessage + '&url=' + siteData.siteUrl + '&button_hashtag=' + siteData.primaryHashtag);
-  var facebookUri = '';
-  var linkedinUri = '';
+  var facebookUri = encodeURI('https://www.facebook.com/sharer/sharer.php?u=' + siteData.siteUrl);
+  var linkedinUri = encodeURI('https://www.linkedin.com/shareArticle?mini=true&url=' + siteData.siteUrl + '&title=' + siteData.siteTitle + '&summary=' + siteData.shareMessage + '&source=' + siteData.primaryHashtag);
 %>
 <div class="c-share<% if (classModifier) { %> <%= classModifier %><% } %>">
   <span class="c-share__title"><%= title %></span>

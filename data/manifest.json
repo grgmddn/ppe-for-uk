@@ -1,5 +1,5 @@
 {
-  "siteTitle": "#ProperNHSProtection",
+  "siteTitle": "#PPEforNHS",
   "title": "Let's get the protective equipment our NHS needs",
   "author": "ppe-for-uk",
   "description": "Raising money to deliver Personal Protective Equipment to frontline NHS staff, including masks, gloves, gowns, aprons",
@@ -10,7 +10,7 @@
     "production": "/" ,
     "development": "/"
   },
-  "primaryHashtag": "ProperNHSProtection",
-  "secondaryHashtags": [],
+  "primaryHashtag": "PPEforNHS",
+  "secondaryHashtags": ["ProperNHSProtection"],
   "shareMessage": "NHS staff are being exposed to COVID-19 without protective equipment. Let's change that."
 }

@@ -1,0 +1,6 @@
+// --------------------------------------------------
+//  percentage
+// --------------------------------------------------
+@function perc($width, $container-width: $max-width) {
+  @return percentage($width / $container-width);
+}

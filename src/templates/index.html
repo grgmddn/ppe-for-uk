@@ -1,0 +1,268 @@
+<!doctype html>
+<% var buildDate = new Date() %>
+<html>
+  <%= require('ejs-loader!../components/head.html')({ siteData: siteData }) %>
+  <body class="o-site">
+    <%= require('ejs-loader!../components/banner.html')({ siteData: siteData }) %>
+    <div class="o-site__inner">
+
+      <%= require('ejs-loader!../components/pageHeader.html')({ siteData: siteData }) %>
+
+      <section class="o-section c-masthead">
+        <div class="c-masthead__overlay">
+            
+            <div class="o-block">
+              <div class="o-block__container">
+                <div class="o-title o-title--large c-masthead__title c-masthead__title--lead">
+                  <div class="o-inner">
+                    <h2 class="o-title__headline c-masthead__headline">Our <span class="c-nhs">NHS</span> staff do not have the protective equipment they need in the fight against COVID-19. Together we can change that.</h2>
+                    <p class="o-title__byline c-masthead__byline">Help us raise the money to get desperately needed supplies to doctors, nurses and surgeons on the frontlines.</p>
+                    <a class="o-button o-button--fill" href="">
+                      <span class="o-button__label">Donate now</span>
+                    </a>
+                    <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'inverted' }) %>
+                  </div>
+                </div>
+              </div>
+              <div class="o-block__container">
+                
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+      <div class="c-tour">
+
+        <section class="o-section c-tour__item c-tourItem">
+          <div class="c-tourItem__inner">
+            <header class="o-title o-title--centered c-tourItem__title">
+              <div class="o-block">
+                <div class="o-inner">
+                  <h3 class="o-title__headline c-tourItem__headline">Why have we started this campaign?</h3>
+                </div>
+              </div>
+            </header>
+            <div class="o-block">
+              <div class="o-block__container">
+                <div class="o-inner">
+                  <ol class="c-list c-list--boxes">
+                    <li class="c-list__item">
+                      <h4 class="c-list__itemTitle">Frontline NHS staff are going unprotected</h4>
+                      <p>Doctors, nurses and key healthcare workers are being asked to treat COVID-19 patients without access to the Personal Protective Equipment needed to keep them safe from infection.</p>
+                    </li>
+                    <li class="c-list__item">
+                      <h4 class="c-list__itemTitle">We have direct links with factories that can deliver vital protective equipment</h4>
+                      <p>Our extensive network built over years of commerce between the UK and China is already helping us connect desperate individual frontline staff with equipment.</p>
+                    </li>
+                    <li class="c-list__item">
+                      <h4 class="c-list__itemTitle">You can help protect thousands more NHS staff</h4>
+                      <p>Your donation will allow us to purchase the masks, gloves, gowns and respirators NHS staff need. Every frontline NHS worker deserves to be properly protected against COVID-19.</p>
+                    </li>
+                  </ol>
+                </div>
+                <div class="o-sp__2"></div>
+              </div>
+            </div>
+            <div class="o-block o-block--centered">
+              <div class="o-block__container u-centered">
+                <div class="o-inner">
+                  <a class="o-button o-button--fill o-button--red" href="">
+                    <span class="o-button__label">Donate now</span>
+                  </a>
+                  <%= require('ejs-loader!../components/share.html')({ siteData: siteData }) %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="o-section c-tour__item c-tourItem c-tourItem--grey">
+          <div class="c-tourItem__inner">
+            <header class="o-title o-title--centered o-title--small">
+              <h3 class="o-note o-title__headline">In the headlines</h3>
+            </header>
+            <div class="o-title c-tourItem__title">
+              <div class="o-block o-block--centered">
+                <div class="o-block__container--8">
+                  <div class="o-inner">
+                    <div class="o-title c-blockQuote">
+                      <blockquote class="c-blockQuote__title">
+                        <p class="o-title__headline c-blockQuote__headline">"We're running out of aprons and masks and we don't know where else they're coming from"</p>
+                      </blockquote>
+                      <cite class="c-blockQuote__name">Jackie Applebee, <span class="c-blockQuote__role">Doctors in Unite</span> <span class="c-blockQuote__source">Read more in the <a href="https://www.ft.com/content/18bf272b-0b3c-433c-a484-7f653c82ff1b" class="o-inlineLink" target="_blank">Financial Times</a>.</span></cite>
+                    </div>
+                  </div>
+                  <div class="o-sp__2"></div>
+                </div>
+              </div>
+              <div class="o-block o-block--centered">
+                <div class="o-block__container--8">
+                  <div class="o-inner">
+                    <div class="o-title c-blockQuote">
+                      <blockquote class="c-blockQuote__title">
+                        <p class="o-title__headline c-blockQuote__headline">"Weeks into this crisis, there are colleagues in all settings – hospitals, community or care homes – who have not been provided with personal protective equipment"</p>
+                      </blockquote>
+                      <cite class="c-blockQuote__name">Dame Donna Kinnair, Chief Executive, <span class="c-blockQuote__role">Royal College of Nursing</span> <span class="c-blockQuote__source">Read more in <a class="o-inlineLink" href="https://www.telegraph.co.uk/news/2020/03/30/nurses-caring-coronavirus-patients-no-protection-warns-union/" target="_blank">The Telegraph</a>.</span></cite>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="o-section c-tour__item c-tourItem">
+          <div class="c-tourItem__inner">
+            <div class="">
+              <div class="o-block o-block--centered">
+                <div class="o-block__container">
+                    <header class="o-title o-title--centered o-title--small c-tourItem__title">
+                      <div class="o-inner">
+                        <h3 class="o-note o-title__headline u-visuallyHidden">Who are we?</h3>
+                      </div>
+                    </header>
+                </div>
+                <div class="o-block__container o-block__container--6">
+                  <div class="o-title c-tourItem__title">
+                    <div class="o-inner">
+                      <p class="o-title__headline c-tourItem__headline">We are a group of concerned citizens with deep roots in both the UK and China. <span class="o-em">We've seen what happens when healthcare workers aren't adequately protected against COVID-19.</span></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="o-block__container o-block__container--6">
+
+                    <div class="o-title">
+                      <div class="o-inner">
+                        <p class="o-title__byline">When a group of doctors and nurses reached out to us desperately seeking suppliers of protective equipment, we knew we had to do more to help.</p>
+                        <p class="o-title__byline">We come from a range of industries and backgrounds including healthcare, technology, business and design and are actively seeking help from passionate individuals who can bolster the campaign for #ProperNHSProtection. Please see the FAQ for more details, or get in touch with us <a class="o-inlineLink" href="https://airtable.com/shrCp4xiDOA9em4TH" target="_blank">here</a>.</p>
+                      </div>
+                    </div>
+
+                    <div class="o-sp__2"></div>
+
+                    <div class="c-list c-list--bullets">
+                      <div class="o-inner">
+                        <div class="o-title o-title--small c-list__title">
+                          <h4 class="o-title__headline">Our members include</h4>
+                        </div>
+                        <ul class="c-list__items">
+                          <li class="c-list__item">
+                              <h5 class="c-list__itemTitle">George Madden</h5>
+                              <p>Founder @<a class="o-inlineLink" href="https://pilot.money/" target="_blank">pilot</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>, served @<a class="o-inlineLink" href="https://www.army.mod.uk/who-we-are/corps-regiments-and-units/infantry/london-regiment/" target="_blank">BritishArmyReserve</a>.</p>
+                          </li>
+                          <li class="c-list__item">
+
+                              <h5 class="c-list__itemTitle">Xinjie Ma</h5>
+                              <p>Co-founder @<a class="o-inlineLink" href="https://rct.studio/" target="_blank">rctstudio</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>. <a class="o-inlineLink" href="http://www.forbeschina.com/entrepreneur/44597" target="_blank">China</a> & <a class="o-inlineLink" href="https://www.forbes.com/profile/rct-studio/" target="_blank">Asia</a> @Forbes30Under30.</p>
+
+                          </li>
+                          <li class="c-list__item">
+
+                              <h5 class="c-list__itemTitle">A number of anonymous supporters</h5>
+
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                </div>
+              </div>
+              <div class="o-block">
+                <div class="o-block__container">
+                  <div class="o-inner">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="o-section c-tour__item c-tourItem c-tourItem--faq">
+          <div class="c-tourItem__inner">
+            <div class="o-block o-block--centered">
+              <div class="o-block__container o-block__container--8">
+                <div class="c-list c-list--faq">
+                  <div class="o-inner">
+                    <header class="o-title c-tourItem__title c-list__title">
+                      <h3 class="o-title__headline c-tourItem__headline">Frequently Asked Questions</h3>
+                      <span class="o-note">Updated <%= buildDate.toLocaleString('en-US', { weekday: 'long' }) %> <%= buildDate.getDate() %> <%= buildDate.toLocaleString('en-US', { month: 'long' }) %>, <%= buildDate.getFullYear() %></span>
+                    </header>
+                    <ul class="c-list__items">
+                      <li class="c-list__item">
+                        <div class="o-title o-title--small">
+                          <h4 class="o-title__headline">How can I donate?</h4>
+                          <p class="o-title__byline">Click <a class="o-inlineLink" href="#" target="_blank">here</a> or on any of the 'donate' buttons to visit our GoFundMe page.</p>
+                        </div>
+                      </li>
+                      <li class="c-list__item">
+                        <div class="o-title o-title--small">
+                          <h4 class="o-title__headline">Why should I donate to you?</h4>
+                          <p class="o-title__byline">We have unparralled connections to manufactureres in China - we are actively connecting individual cases with suppliers - and unlike like big charities, every penny raised will go directly towards purchasing PPE.</p>
+                        </div>
+                      </li>
+                      <li class="c-list__item">
+                        <div class="o-title o-title--small">
+                          <h4 class="o-title__headline">What will you do with any leftover money?</h4>
+                          <p class="o-title__byline">Every pound and every penny we raise will go directly towards purchasing the equipment needed and getting it to frontline staff. If for any reason we are unable to achieve our goals we will donate the money to charities supporting NHS staff in other ways.</p>
+                        </div>
+                      </li>
+                      <li class="c-list__item">
+                        <div class="o-title o-title--small">
+                          <h4 class="o-title__headline">Are there other ways to get involved?</h4>
+                          <p class="o-title__byline">Absolutely! We are looking for people to help us create content, spread the message, and ultimately raise money. Get in touch with us <a class="o-inlineLink" href="https://airtable.com/shrCp4xiDOA9em4TH" target="_blank">here</a>.</p>
+                        </div>
+                      </li>
+                      <li class="c-list__item">
+                        <div class="o-title o-title--small">
+                          <h4 class="o-title__headline">What equipment can you supply?</h4>
+                          <p class="o-title__byline">We have access to certified suppliers of respirator and surgical masks, gowns, gloves, coveralls, eye protection and other essential protective equipment. If you are NHS staff, please <a class="o-inlineLink" href="https://airtable.com/shrCp4xiDOA9em4TH" target="_blank">contact us for more information</a>.</p>
+                        </div>
+                      </li>
+                      <li class="c-list__item">
+                          <div class="o-title o-title--small">
+                            <h4 class="o-title__headline">Can I get protective equipment from you for myself, family and friends?</h4>
+                            <p class="o-title__byline">Right now the need is greatest for frontline NHS staff - too many of whom are are treating patients without adequate protection. For that reason all of the stock we order will be directed towards them, and not private individuals or households.</p>
+                            <p class="o-title__byline">Please support and protect NHS staff by staying at home and following <a class="o-inlineLink" href="https://www.gov.uk/coronavirus" target="_blank" >government advice</a>.</p>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <section class="o-section c-cta c-cta--centered">
+        <div class="o-block o-block--centered">
+          <div class="o-block__container">
+            <div class="c-cta__section c-cta__section--lead">
+              <div class="o-title o-title--large c-cta__title">
+                <div class="o-inner">
+                  <h2 class="o-title__headline c-cta__headline">Let's protect our nation's <span class="c-nhs">NHS</span> staff.</h2>
+                </div>
+              </div>
+            </div>
+            <div class="c-cta__section">
+              <div class="o-inner">
+                <a class="o-button o-button--fill o-button--red" href="">
+                  <span class="o-button__label">Donate now</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="c-cta__section">
+            <div class="o-inner">
+              <%= require('ejs-loader!../components/share.html')({ siteData: siteData }) %>
+            </div>
+          </div>
+        </div>
+      </section>
+      <%= require('ejs-loader!../components/pageFooter.html')({ siteData: siteData }) %>
+    </div>
+  </body>
+</html>

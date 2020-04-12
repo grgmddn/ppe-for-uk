@@ -1,0 +1,59 @@
+{
+  "name": "ppe-for-uk",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "src": "./src",
+  "dist": "./dist",
+  "statics": "./static",
+  "cache": "./.cache",
+  "manifest": "./data/manifest.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --config webpack.common.js --inline --hot --open",
+    "build": "NODE_ENV=production webpack --mode production -p --config webpack.common.js",
+    "deploy": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grgmddn/ppe-for-uk.git"
+  },
+  "author": "George Madden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/grgmddn/ppe-for-uk/issues"
+  },
+  "homepage": "https://github.com/grgmddn/ppe-for-uk#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.5.0",
+    "ejs-loader": "^0.3.6",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^4.0.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.0.4",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.13.1",
+    "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.1",
+    "sass-loader": "^8.0.2",
+    "sitemap-webpack-plugin": "^0.7.1",
+    "style-loader": "^1.1.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.1",
+    "reset-css": "^5.0.1"
+  }
+}

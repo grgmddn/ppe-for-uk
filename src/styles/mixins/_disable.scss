@@ -1,0 +1,17 @@
+// --------------------------------------------------
+//  disable/enable
+// --------------------------------------------------
+@mixin disable() {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+@mixin enable() {
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  pointer-events: auto;
+}

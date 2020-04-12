@@ -1,0 +1,125 @@
+// --------------------------------------------------
+//  Object: block
+// --------------------------------------------------
+@media all {
+
+  .o-block {
+    $o: &;
+
+    display: block;
+    margin: auto;
+    width: 100%;
+    position: relative;
+
+    &:before, &:after {
+      display: table;
+      content: " ";
+      box-sizing: border-box;
+    }
+    &:after {
+      clear: both;
+    }
+
+    #{$o}__container {
+      width: 100%;
+      float: left;
+      //line-height: 0;
+    }
+
+    &--centered {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center!important;
+      -ms-flex-pack: center!important;
+      justify-content: center!important;
+    }
+  }
+}
+@media (min-width: $viewport-mobile) {}
+@media (min-width: $viewport-tablet) {
+
+  .o-block {
+    $o: &;
+
+    &:before,
+    &:after {
+      display: table;
+      content: " ";
+    }
+    &:after {
+      clear: both;
+    }
+
+    #{$o}__container {
+      display: inline-block;
+
+      &--push {
+        float: right;
+      }
+      &--pull {
+        float: left;
+      }
+      &--1 {
+        width: colWidth(1);
+      }
+      &--2 {
+        width: colWidth(2);
+      }
+      &--3 {
+        width: colWidth(3);
+      }
+      &--4 {
+        width: colWidth(4);
+      }
+      &--5 {
+        width: colWidth(5);
+      }
+      &--6 {
+        width: colWidth(6);
+      }
+      &--7 {
+        width: colWidth(7);
+      }
+      &--8 {
+        width: colWidth(8);
+      }
+      &--9 {
+        width: colWidth(9);
+      }
+      &--10 {
+        width: colWidth(10);
+      }
+      &--11 {
+        width: colWidth(11);
+      }
+      &--12 {
+        width: colWidth(12);
+      }
+    }
+    &--sticky {
+      position: sticky;
+      top: 0;
+    }
+    &--justify {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+@media (min-width: $viewport-desktop) {
+
+  .o-block {
+    $o: &;
+
+    max-width: 1080px;
+  }
+}
+@media (min-width: $viewport-desktop-lg) {
+
+  .o-block {
+  	$o: &;
+
+    max-width: 1080px;
+  }
+}

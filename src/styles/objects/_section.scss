@@ -1,0 +1,17 @@
+.o-section {
+  $o: &;
+
+  @media all {
+    background-color: transparent;
+    width: 100%;
+    overflow: hidden;
+
+    &--centered {
+      text-align: center;
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {}
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+}

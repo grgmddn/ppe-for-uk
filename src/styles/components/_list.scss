@@ -1,0 +1,131 @@
+//  component: list
+// --------------------------------------------------
+.c-list {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+    
+
+    #{$c}__item {
+      box-sizing: border-box;
+    }
+    #{$c}__itemTitle {
+      display: inline-block;
+    }
+
+    &--bullets {
+
+      #{$c}__item {
+        box-sizing: border-box;
+        margin: 1rem 1rem 0 1.5rem;
+        position: relative;
+
+        &:before {
+          width: 0.67rem;
+          height: 0.67rem;
+          //border-radius: 1rem;
+          background-color: $black;
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          margin-left: -1.5rem;
+          margin-top: 0.4rem;
+        }
+        #{$c}__itemTitle {
+          line-height: 1rem;
+          margin-bottom: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2px;
+        }
+      } 
+    }
+    &--boxes {
+
+      #{$c}__item {
+        box-sizing: border-box;
+        border: 1px solid $lightGrey;
+        padding: ($base-em * 2) $base-em ($base-em * 2);
+        font-size: $small;
+        line-height: 1.5em;
+
+        &:before {
+          //margin: 0 auto;
+          width: 2rem;
+          height: 2rem;
+          text-align: center;
+          line-height: 2rem;
+          font-size: $base-em;
+          margin-bottom: 1rem;
+          border-radius: 2rem;
+          background-color: $brand;
+          color: $white;
+          content: counter(countz);
+          display: block;
+        }
+
+        &:nth-child(even) {
+          background-color: $lightGrey;
+        }
+      }
+      #{$c}__itemTitle {
+        display: inline-block;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+    &--faq {
+      background-color: $lightGrey;
+      padding: 2rem 0;
+
+      #{$c}__title {
+        margin-bottom: 2rem;
+      }
+      #{$c}__item {
+        min-height: 1rem;
+        position: relative;
+        box-sizing: border-box;
+        padding: ($base-em * 0.5) 0;
+        //background-color: $lightGrey;
+        //border: 1px solid $grey;
+        margin-bottom: ($base-em * 0.5);
+        line-height: 2em;
+        vertical-align: center;
+        border-bottom: 1px solid $grey;
+
+        &:first-child {
+          //border-top: none;
+        }
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  @media (min-width: $screen-sm) {}
+  @media (min-width: $screen-md) {
+    
+    &--boxes {
+      display: flex;
+
+      #{$c}__item {
+        width: colWidth(4);
+        float: left;
+        padding: ($base-em * 2);
+
+        &:before {}
+      }
+    }
+  }
+  @media (min-width: $screen-lg) {}  
+}
+
+ol.c-list {
+  counter-reset: countz;
+
+  li {
+    counter-increment: countz;
+  }
+}

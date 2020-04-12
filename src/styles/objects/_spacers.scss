@@ -1,0 +1,60 @@
+// --------------------------------------------------
+//  Object: spacers
+// --------------------------------------------------
+@media all {
+
+  .o-sp__2 {
+    display: block;
+    height: 1rem;
+  }
+  .o-sp__4 {
+    display: block;
+    height: 2rem;
+  }
+  .o-sp__5 {
+    display: block;
+    height: 2rem;
+  }
+  .o-sp__10 {
+    display: block;
+    height: 4rem;
+  }
+  .o-sp__20 {
+    display: block;
+    height: 6rem;
+  }
+  .o-sp__30 {
+    display: block;
+    height: 8rem;
+  }
+}
+@media (min-width: $viewport-mobile) {}
+@media (min-width: $viewport-tablet) {
+
+  .o-sp__2 {
+    display: block;
+    height: 2rem;
+  }
+  .o-sp__4 {
+    display: block;
+    height: 4rem;
+  }
+  .o-sp__5 {
+    display: block;
+    height: 5rem;
+  }
+  .o-sp__10 {
+    display: block;
+    height: 10rem;
+  }
+  .o-sp__20 {
+    display: block;
+    height: 20rem;
+  }
+  .o-sp__30 {
+    display: block;
+    height: 30rem;
+  }
+}
+@media (min-width: $viewport-desktop) {}
+@media (min-width: $viewport-desktop-lg) {}

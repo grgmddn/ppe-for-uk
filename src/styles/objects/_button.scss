@@ -1,0 +1,195 @@
+// --------------------------------------------------
+//  Button
+// --------------------------------------------------
+@media all {
+
+  .o-button {
+    $c: &;
+    display: block;
+    padding: 0;
+    margin: 0;
+    //outline: none;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+
+    @include fontBase;
+    @include enable;
+
+    &__input {
+      display: none;
+    }
+    &__label {
+      color: $white;
+      font-size: $base-em;
+      font-weight: 500;
+      cursor: pointer;
+      line-height: 1.375em;
+      display: block;
+      padding: 0.6875em 1.275em 0.6875em;
+      box-sizing: border-box;
+      border-width: 2px;
+      border-style: solid;
+      border-color: $white;
+      letter-spacing: 0.02em;
+      border-radius: 0;
+      line-height: 1em;
+      text-transform: uppercase;
+      text-align: center;
+      //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
+
+      @include antialias;
+    }
+    + #{$c} {
+      margin-top: 0.5rem;
+    }
+    &:active,
+    &:focus,
+    &:hover {
+
+      #{$c}__label {
+      	color: $brand;
+      	background-color: $white;
+        border-color: $white;
+      //  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+      }
+    }
+    &:active:hover,
+    &:active:hover:focus
+    &:hover:focus
+    &:active:focus {
+
+      #{$c}__label {
+        background-color: $black;
+        border-color: $warning;
+        color: $white;
+      }
+    }
+    &[disabled] {
+      cursor: not-allowed;
+
+      #{$c}__label {
+        cursor: not-allowed;
+        background-color: red;
+      }
+      &:active:hover {
+
+        #{$c}__label {
+          cursor: not-allowed;
+          background-color: inherit;
+          border-color: inherit;
+          color: inherit;
+        }
+      }
+    }
+    &--red {
+
+      #{$c}__label {
+        background-color: $white;
+        color: $brand;
+        border-color: $brand;
+      }
+    }
+    &--small {
+
+      #{$c}__label {
+        font-size: $pico;
+      //  border-radius: 0.675em;
+      //  background-color: $line-grey;
+      //  border-color: $line-grey;
+      //  color: $white;
+      //  padding: 1.22em 2.365em 1.22em;
+      }
+    }
+    &--large {
+
+      #{$c}__label {
+        font-size: $small;
+      }
+    }
+    &--fill {
+
+      #{$c}__label {
+        background-color: $white;
+        color: $brand;
+        border-color: $white;
+      }
+
+      &:hover {
+
+        #{$c}__label {
+          background-color: $nhsBlue;
+          color: $white;
+          border-color: $nhsBlue;
+        }
+      }
+    }
+    &--fill#{$c}--red {
+
+      #{$c}__label {
+        background-color: $brand;
+        color: $white;
+        border-color: $brand;
+      }
+
+      &:hover {
+
+        #{$c}__label {
+          background-color: $nhsBlue;
+          color: $white;
+          border-color: $nhsBlue;
+        }
+      }
+    }
+  }
+}
+@media (min-width: $viewport-mobile) {
+
+  .o-button {
+    $c: &;
+
+    &__input {}
+    &__label {
+    //  font-size: $small;
+    }
+
+    &--large {
+
+      #{$c}__label {
+        font-size: $small;
+      }
+    }
+  }
+}
+@media (min-width: $viewport-tablet) {
+  .o-button {
+    $c: &;
+
+    display: inline-block;
+
+    &__input {}
+    &__label {
+    //  font-size: $small;
+      display: inline-block;
+    }
+
+    + #{$c} {
+      margin-top: 0;
+    }
+
+    &--large {
+
+      #{$c}__label {
+        font-size: $medium;
+      }
+    }
+    &--device {
+
+      #{$c}__label {
+        font-size: $base-em;
+      }
+    }
+  }
+}
+@media (min-width: $viewport-desktop) {}
+@media (min-width: $viewport-desktop-lg) {}

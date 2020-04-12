@@ -1,0 +1,39 @@
+//  component: subPageNav
+// --------------------------------------------------
+.c-mainNav {
+  $c: &;
+
+  @media all {
+    font-size: 1rem;
+    background: transparent;
+    box-sizing: border-box;
+
+    #{$c}__title {
+      border-bottom: 2px solid $black;
+    }
+    #{$c}__items {
+      list-style: none;
+      padding: 0;
+      margin: 0 auto;
+    }
+    #{$c}__item {
+      padding: 0;
+      margin: 0;
+      display: block;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+    #{$c}__link {
+      display: block;
+      padding: $base-em/2 0;
+      //margin: 0 $base-em*2;
+      border-bottom: 1px solid $black;
+      //background-color: $brand-second;
+      @include antialias;
+      @include fontDisplay;
+    }
+  }
+  @media (min-width: $screen-sm) {}
+  @media (min-width: $screen-md) {}
+  @media (min-width: $screen-lg) {}  
+}

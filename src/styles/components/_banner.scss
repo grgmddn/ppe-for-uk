@@ -1,0 +1,105 @@
+//  component: banner
+// --------------------------------------------------
+.c-banner {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    background-color: $brand-second;
+    color: $white;
+    padding: 2rem 0;
+
+    #{$c}__title {}
+    #{$c}__inlineLink {
+      border-bottom: 1px dotted $white;
+
+      &:hover {
+        border-bottom-style: solid;
+      }
+    }
+    #{$c}__close {
+      display: block;
+      position: absolute;
+      width: ($base-em);
+      height: ($base-em);
+      padding: ($base-em / 2);
+      right: $base-em;
+      top: $base-em;
+      top: calc(50% - #{$base-em});
+      background-color: $white;
+      border-radius: 2px;
+      user-select: none;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $grey;
+
+        #{$c}__closeIcon {
+
+          .g {
+            fill: $lightGrey;
+          }
+        }
+      }
+    }
+    #{$c}__closeIcon {
+      display: block;
+
+      .g {
+        fill: $black;
+      }
+    }
+
+    &--temp {
+      background-color: $dark;
+    }
+    &--narrow {
+      padding: 1rem 0;
+
+      #{$c}__title {
+        margin: 0;
+        width: 80%;
+      }
+      #{$c}__headline {
+        margin: 0 auto 0.25rem;
+        font-size: $base-em;
+      }
+      #{$c}__byline {
+        margin: 0 auto;
+        font-size: $base-em;
+      }
+    }
+
+    &.is-hidden {
+      visibility: hidden;
+      display: none;
+    }
+  }
+  @media (min-width: $viewport-mobile) {
+    padding: 4rem 0;
+
+    &--narrow {
+      padding: 1rem 0;
+    }
+  }
+  @media (min-width: $viewport-tablet) {
+
+    #{$c}__close {
+      right: ($base-em * 2);
+    }
+    
+    &--narrow {
+      padding: 2rem 0;
+
+      #{$c}__title,
+      #{$c}__headline {
+        margin: 0 auto;
+        width: auto;
+      }      
+    }
+  }
+  @media (min-width: $viewport-desktop) {}  
+  @media (min-width: $viewport-desktop-lg) {}
+}

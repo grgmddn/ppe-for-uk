@@ -1,0 +1,25 @@
+// Fonts
+// --------------------------------------------------
+$font-fallback: "Inter", system-ui, -apple-system, "Roboto", "Helvetica Neue", "Helvetica", "Arial", helvetica, arial, sans-serif;
+$font-display: $font-fallback !default;
+$font-text: $font-fallback !default;
+$font-zh: "PingFang SC", system-ui, -apple-system, "Helvetica Neue", "Arial", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+// Font family/weight mixins
+// --------------------------------------------------
+@mixin fontBase() {
+  font-family: $font-fallback;
+  font-weight: 400;
+}
+@mixin fontLight() {
+  font-family: $font-fallback;
+  font-weight: 400;
+}
+@mixin fontDisplay() {
+  font-family: $font-fallback;
+  font-weight: 700;
+}
+@mixin fontZh() {
+  font-family: $font-zh;
+  font-weight: 200;
+}

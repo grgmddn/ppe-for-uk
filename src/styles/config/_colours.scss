@@ -1,0 +1,22 @@
+//  Colours
+// --------------------------------------------------
+$white: #fff;
+$black: #000;
+$dark: lighten($black, 6%) !default;
+$line-grey: #636363 !default;
+$grey: #9B9B9B;
+$light-grey: lighten($grey, 35%) !default;
+
+$brand: #FF0F28 !default;
+$brand-hover: lighten($brand, 20%) !default;
+$brand-second: darken($brand, 12%) !default;
+
+$brandSecond: $brand-second !default;
+$lightGrey: $light-grey !default;
+$warning: #ffdd00;
+
+$nhsBlue: #005EB8;
+$twitterBlue: #1DA1F2;
+$facebookBlue: #3E5C9B;
+$linkedInBlue: #4875B4;
+$whatsAppGreen: #000;

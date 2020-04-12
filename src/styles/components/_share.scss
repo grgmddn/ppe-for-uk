@@ -1,0 +1,118 @@
+//  component: share
+// --------------------------------------------------
+.c-share {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+    display: block;
+    color: $black;
+    margin: 0 auto;
+    text-align: center;
+    padding: $base-em;
+    line-height: ($base-em * 2);
+
+    #{$c}__title {
+      font-size: $base-em;
+      text-transform: uppercase;
+      display: block;
+      letter-spacing: 0.02em;
+      border-radius: 0;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 500;
+      @include antialias;
+    }
+    #{$c}__links {
+      display: block;
+    }
+    #{$c}__link {
+      display: inline-block;
+    }
+    #{$c}__button {
+      display: block;
+      width: ($base-em * 3);
+      height: ($base-em * 3);
+      line-height: ($base-em * 3);
+      //padding: $base-em;
+      //border-bottom: 2px solid transparent;
+
+      &:hover {
+        //border-bottom: 2px solid $white;
+
+        #{$c}__icon {
+          //fill: $black;
+
+          &--twit {
+            fill: $twitterBlue;
+          }
+          &--face {
+            fill: $facebookBlue;
+          }
+          &--link {
+            fill: $linkedInBlue;
+          }
+          &--what {
+            fill: $whatsAppGreen;
+          }
+        }
+      }
+      &:hover:active,
+      &:hover:active:focus,
+      &:hover:focus,
+      &:active:focus {
+        //border-bottom: 2px solid $warning;
+
+        #{$c}__icon {
+          fill: $black;
+        }
+      }
+    }
+    #{$c}__icon {
+      fill: $black;
+      vertical-align: middle;
+
+      .g {
+        fill: $white;
+      }
+    }
+
+    &--inverted {
+      color: $white;
+
+      #{$c}__icon {
+        fill: $white;
+
+        .g {
+          fill: $brandSecond;
+        }
+      }
+    }
+  }
+  @media (min-width: $screen-sm) {}
+  @media (min-width: $viewport-tablet) {
+    display: inline-block;
+    text-align: left;
+    line-height: ($base-em * 2);
+    padding: 0 ($base-em * 2);
+
+    #{$c}__title {
+      display: inline-block;
+      padding: 0 ($base-em / 2) 0 $base-em;
+    }
+    #{$c}__links {
+      display: inline-block;
+      padding-right: $base-em;
+    }
+    #{$c}__link {
+      display: inline-block;
+    }
+    #{$c}__button {
+      display: block;
+    }
+    #{$c}__icon {
+      vertical-align: top;
+    }
+  }
+  @media (min-width: $screen-lg) {}  
+}

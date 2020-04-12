@@ -1,0 +1,106 @@
+// --------------------------------------------------
+//  object: title
+// --------------------------------------------------
+@media all {
+
+  .o-title {
+    $o: &;
+    
+    #{$o}__headline {
+      //  font-size: $small;
+      line-height: normal;
+      margin-bottom: 0.5rem;
+      white-space: pre-line;
+      //letter-spacing: -0.01em;
+      // text-transform: uppercase;
+
+      font-size: $large;
+
+      @include fontDisplay;
+      @include antialias;
+    }
+    #{$o}__byline {
+      font-size: $small;
+      line-height: 1.32em;
+      white-space: pre-line;
+      //color: $line-grey;
+      margin-bottom: 0.5rem;
+
+      //color: inherit;
+
+      @include fontBase;
+      @include antialias;
+    }
+
+    &--small {
+
+      #{$o}__headline {
+        font-size: $small;
+      }
+      #{$o}__byline {
+        font-size: $base-em;
+      }
+    }
+    &--large {
+
+      #{$o}__headline {
+        //font-size: $large;
+        margin-bottom: 2rem;
+      }
+      #{$o}__byline {
+        font-size: $medium;
+        margin-bottom: 2rem;
+      }
+    }
+    &--centered {
+      text-align: center;
+    }
+    &--breadcrumb {
+      #{$o}__headline,
+      #{$o}__byline {
+        //display: inline-block;
+        font-size: $base-em;
+        text-transform: lowercase;
+      }
+      #{$o}__headline {
+        color: $grey;
+        font-size: $small;
+        margin: 0;
+
+        &:after {}
+      }
+    }
+  }
+}
+@media (min-width: $viewport-tablet) {
+  .o-title {
+    $o: &;
+
+    #{$o}__headline {
+      //font-size: $super;
+      line-height: 1.16em;
+    }
+    #{$o}__byline {
+    //  font-size: $large;
+    }
+
+    &--small {
+
+      #{$o}__headline {
+        font-size: $small;
+      }
+      #{$o}__byline {
+        font-size: $base-em;
+      }
+    }
+    &--large {
+      #{$o}__headline {
+        font-size: $extraLarge;
+        margin-bottom: 0.67em;
+      }
+      #{$o}__byline {
+        font-size: $medium;
+      }
+    }
+  }
+}

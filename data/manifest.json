@@ -1,9 +1,28 @@
 {
-  "siteTitle": "#PPEforNHS",
+  "siteTitle": "#PPEforNHS - Protect NHS Workers",
   "title": "Let's get the protective equipment our NHS needs",
   "author": "ppe-for-uk",
   "description": "Raising money to deliver Personal Protective Equipment to frontline NHS staff, including masks, gloves, gowns, aprons",
-  "keywords": ["coronavirus", "covid-19", "nhs", "fundraiser", "protective equipment", "healthcare", "coronavirus protection", "coronavirus medical", "doctors", "nurses", "ppe", "personal protective equipment", "equipment shortage", "factories", "china", "united kingdom", "china medical equipment"],
+  "keywords": [
+    "coronavirus",
+    "covid-19",
+    "covid19",
+    "nhs",
+    "fundraiser",
+    "protective equipment",
+    "healthcare",
+    "coronavirus protection",
+    "coronavirus medical",
+    "doctors",
+    "nurses",
+    "ppe",
+    "personal protective equipment",
+    "equipment shortage",
+    "factories",
+    "china",
+    "united kingdom",
+    "china medical equipment"
+  ],
   "previewImageUrl": "",
   "siteUrl": "https://propernhsprotection.com/",
   "publicPath": {
@@ -11,6 +30,11 @@
     "development": "/"
   },
   "primaryHashtag": "PPEforNHS",
-  "secondaryHashtags": ["ProperNHSProtection"],
+  "secondaryHashtags": [
+    "TheRightKit",
+    "ProtectNHSLives",
+    "ProperNHSProtection",
+    "SaveNHS"
+  ],
   "shareMessage": "NHS staff are being exposed to COVID-19 without protective equipment. Let's change that."
 }

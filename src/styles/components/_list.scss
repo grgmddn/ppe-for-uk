@@ -22,8 +22,8 @@
         position: relative;
 
         &:before {
-          width: 0.5rem;
-          height: 0.5rem;
+          width: 0.67rem;
+          height: 0.67rem;
           //border-radius: 1rem;
           background-color: $black;
           content: "";
@@ -31,11 +31,13 @@
           position: absolute;
           left: 0;
           margin-left: -1.5rem;
-          margin-top: 0.5rem;
+          margin-top: 0.4rem;
         }
         #{$c}__itemTitle {
           line-height: 1rem;
           margin-bottom: 0.5rem;
+          text-transform: uppercase;
+          letter-spacing: 0.2px;
         }
       } 
     }

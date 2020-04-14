@@ -1,10 +1,10 @@
 // --------------------------------------------------
 //  Button
 // --------------------------------------------------
-@media all {
+.o-button {
+  $o: &;
 
-  .o-button {
-    $c: &;
+  @media all {
     display: block;
     padding: 0;
     margin: 0;
@@ -33,8 +33,8 @@
     @include enable;
     @include antialias;
 
-    + #{$c} {
-      margin-top: 0.5rem;
+    + #{$o} {
+    //  margin-top: 0.5rem;
     }
     //&:active,
     //&:focus,
@@ -63,18 +63,18 @@
         color: inherit;
       }
     }
-    &#{$c}--red {
+    &#{$o}--red {
       background-color: $white;
       color: $brand;
       border-color: $brand;
     }
-    &#{$c}--small {
+    &#{$o}--small {
       font-size: $pico;
     }
-    &#{$c}--large {
+    &#{$o}--large {
       font-size: $small;
     }
-    &#{$c}--fill {
+    &#{$o}--fill {
       background-color: $white;
       color: $brand;
       border-color: $white;
@@ -85,7 +85,7 @@
         border-color: $nhsBlue;
       }
     }
-    &#{$c}--fill#{$c}--red {
+    &#{$o}--fill#{$o}--red {
       background-color: $brand;
       color: $white;
       border-color: $brand;
@@ -97,34 +97,40 @@
       }
     }
   }
-}
-@media (min-width: $viewport-mobile) {
+  @media (min-width: $viewport-mobile) {
 
-  .o-button {
-    $c: &;
-
-    &#{$c}--large {
+    &#{$o}--large {
       font-size: $small;
     }
   }
-}
-@media (min-width: $viewport-tablet) {
-  .o-button {
-    $c: &;
+  @media (max-width: $viewport-tablet - 1) {
+    
+    &#{$o}--masthead {
+      width: 50%;
+      display: inline-block;
+      float: left;
+    }
+  }
+  @media (min-width: $viewport-tablet) {
 
     display: inline-block;
 
-    + #{$c} {
+    + #{$o} {
       margin-top: 0;
     }
 
-    &#{$c}--large {
+    &#{$o}--large {
       font-size: $medium;
     }
-    &#{$c}--device {
+    &#{$o}--device {
       font-size: $base-em;
     }
+    &#{$o}--masthead {
+      width: auto;
+      display: inline-block;
+      float: none;
+    }
   }
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
 }
-@media (min-width: $viewport-desktop) {}
-@media (min-width: $viewport-desktop-lg) {}

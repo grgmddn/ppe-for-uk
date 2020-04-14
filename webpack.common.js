@@ -38,12 +38,20 @@ let isProduction = () => {
   if (process.env.NODE_ENV === 'production') { return true; } else { return false; }
 };
 
-const configPromise = new Promise(function(resolve, reject) {
+module.exports = (env, argv) => new Promise(function(resolve, reject) {
 
   //  If using getData method
   //  getData(url).then(function (response) {});
 
+  if (!argv.pipeline) {
+    console.log('No pipeline specified, building for production.')
+  }
+
   let plugins = [
+
+    new webpack.DefinePlugin({
+      'process.env.PIPELINE': isProduction() ? JSON.stringify(argv.pipeline) : JSON.stringify(undefined)
+    }),
 
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': isProduction() ? JSON.stringify('production') : JSON.stringify('development')
@@ -163,5 +171,3 @@ const configPromise = new Promise(function(resolve, reject) {
 
   });
 });
-
-module.exports = configPromise;

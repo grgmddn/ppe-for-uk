@@ -1,6 +1,7 @@
 <!doctype html>
 <% var buildDate = new Date() %>
 <html>
+  <%= require('ejs-loader!../components/gtm/gtmBody.html')({ siteData: siteData }) %>
   <%= require('ejs-loader!../components/head.html')({ siteData: siteData }) %>
   <body class="o-site">
     <!-- Google Tag Manager (noscript) -->

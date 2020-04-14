@@ -46,6 +46,20 @@
     }
   }
   @media (min-width: $viewport-mobile) {}
+  @media (max-width: $viewport-tablet - 1) {
+    #{$c}__buttons {
+      display: block;
+
+      &:before,
+      &:after {
+        display: table;
+        content: " ";
+      }
+      &:after {
+        clear: both;
+      }
+    }
+  }
   @media (min-width: $viewport-tablet) {
     #{$c}__overlay {
       //width: colWidth(10);
@@ -60,6 +74,9 @@
       //font-size: $medium;
       //line-height: 1.8em;
       //max-width: colWidth(8);
+    }
+    #{$c}__buttons {
+      display: inline-block;
     }
   }
   @media (min-width: $viewport-desktop) {

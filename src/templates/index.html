@@ -1,6 +1,7 @@
 <!doctype html>
 <% var buildDate = new Date() %>
 <html>
+  <%= require('ejs-loader!../components/gtm/gtmBody.html')({ siteData: siteData }) %>
   <%= require('ejs-loader!../components/head.html')({ siteData: siteData }) %>
   <body class="o-site">
     <!-- Google Tag Manager (noscript) -->
@@ -21,18 +22,13 @@
                   <div class="o-inner">
                     <h2 class="o-title__headline c-masthead__headline">Our <span class="c-nhs">NHS</span> staff do not have the protective equipment they need in the fight against COVID-19. Together we can change that.</h2>
                     <p class="o-title__byline c-masthead__byline">Help us raise the money to get desperately needed supplies to doctors, nurses and surgeons on the frontlines.</p>
-                    <a class="o-button o-button--fill" href="" data-event-id="donate">
-                      <span class="o-button__label">Donate now</span>
-                    </a>
-                    <a class="o-button o-button--fill" href="">
-                      <span class="o-button__label">Read more</span>
-                    </a>
+                    <div class="c-masthead__buttons">
+                      <a class="o-button o-button--fill o-button--masthead" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_masthead">Donate now</a>
+                      <a class="o-button o-button--masthead" href="#why-this-campaign">Read more</a>
+                    </div>
                     <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'inverted' }) %>
                   </div>
                 </div>
-              </div>
-              <div class="o-block__container">
-                
               </div>
             </div>
 
@@ -41,7 +37,7 @@
 
       <div class="c-tour">
 
-        <section class="o-section c-tour__item c-tourItem">
+        <section class="o-section c-tour__item c-tourItem" id="why-this-campaign">
           <div class="c-tourItem__inner">
             <header class="o-title o-title--centered c-tourItem__title">
               <div class="o-block">
@@ -74,9 +70,7 @@
             <div class="o-block o-block--centered">
               <div class="o-block__container u-centered">
                 <div class="o-inner">
-                  <a class="o-button o-button--fill o-button--red" href="" data-event-id="donate">
-                    <span class="o-button__label">Donate now</span>
-                  </a>
+                  <a class="o-button o-button--fill o-button--red" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_why">Donate now</a>
                   <%= require('ejs-loader!../components/share.html')({ siteData: siteData }) %>
                 </div>
               </div>
@@ -84,7 +78,7 @@
           </div>
         </section>
 
-        <section class="o-section c-tour__item c-tourItem c-tourItem--grey">
+        <section class="o-section c-tour__item c-tourItem c-tourItem--grey" id="news">
           <div class="c-tourItem__inner">
             <header class="o-title o-title--centered o-title--small">
               <h3 class="o-note o-title__headline">In the headlines</h3>
@@ -119,7 +113,7 @@
           </div>
         </section>
 
-        <section class="o-section c-tour__item c-tourItem">
+        <section class="o-section c-tour__item c-tourItem" id="who-we-are">
           <div class="c-tourItem__inner">
             <div class="">
               <div class="o-block o-block--centered">
@@ -186,7 +180,7 @@
           </div>
         </section>
 
-        <section class="o-section c-tour__item c-tourItem c-tourItem--faq">
+        <section class="o-section c-tour__item c-tourItem c-tourItem--faq" id="faq">
           <div class="c-tourItem__inner">
             <div class="o-block o-block--centered">
               <div class="o-block__container o-block__container--8">
@@ -244,7 +238,7 @@
 
       </div>
 
-      <section class="o-section c-cta c-cta--centered">
+      <section class="o-section c-cta c-cta--centered" id="cta">
         <div class="o-block o-block--centered">
           <div class="o-block__container">
             <div class="c-cta__section c-cta__section--lead">
@@ -256,9 +250,7 @@
             </div>
             <div class="c-cta__section">
               <div class="o-inner">
-                <a class="o-button o-button--fill o-button--red" href="" data-event-id="donate">
-                  <span class="o-button__label">Donate now</span>
-                </a>
+                <a class="o-button o-button--fill o-button--red" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_cta">Donate now</a>
               </div>
             </div>
           </div>

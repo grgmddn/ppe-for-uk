@@ -1,10 +1,10 @@
 // --------------------------------------------------
 //  Button
 // --------------------------------------------------
-@media all {
+.o-button {
+  $o: &;
 
-  .o-button {
-    $c: &;
+  @media all {
     display: block;
     padding: 0;
     margin: 0;
@@ -12,184 +12,125 @@
     border: 0;
     background-color: transparent;
     color: inherit;
+    color: $white;
+    font-size: $base-em;
+    font-weight: 500;
+    cursor: pointer;
+    line-height: 1.375em;
+    display: block;
+    padding: 0.6875em 1.275em 0.6875em;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-style: solid;
+    border-color: $white;
+    letter-spacing: 0.02em;
+    border-radius: 0;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
 
-    @include fontBase;
     @include enable;
+    @include antialias;
 
-    &__input {
-      display: none;
+    + #{$o} {
+    //  margin-top: 0.5rem;
     }
-    &__label {
-      color: $white;
-      font-size: $base-em;
-      font-weight: 500;
-      cursor: pointer;
-      line-height: 1.375em;
-      display: block;
-      padding: 0.6875em 1.275em 0.6875em;
-      box-sizing: border-box;
-      border-width: 2px;
-      border-style: solid;
-      border-color: $white;
-      letter-spacing: 0.02em;
-      border-radius: 0;
-      line-height: 1em;
-      text-transform: uppercase;
-      text-align: center;
-      //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
-
-      @include antialias;
-    }
-    + #{$c} {
-      margin-top: 0.5rem;
-    }
-    &:active,
-    &:focus,
+    //&:active,
+    //&:focus,
     &:hover {
-
-      #{$c}__label {
-      	color: $brand;
-      	background-color: $white;
-        border-color: $white;
-      //  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
-      }
+    	color: $white;
+    	background-color: $nhsBlue;
+      border-color: $nhsBlue;
     }
     &:active:hover,
-    &:active:hover:focus
-    &:hover:focus
-    &:active:focus {
-
-      #{$c}__label {
-        background-color: $black;
-        border-color: $warning;
-        color: $white;
-      }
+    &:active:hover:focus,
+    //&:hover:focus,
+    &:active:focus,
+    &:active {
+      background-color: $black;
+      border-color: $warning;
+      color: $white;
     }
     &[disabled] {
       cursor: not-allowed;
-
-      #{$c}__label {
-        cursor: not-allowed;
-        background-color: red;
-      }
+      background-color: red;
+      
       &:active:hover {
-
-        #{$c}__label {
-          cursor: not-allowed;
-          background-color: inherit;
-          border-color: inherit;
-          color: inherit;
-        }
+        cursor: not-allowed;
+        background-color: inherit;
+        border-color: inherit;
+        color: inherit;
       }
     }
-    &--red {
-
-      #{$c}__label {
-        background-color: $white;
-        color: $brand;
-        border-color: $brand;
-      }
+    &#{$o}--red {
+      background-color: $white;
+      color: $brand;
+      border-color: $brand;
     }
-    &--small {
-
-      #{$c}__label {
-        font-size: $pico;
-      //  border-radius: 0.675em;
-      //  background-color: $line-grey;
-      //  border-color: $line-grey;
-      //  color: $white;
-      //  padding: 1.22em 2.365em 1.22em;
-      }
+    &#{$o}--small {
+      font-size: $pico;
     }
-    &--large {
-
-      #{$c}__label {
-        font-size: $small;
-      }
+    &#{$o}--large {
+      font-size: $small;
     }
-    &--fill {
-
-      #{$c}__label {
-        background-color: $white;
-        color: $brand;
-        border-color: $white;
-      }
+    &#{$o}--fill {
+      background-color: $white;
+      color: $brand;
+      border-color: $white;
 
       &:hover {
-
-        #{$c}__label {
-          background-color: $nhsBlue;
-          color: $white;
-          border-color: $nhsBlue;
-        }
-      }
-    }
-    &--fill#{$c}--red {
-
-      #{$c}__label {
-        background-color: $brand;
+        background-color: $nhsBlue;
         color: $white;
-        border-color: $brand;
+        border-color: $nhsBlue;
       }
+    }
+    &#{$o}--fill#{$o}--red {
+      background-color: $brand;
+      color: $white;
+      border-color: $brand;
 
       &:hover {
-
-        #{$c}__label {
-          background-color: $nhsBlue;
-          color: $white;
-          border-color: $nhsBlue;
-        }
+        background-color: $nhsBlue;
+        color: $white;
+        border-color: $nhsBlue;
       }
     }
   }
-}
-@media (min-width: $viewport-mobile) {
+  @media (min-width: $viewport-mobile) {
 
-  .o-button {
-    $c: &;
-
-    &__input {}
-    &__label {
-    //  font-size: $small;
-    }
-
-    &--large {
-
-      #{$c}__label {
-        font-size: $small;
-      }
+    &#{$o}--large {
+      font-size: $small;
     }
   }
-}
-@media (min-width: $viewport-tablet) {
-  .o-button {
-    $c: &;
+  @media (max-width: $viewport-tablet - 1) {
+    
+    &#{$o}--masthead {
+      width: 50%;
+      display: inline-block;
+      float: left;
+    }
+  }
+  @media (min-width: $viewport-tablet) {
 
     display: inline-block;
 
-    &__input {}
-    &__label {
-    //  font-size: $small;
-      display: inline-block;
-    }
-
-    + #{$c} {
+    + #{$o} {
       margin-top: 0;
     }
 
-    &--large {
-
-      #{$c}__label {
-        font-size: $medium;
-      }
+    &#{$o}--large {
+      font-size: $medium;
     }
-    &--device {
-
-      #{$c}__label {
-        font-size: $base-em;
-      }
+    &#{$o}--device {
+      font-size: $base-em;
+    }
+    &#{$o}--masthead {
+      width: auto;
+      display: inline-block;
+      float: none;
     }
   }
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
 }
-@media (min-width: $viewport-desktop) {}
-@media (min-width: $viewport-desktop-lg) {}

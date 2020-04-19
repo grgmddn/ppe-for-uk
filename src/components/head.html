@@ -1,36 +1,28 @@
 <head>
-    <meta charset="utf-8">
-    <title><%= siteData.siteTitle %></title>
-    <meta name="description" content="<%= siteData.description %>">
-    <meta name="viewport" content="width=device-width">
-    <meta name="theme-color" content="#18183C">
-    <meta name="author" content="<%= siteData.author %>">
-    <meta name="keywords" content="<%= siteData.keywords %>">
-    <meta property="og:url" content="<%= siteData.siteUrl %>">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<%= siteData.siteTitle %>">
-    <% if (siteData.previewImageUrl) { %>
-    <meta property="og:image" content="<%= siteData.previewImageUrl %>">
-    <% } %>
-    <meta property="og:description" content="<%= siteData.description %>">
-    <meta property="og:site_name" content="<%= siteData.siteTitle %>">
-    <meta property="og:locale" content="en_US">
-    <meta property="article:author" content="<%= siteData.author %>">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="<%= siteData.siteUrl %>">
-    <meta name="twitter:title" content="<%= siteData.siteTitle %>">
-    <meta name="twitter:description" content="<%= siteData.description %>">
-    <% if (siteData.previewImageUrl) { %>
-    <meta name="twitter:image" content="<%= siteData.previewImageUrl %>">
-    <% } %>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163306694-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-163306694-1');
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  </head>
+  <meta charset="utf-8">
+  <title><%= siteData.siteTitle %></title>
+  <%= require('ejs-loader!../components/gtm/gtmHead.html')({ siteData: siteData }) %>
+  <meta name="description" content="<%= siteData.description %>">
+  <meta name="viewport" content="width=device-width">
+  <meta name="theme-color" content="#18183C">
+  <meta name="author" content="<%= siteData.author %>">
+  <meta name="keywords" content="<%= siteData.keywords %>">
+  <meta property="og:url" content="<%= siteData.siteUrl %>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= siteData.siteTitle %>">
+  <% if (siteData.previewImageUrl) { %>
+  <meta property="og:image" content="<%= siteData.previewImageUrl %>">
+  <% } %>
+  <meta property="og:description" content="<%= siteData.description %>">
+  <meta property="og:site_name" content="<%= siteData.siteTitle %>">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:author" content="<%= siteData.author %>">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="<%= siteData.siteUrl %>">
+  <meta name="twitter:title" content="<%= siteData.siteTitle %>">
+  <meta name="twitter:description" content="<%= siteData.description %>">
+  <% if (siteData.previewImageUrl) { %>
+  <meta name="twitter:image" content="<%= siteData.previewImageUrl %>">
+  <% } %>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>

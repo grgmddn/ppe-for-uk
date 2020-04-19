@@ -36,8 +36,7 @@
         #{$c}__itemTitle {
           line-height: 1rem;
           margin-bottom: 0.5rem;
-          text-transform: uppercase;
-          letter-spacing: 0.2px;
+          @include fontDisplay;
         }
       } 
     }

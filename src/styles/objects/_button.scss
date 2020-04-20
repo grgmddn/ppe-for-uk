@@ -68,6 +68,12 @@
       background-color: $white;
       color: $brand;
       border-color: $brand;
+
+      &:hover {
+        color: $white;
+        background-color: $nhsBlue;
+        border-color: $nhsBlue;
+      }
     }
     &#{$o}--small {
       font-size: $pico;

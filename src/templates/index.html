@@ -26,7 +26,6 @@
                       <a class="o-button o-button--fill o-button--masthead" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_masthead">Donate now</a>
                       <a class="o-button o-button--masthead" href="#why-this-campaign">Read more</a>
                     </div>
-                    <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'inverted' }) %>
                   </div>
                 </div>
               </div>
@@ -34,6 +33,14 @@
 
         </div>
       </section>
+
+      <div class="o-section o-section--grey">
+        <div class="o-block">
+          <div class="o-block__container">
+            <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
+          </div>
+        </div>
+      </div>
 
       <div class="c-tour">
 
@@ -249,13 +256,15 @@
               </div>
             </div>
           </div>
-          <div class="c-cta__section">
-            <div class="o-inner">
-              <%= require('ejs-loader!../components/share.html')({ siteData: siteData }) %>
-            </div>
-          </div>
         </div>
       </section>
+      <div class="o-section o-section--grey">
+        <div class="o-block">
+          <div class="o-block__container">
+            <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
+          </div>
+        </div>
+      </div>
       <%= require('ejs-loader!../components/pageFooter.html')({ siteData: siteData }) %>
     </div>
   </body>

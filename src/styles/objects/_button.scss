@@ -26,6 +26,7 @@
     letter-spacing: 0.02em;
     border-radius: 0;
     line-height: 1em;
+    line-height: ($base-em * 3.4);
     text-transform: uppercase;
     text-align: center;
     //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
@@ -114,6 +115,7 @@
   @media (min-width: $viewport-tablet) {
 
     display: inline-block;
+    line-height: 1em;
 
     + #{$o} {
       margin-top: 0;

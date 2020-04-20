@@ -7,7 +7,8 @@
     $c: &;
 
     background: transparent;
-    padding-bottom: 1rem;
+    padding: ($base-em * 2) 0;
+    //padding-bottom: 1rem;
 
     #{$c}__title {
       margin: 0 auto;
@@ -30,7 +31,7 @@
         z-index: $zIndex-6;
 
         &--lead {
-          padding-top: 4rem;
+          //padding-top: 4rem;
         }
       }
     }
@@ -49,7 +50,7 @@
   .c-cta {
     $c: &;
 
-    padding-bottom: 2rem;
+    padding: ($base-em * 4) 0;
 
     #{$c}__title {
       //max-width: colWidth(8);
@@ -68,7 +69,7 @@
       #{$c}__section {
 
         &--lead {
-          margin-bottom: 4rem;
+          //margin-bottom: 4rem;
         }
       }
     }
@@ -79,7 +80,7 @@
   .c-cta {
     $c: &;
 
-    padding-bottom: 4rem;
+    padding: ($base-em * 6) 0;
 
     #{$c}__title {}
 

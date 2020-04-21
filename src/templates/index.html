@@ -1,14 +1,14 @@
 <!doctype html>
 <% var buildDate = new Date() %>
 <html>
-  <%= require('ejs-loader!../components/gtm/gtmBody.html')({ siteData: siteData }) %>
+
   <%= require('ejs-loader!../components/head.html')({ siteData: siteData }) %>
+
   <body class="o-site">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCCHCGR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    <%= require('ejs-loader!../components/gtm/gtmBody.html')({ siteData: siteData }) %>
+
     <%= require('ejs-loader!../components/banner.html')({ siteData: siteData }) %>
+
     <div class="o-site__inner">
 
       <%= require('ejs-loader!../components/pageHeader.html')({ siteData: siteData }) %>

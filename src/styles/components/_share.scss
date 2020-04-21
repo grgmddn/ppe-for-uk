@@ -28,6 +28,7 @@
     }
     #{$c}__link {
       display: inline-block;
+      margin: 0 $base-em;
     }
     #{$c}__button {
       display: block;
@@ -93,25 +94,36 @@
   @media (min-width: $viewport-tablet) {
     display: inline-block;
     text-align: left;
-    line-height: ($base-em * 2);
+    line-height: ($base-em * 4);
     padding: 0 ($base-em * 2);
 
     #{$c}__title {
       display: inline-block;
-      padding: 0 ($base-em / 2) 0 $base-em;
+      margin: 0 $base-em;
+      //padding: 0 ($base-em / 2) 0 $base-em;
     }
     #{$c}__links {
       display: inline-block;
-      padding-right: $base-em;
+      padding: 0;
     }
     #{$c}__link {
       display: inline-block;
+      margin: 0 $base-em;
     }
     #{$c}__button {
       display: block;
+      width: ($base-em * 4);
+      height: ($base-em * 4);
+      line-height: ($base-em * 4);
     }
     #{$c}__icon {
       vertical-align: top;
+    }
+
+    &--banner {
+      padding: ($base-em * 2);
+      text-align: center;
+      width: 100%;
     }
   }
   @media (min-width: $screen-lg) {}  

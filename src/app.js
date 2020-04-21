@@ -18,6 +18,8 @@ const setCookieConsent = () => {
 
     } else {
 
+      cookieConsentBanner.classList.remove('is-hidden');
+
       cookieConsentAcceptButton.addEventListener('click', () => {
 
         Cookies.set(key, true, { expires: 180 });

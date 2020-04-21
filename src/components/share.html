@@ -5,7 +5,7 @@
   if (typeof title == 'undefined') {
     var title = 'Share the message';
   }
-  var twitterUri = encodeURI('https://twitter.com/intent/tweet?text=' + siteData.shareMessage + '&url=' + siteData.siteUrl + '&button_hashtag=' + siteData.primaryHashtag);
+  var twitterUri = encodeURI('https://twitter.com/intent/tweet?text=' + siteData.shareMessage + '&url=' + siteData.siteUrl + '&button_hashtag=' + siteData.primaryHashtag + '&via=' + 'ppefornhs');
   var facebookUri = encodeURI('https://www.facebook.com/sharer/sharer.php?u=' + siteData.siteUrl);
   var linkedinUri = encodeURI('https://www.linkedin.com/shareArticle?mini=true&url=' + siteData.siteUrl + '&title=' + siteData.siteTitle + '&summary=' + siteData.shareMessage + '&source=' + siteData.primaryHashtag);
 %>

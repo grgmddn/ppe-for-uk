@@ -41,9 +41,9 @@ const setCookieConsent = () => {
 const scrollTo = (element) => {
 
   let offset = document.getElementsByClassName('c-pageHeader')[0].offsetHeight;
-  let count = element.getBoundingClientRect().top - offset;
+  let count = (element.getBoundingClientRect().top + window.scrollY) - offset;
 
-  return window.scrollTo({
+  return window.scroll({
     top: count,
     left: 0,
     behavior: 'smooth'

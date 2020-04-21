@@ -65,7 +65,7 @@
       }
     }
     &#{$o}--red {
-      background-color: $white;
+      background-color: transparent;
       color: $brand;
       border-color: $brand;
 
@@ -121,12 +121,15 @@
   @media (min-width: $viewport-tablet) {
 
     display: inline-block;
-    line-height: 1em;
+    //line-height: 1em;
 
     + #{$o} {
       margin-top: 0;
     }
 
+    &#{$o}--small {
+      line-height: 1em;
+    }
     &#{$o}--large {
       font-size: $medium;
     }

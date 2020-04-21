@@ -140,6 +140,7 @@
       width: auto;
       display: inline-block;
       float: none;
+      margin-right: $base-em;
     }
   }
   @media (min-width: $viewport-desktop) {}

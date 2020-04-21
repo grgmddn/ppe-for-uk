@@ -18,6 +18,8 @@ const setCookieConsent = () => {
 
     } else {
 
+      cookieConsentBanner.classList.remove('is-hidden');
+
       cookieConsentAcceptButton.addEventListener('click', () => {
 
         Cookies.set(key, true, { expires: 180 });
@@ -36,7 +38,24 @@ const setCookieConsent = () => {
   }
 };
 
+const scrollTo = (element) => {
+
+  let offset = document.getElementsByClassName('c-pageHeader')[0].offsetHeight;
+  let count = element.getBoundingClientRect().top - offset;
+
+  return window.scrollTo({
+    top: count,
+    left: 0,
+    behavior: 'smooth'
+  });
+};
+
 window.onload = () => {
   console.log(`Application started on ${runTime}`);
   setCookieConsent();
+
+  document.getElementById('read-more').addEventListener('click', (event) => {
+    event.preventDefault();
+    scrollTo(document.getElementById('why-this-campaign'));
+  });
 };

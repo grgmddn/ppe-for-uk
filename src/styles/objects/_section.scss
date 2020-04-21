@@ -9,6 +9,9 @@
     &--centered {
       text-align: center;
     }
+    &--grey {
+      background-color: $lightGrey;
+    }
   }
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {}

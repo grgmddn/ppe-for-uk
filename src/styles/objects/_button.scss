@@ -26,6 +26,7 @@
     letter-spacing: 0.02em;
     border-radius: 0;
     line-height: 1em;
+    line-height: ($base-em * 3.4);
     text-transform: uppercase;
     text-align: center;
     //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
@@ -64,9 +65,15 @@
       }
     }
     &#{$o}--red {
-      background-color: $white;
+      background-color: transparent;
       color: $brand;
       border-color: $brand;
+
+      &:hover {
+        color: $white;
+        background-color: $nhsBlue;
+        border-color: $nhsBlue;
+      }
     }
     &#{$o}--small {
       font-size: $pico;
@@ -114,11 +121,15 @@
   @media (min-width: $viewport-tablet) {
 
     display: inline-block;
+    //line-height: 1em;
 
     + #{$o} {
       margin-top: 0;
     }
 
+    &#{$o}--small {
+      line-height: 1em;
+    }
     &#{$o}--large {
       font-size: $medium;
     }
@@ -129,6 +140,7 @@
       width: auto;
       display: inline-block;
       float: none;
+      margin-right: $base-em;
     }
   }
   @media (min-width: $viewport-desktop) {}

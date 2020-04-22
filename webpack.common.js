@@ -10,6 +10,7 @@ const autoprefixer = require('autoprefixer');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const fetch = require('node-fetch');
+const SiteMapPlugin = require('sitemap-webpack-plugin').default;
 
 const manifest = require(path.join(__dirname, config.manifest));
 
@@ -80,6 +81,20 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
 
   if (isProduction) {
     plugins.push(new UglifyJSPlugin());
+  }
+
+  if (isProduction) {
+    plugins.push(new SiteMapPlugin(manifest.siteUrl, [
+      {
+        path: '/',
+        lastMod: new Date().toISOString(),
+        changeFreq: 'daily',
+        priority: '1.0'
+      }
+     ], {
+      fileName: 'sitemap.xml',
+      priority: '0.8'
+    }));
   }
 
   // then at some point call `resolve()` with the config object:

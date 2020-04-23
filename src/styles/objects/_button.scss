@@ -109,6 +109,32 @@
         color: $white;
       }
     }
+    &#{$o}--fill#{$o}--blue {
+      background-color: $nhsBlue;
+      color: $white;
+      border-color: $nhsBlue;
+
+      &:hover {
+        background-color: $brand;
+        color: $white;
+        border-color: $brand;
+      }
+      &:active:hover,
+      &:active:hover:focus,
+      &:active:focus,
+      &:active {
+        background-color: $black;
+        border-color: $warning;
+        color: $white;
+      }
+    }
+    &#{$o}--masthead {
+      &:hover {
+        background-color: $brand;
+        color: $white;
+        border-color: $brand;
+      }
+    }
   }
   @media (min-width: $viewport-mobile) {
 

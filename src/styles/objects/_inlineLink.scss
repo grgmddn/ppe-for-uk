@@ -7,6 +7,18 @@
     &:hover {
       border-style: solid;
     }
+
+    &#{$o}--red {
+      color: $brand;
+      border-color: $brand;
+    }
+    &:active:hover,
+    &:active:hover:focus,
+    &:active:focus,
+    &:active {
+      color: $grey;
+      border-color: $grey;
+    }
   }
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {}

@@ -20,7 +20,7 @@
     display: block;
     padding: 0.6875em 1.275em 0.6875em;
     box-sizing: border-box;
-    border-width: 2px;
+    border-width: 1px;
     border-style: solid;
     border-color: $white;
     letter-spacing: 0.02em;
@@ -29,16 +29,12 @@
     line-height: ($base-em * 3.4);
     text-transform: uppercase;
     text-align: center;
-    //	transition: background-color linear 20ms, border-color linear 200ms, color linear 200ms, box-shadow 200ms;
+    border-radius: 5px;
+    position: relative;
 
     @include enable;
     @include antialias;
 
-    + #{$o} {
-    //  margin-top: 0.5rem;
-    }
-    //&:active,
-    //&:focus,
     &:hover {
     	color: $white;
     	background-color: $nhsBlue;
@@ -46,12 +42,13 @@
     }
     &:active:hover,
     &:active:hover:focus,
-    //&:hover:focus,
     &:active:focus,
     &:active {
+      top: 2px;
       background-color: $black;
       border-color: $warning;
       color: $white;
+      outline: 3px solid transparent;
     }
     &[disabled] {
       cursor: not-allowed;
@@ -77,6 +74,7 @@
     }
     &#{$o}--small {
       font-size: $pico;
+      border-radius: 2px;
     }
     &#{$o}--large {
       font-size: $small;
@@ -101,6 +99,14 @@
         background-color: $nhsBlue;
         color: $white;
         border-color: $nhsBlue;
+      }
+      &:active:hover,
+      &:active:hover:focus,
+      &:active:focus,
+      &:active {
+        background-color: $black;
+        border-color: $warning;
+        color: $white;
       }
     }
   }

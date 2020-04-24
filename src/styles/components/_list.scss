@@ -112,8 +112,10 @@
   @media (min-width: $screen-sm) {}
   @media (max-width: $screen-md - 1) {
     
-    #{$c}__item {
-      margin-bottom: ($base-em * 2);
+    &--image {
+      #{$c}__item {
+        margin-bottom: ($base-em * 2);
+      }
     }
   }
   @media (min-width: $screen-md) {

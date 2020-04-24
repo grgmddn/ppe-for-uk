@@ -122,6 +122,10 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
 
     module: {
       rules: [
+        {
+          test: /\.html$/,
+          loader: 'underscore-template-loader'
+        },
         { 
           test: /\.js?$/,
           exclude: /node_modules/,
@@ -167,6 +171,18 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
               }
             }
           ]
+        }, {
+          test: /\.(jpe?g|gif)$/i,
+          loader: 'file-loader',
+          options: {
+            name: isProduction() ? '[contenthash].[ext]' : '[path][name].[ext]'
+          }
+        }, {
+          test: /\.png$/,
+          loader: 'url-loader?mimetype=image/png',
+          options: {
+            name: isProduction() ? '[contenthash].[ext]' : '[path][name].[ext]'
+          }
         }
       ]
     },

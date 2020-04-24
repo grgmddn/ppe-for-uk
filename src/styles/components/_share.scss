@@ -35,6 +35,7 @@
       width: ($base-em * 3);
       height: ($base-em * 3);
       line-height: ($base-em * 3);
+
       //padding: $base-em;
       //border-bottom: 2px solid transparent;
 
@@ -42,20 +43,7 @@
         //border-bottom: 2px solid $white;
 
         #{$c}__icon {
-          //fill: $black;
-
-          &--twit {
-            fill: $twitterBlue;
-          }
-          &--face {
-            fill: $facebookBlue;
-          }
-          &--link {
-            fill: $linkedInBlue;
-          }
-          &--what {
-            fill: $whatsAppGreen;
-          }
+          fill: $black;
         }
       }
       &:hover:active,
@@ -65,16 +53,33 @@
         //border-bottom: 2px solid $warning;
 
         #{$c}__icon {
-          fill: $black;
+          //fill: $black;
         }
       }
     }
     #{$c}__icon {
-      fill: $black;
+      //fill: $black;
       vertical-align: middle;
 
       .g {
         fill: $white;
+      }
+
+      &--twit {
+        
+        fill: $twitterBlue;
+      }
+      &--face {
+        
+        fill: $facebookBlue;
+      }
+      &--link {
+        
+        fill: $linkedInBlue;
+      }
+      &--what {
+        
+        fill: $whatsAppGreen;
       }
     }
 

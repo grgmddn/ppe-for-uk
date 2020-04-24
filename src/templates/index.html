@@ -24,7 +24,7 @@
                     <p class="o-title__byline c-masthead__byline">Help us raise the money to get desperately needed supplies to doctors, nurses and surgeons on the frontlines.</p>
                     <div class="c-masthead__buttons">
                       <a class="o-button o-button--fill o-button--blue o-button--masthead" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_masthead">Donate now</a>
-                      <a class="o-button o-button--masthead" href="#why-this-campaign" id="read-more">Read more</a>
+                      <a class="o-button o-button--masthead" href="#why-this-campaign" id="read-more" data-event-id="read-more">Read more</a>
                     </div>
                   </div>
                 </div>
@@ -37,7 +37,7 @@
       <div class="o-section o-section--grey">
         <div class="o-block">
           <div class="o-block__container">
-            <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
+            <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message', location: 'section_masthead' }) %>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
               <div class="o-block__container u-centered">
                 <div class="o-inner">
                   <a class="o-button o-button--fill o-button--red" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_why">Donate now</a>
-                  <%= require('../components/share.html')({ siteData: siteData }) %>
+                  <%= require('../components/share.html')({ siteData: siteData, location: 'section_why' }) %>
                 </div>
               </div>
             </div>
@@ -277,7 +277,7 @@
       <div class="o-section o-section--grey">
         <div class="o-block">
           <div class="o-block__container">
-            <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
+            <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message', location: 'section_footer' }) %>
           </div>
         </div>
       </div>

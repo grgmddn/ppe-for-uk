@@ -102,8 +102,20 @@
         }
       }
     }
+    &--image {
+
+      #{$c}__itemTitle {
+        margin-top: ($base-em * 0.5);
+      }
+    }
   }
   @media (min-width: $screen-sm) {}
+  @media (max-width: $screen-md - 1) {
+    
+    #{$c}__item {
+      margin-bottom: ($base-em * 2);
+    }
+  }
   @media (min-width: $screen-md) {
     
     &--boxes {

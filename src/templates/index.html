@@ -2,16 +2,16 @@
 <% var buildDate = new Date() %>
 <html>
 
-  <%= require('ejs-loader!../components/head.html')({ siteData: siteData }) %>
+  <%= require('../components/head.html')({ siteData: siteData }) %>
 
   <body class="o-site">
-    <%= require('ejs-loader!../components/gtm/gtmBody.html')({ siteData: siteData }) %>
+    <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %>
 
-    <%= require('ejs-loader!../components/banner.html')({ siteData: siteData }) %>
+    <%= require('../components/banner.html')({ siteData: siteData }) %>
 
     <div class="o-site__inner">
 
-      <%= require('ejs-loader!../components/pageHeader.html')({ siteData: siteData }) %>
+      <%= require('../components/pageHeader.html')({ siteData: siteData }) %>
 
       <section class="o-section c-masthead">
         <div class="c-masthead__overlay">
@@ -23,7 +23,7 @@
                     <h2 class="o-title__headline c-masthead__headline">Our <span class="c-nhs">NHS</span> staff do not have the protective equipment they need in the fight against COVID-19. Together we can change that.</h2>
                     <p class="o-title__byline c-masthead__byline">Help us raise the money to get desperately needed supplies to doctors, nurses and surgeons on the frontlines.</p>
                     <div class="c-masthead__buttons">
-                      <a class="o-button o-button--fill o-button--masthead" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_masthead">Donate now</a>
+                      <a class="o-button o-button--fill o-button--blue o-button--masthead" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_masthead">Donate now</a>
                       <a class="o-button o-button--masthead" href="#why-this-campaign" id="read-more">Read more</a>
                     </div>
                   </div>
@@ -37,7 +37,7 @@
       <div class="o-section o-section--grey">
         <div class="o-block">
           <div class="o-block__container">
-            <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
+            <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
           </div>
         </div>
       </div>
@@ -78,7 +78,7 @@
               <div class="o-block__container u-centered">
                 <div class="o-inner">
                   <a class="o-button o-button--fill o-button--red" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="section_why">Donate now</a>
-                  <%= require('ejs-loader!../components/share.html')({ siteData: siteData }) %>
+                  <%= require('../components/share.html')({ siteData: siteData }) %>
                 </div>
               </div>
             </div>
@@ -150,28 +150,38 @@
                   </div>
                 </div>
 
+              </div>
+              <div class="o-block__container o-block__container--12">
+
                 <div class="o-sp__2"></div>
 
-                <div class="c-list c-list--bullets">
-                  <div class="o-inner">
-                    <div class="o-title o-title--small c-list__title">
-                      <h4 class="o-title__headline">Our members include:</h4>
-                    </div>
-                    <ul class="c-list__items">
-                      <li class="c-list__item">
-                        <h5 class="c-list__itemTitle">Xinjie Ma</h5>
-                        <p>Co-founder @<a class="o-inlineLink" href="https://rct.studio?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">rctstudio</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>. <a class="o-inlineLink" href="http://www.forbeschina.com/entrepreneur/44597" target="_blank">China</a> & <a class="o-inlineLink" href="https://www.forbes.com/profile/rct-studio/" target="_blank">Asia</a> @Forbes30Under30.</p>
-                      </li>
-                      <li class="c-list__item">
-                        <h5 class="c-list__itemTitle">George Madden</h5>
-                        <p>Founder @<a class="o-inlineLink" href="https://pricetracker.pilot.money?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">pilot</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>, served @<a class="o-inlineLink" href="https://www.army.mod.uk/who-we-are/corps-regiments-and-units/infantry/london-regiment/" target="_blank">BritishArmyReserve</a>.</p>
-                      </li>
-                      <li class="c-list__item">
-                        <h5 class="c-list__itemTitle">Dr. Tara H. Verity, MB BChir, MRCGP, DCH, DRCOG</h5>
-                        <p>General Practitioner (GP) at <a class="o-inlineLink" href="https://www.caddingtonsurgery.co.uk/" target="_blank">Caddington Surgery</a>. Qualified 1991 @<a class="o-inlineLink" href="https://www.medschl.cam.ac.uk/" target="_blank">Cambridge</a>, worked in hospitals and General Practice in inner London.</p>
-                      </li>
-                    </ul>
+                <div class="c-list c-list--image">
+                  <div class="o-title o-title--small c-list__title u-visuallyHidden">
+                    <h4 class="o-title__headline">Our members include:</h4>
                   </div>
+                  <ul class="o-block c-list__items">
+                    <li class="o-block__container o-block__container--4 o-title o-title--small c-list__item">
+                      <div class="o-inner">
+                        <img class="c-list__itemImage" src="<%= require('../images/team/xinjie.jpeg').default %>">
+                        <h5 class="o-title__headline c-list__itemTitle">Xinjie Ma</h5>
+                        <p>Xinjie is co-founder @<a class="o-inlineLink" href="https://rct.studio?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">rctstudio</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>. <a class="o-inlineLink" href="http://www.forbeschina.com/entrepreneur/44597" target="_blank">China</a> & <a class="o-inlineLink" href="https://www.forbes.com/profile/rct-studio/" target="_blank">Asia</a> @Forbes30Under30.</p>
+                      </div>
+                    </li>
+                    <li class="o-block__container o-block__container--4 o-title o-title--small c-list__item">
+                      <div class="o-inner">
+                        <img class="c-list__itemImage" src="<%= require('../images/team/george.jpeg').default %>">
+                        <h5 class="o-title__headline c-list__itemTitle">George Madden</h5>
+                        <p>George is founder @<a class="o-inlineLink" href="https://pricetracker.pilot.money?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">pilot</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>, served @<a class="o-inlineLink" href="https://www.army.mod.uk/who-we-are/corps-regiments-and-units/infantry/london-regiment/" target="_blank">BritishArmyReserve</a>.</p>
+                      </div>
+                    </li>
+                    <li class="o-block__container o-block__container--4 o-title o-title--small c-list__item">
+                      <div class="o-inner">
+                        <img class="c-list__itemImage" src="<%= require('../images/team/tara.png').default %>">
+                        <h5 class="o-title__headline c-list__itemTitle">Dr. Tara H. Verity, MB BChir, MRCGP, DCH, DRCOG</h5>
+                        <p>Tara is a General Practitioner (GP) at <a class="o-inlineLink" href="https://www.caddingtonsurgery.co.uk/" target="_blank">Caddington Surgery</a>. Qualified 1991 @<a class="o-inlineLink" href="https://www.medschl.cam.ac.uk/" target="_blank">Cambridge</a>, worked in hospitals and General Practice in inner London.</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
 
                 <div class="o-sp__2"></div>
@@ -267,11 +277,11 @@
       <div class="o-section o-section--grey">
         <div class="o-block">
           <div class="o-block__container">
-            <%= require('ejs-loader!../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
+            <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message' }) %>
           </div>
         </div>
       </div>
-      <%= require('ejs-loader!../components/pageFooter.html')({ siteData: siteData }) %>
+      <%= require('../components/pageFooter.html')({ siteData: siteData }) %>
     </div>
   </body>
 </html>

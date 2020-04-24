@@ -129,6 +129,8 @@
       }
     }
     &#{$o}--masthead {
+      font-weight: 700;
+      
       &:hover {
         background-color: $brand;
         color: $white;
@@ -145,17 +147,19 @@
   @media (max-width: $viewport-tablet - 1) {
     
     &#{$o}--masthead {
-      width: 50%;
+      width: calc(50% - #{$base-em / 2});
       display: inline-block;
       float: left;
 
       &:first-child {
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
+        //border-bottom-right-radius: 0;
+        //border-top-right-radius: 0;
+        margin-right: ($base-em / 2);
       }
       &:last-child {
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
+        margin-left: ($base-em / 2);
+        //border-bottom-left-radius: 0;
+        //border-top-left-radius: 0;
       }
     }
   }

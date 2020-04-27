@@ -190,4 +190,7 @@
   }
   @media (min-width: $viewport-desktop) {}
   @media (min-width: $viewport-desktop-lg) {}
+  @include mobileLandscape {
+    width: auto;
+  }
 }

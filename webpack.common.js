@@ -183,6 +183,9 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
           options: {
             name: isProduction() ? '[contenthash].[ext]' : '[path][name].[ext]'
           }
+        },  {
+          test: /\.mp4$/,
+          use: 'file-loader?name=videos/[name].[ext]',
         }
       ]
     },

@@ -7,8 +7,8 @@
     display: block;
     margin: auto;
     z-index: $zIndex-3;
-    background-color: $brandSecond;
-    color: $white;
+    background-color: $brandPink;
+    color: $brand;
 
     #{$c}__overlay {
       margin: 0 auto;
@@ -23,10 +23,6 @@
     #{$c}__title {
       position: relative;
       margin: 2rem auto 2rem;
-
-      &--centered {
-        text-align: center;
-      }
     }
     #{$c}__headline {
 
@@ -42,6 +38,13 @@
       }
       a {
         border-bottom: 1px solid $white;
+      }
+    }
+    &--centered {
+      text-align: center;
+
+      #{$c}__title {
+        text-align: center;
       }
     }
   }

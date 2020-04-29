@@ -8,6 +8,8 @@
 
     background: transparent;
     padding: ($base-em * 2) 0;
+    position: relative;
+    @include zIndex(4);
     //padding-bottom: 1rem;
 
     #{$c}__title {
@@ -33,6 +35,19 @@
         &--lead {
           //padding-top: 4rem;
         }
+      }
+    }
+    &--challenge {
+
+      #{$c}__section {
+        margin-bottom: $base-em;
+
+        &--lead {
+          margin-bottom: $base-em;
+        }
+      }
+      #{$c}__title {
+        margin-bottom: $base-em;
       }
     }
   }
@@ -73,6 +88,17 @@
         }
       }
     }
+    &--challenge {
+      margin-top: -($base-em * 2);
+      padding-top: 0;
+
+      #{$c}__section {
+
+        //&--lead {
+          margin-bottom: ($base-em * 2);
+        //}
+      }
+    }
   }
 }
 @media (min-width: $viewport-desktop) {
@@ -94,6 +120,17 @@
         display: inline-block;
       }
       #{$c}__section {}
+    }
+    &--challenge {
+      margin-top: -($base-em * 2);
+      padding-top: 0;
+
+      #{$c}__section {
+
+        // /&--lead {
+          margin-bottom: ($base-em * 2);
+        // /}
+      }
     }
   }
 }

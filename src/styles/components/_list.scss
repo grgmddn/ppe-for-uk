@@ -44,7 +44,7 @@
 
       #{$c}__item {
         box-sizing: border-box;
-        border: 1px solid $lightGrey;
+        //border: 1px solid $lightGrey;
         padding: ($base-em * 2) $base-em ($base-em * 2);
         font-size: $small;
         line-height: 1.5em;
@@ -65,7 +65,7 @@
         }
 
         &:nth-child(even) {
-          background-color: $lightGrey;
+          //background-color: $lightGrey;
         }
       }
       #{$c}__itemTitle {

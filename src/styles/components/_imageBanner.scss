@@ -1,0 +1,17 @@
+.c-imageBanner {
+  $c: &;
+  
+  @media all {}
+  @media (min-width: $viewport-mobile) {}
+  @media (max-width: $viewport-tablet - 1) {
+    width: 150%;
+    margin-left: -25%;
+
+    #{$c}__item {
+      width: 33.33%;
+    }
+  }
+  @media (min-width: $viewport-tablet) {}
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+}

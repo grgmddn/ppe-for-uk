@@ -25,15 +25,6 @@
       float: left;
       //line-height: 0;
     }
-
-    &--centered {
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-box-pack: center!important;
-      -ms-flex-pack: center!important;
-      justify-content: center!important;
-    }
   }
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {
@@ -92,6 +83,19 @@
       &--12 {
         width: colWidth(12);
       }
+    }
+    &--centered {
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: center!important;
+      -ms-flex-pack: center!important;
+      justify-content: center!important;
+    }
+    &--verticalCentered {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     &--sticky {
       position: sticky;

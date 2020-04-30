@@ -14,7 +14,7 @@
     color: inherit;
     color: $white;
     font-size: $base-em;
-    font-weight: 500;
+    font-weight: 700;
     cursor: pointer;
     line-height: 1.375em;
     display: block;
@@ -129,7 +129,6 @@
       }
     }
     &#{$o}--masthead {
-      font-weight: 700;
       
       &:hover {
         background-color: $brand;

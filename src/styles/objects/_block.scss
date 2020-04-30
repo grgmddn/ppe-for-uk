@@ -25,6 +25,18 @@
       float: left;
       //line-height: 0;
     }
+
+    &--trio {
+      text-align: center;
+
+      #{$o}__container {
+        margin-bottom: ($base-em * 4);
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {
@@ -104,6 +116,13 @@
     &--justify {
       display: flex;
       justify-content: center;
+    }
+    &--trio {
+      text-align: left;
+
+      #{$o}__container {
+        margin-bottom: 0;
+      }
     }
   }
   @media (min-width: $viewport-desktop) {

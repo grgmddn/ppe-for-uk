@@ -93,10 +93,11 @@
       padding-top: 0;
 
       #{$c}__section {
+        margin-bottom: ($base-em * 2);
 
-        //&--lead {
-          margin-bottom: ($base-em * 2);
-        //}
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -106,7 +107,7 @@
   .c-cta {
     $c: &;
 
-    padding: ($base-em * 6) 0;
+    padding: ($base-em * 4) 0;
 
     #{$c}__title {}
 
@@ -126,10 +127,11 @@
       padding-top: 0;
 
       #{$c}__section {
+        margin-bottom: ($base-em * 2);
 
-        // /&--lead {
-          margin-bottom: ($base-em * 2);
-        // /}
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

@@ -56,6 +56,6 @@ window.onload = () => {
 
   document.getElementById('read-more').addEventListener('click', (event) => {
     event.preventDefault();
-    scrollTo(document.getElementById('why-this-campaign'));
+    scrollTo(document.getElementById('what-is-this-campaign'));
   });
 };

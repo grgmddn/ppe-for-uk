@@ -29,6 +29,9 @@
         padding: 0;
       }
     }
+    &--pink {
+      background-color: $brandPink;
+    }
   }
 }
 @media (min-width: $viewport-mobile) {}

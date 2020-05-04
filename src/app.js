@@ -5,7 +5,7 @@ import './styles/main.scss';
 
 const runTime = new Date();
 
-const setCookieConsent = () => {
+export const setCookieConsent = () => {
   let key = 'cookie_consent_accepted';
   let cookieConsentBanner = document.getElementById('cookieConsent');
   let cookieConsentAcceptButton = document.getElementById('cookieConsentAccept');

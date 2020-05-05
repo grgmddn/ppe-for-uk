@@ -18,10 +18,9 @@ import Head from '../components/head'
 import PageHeader from '../components/pageHeader'
 import Banner from '../components/banner'
 import PageFooter from '../components/pageFooter'
+import Share from '../components/share'
 
 // <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %>
-// <%= require('../components/share.html')({ siteData: siteData, location: 'section_why' }) %>
-// <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message', location: 'section_footer' }) %>
 
 export default function Home() {
   const buildDate = new Date()
@@ -199,6 +198,7 @@ export default function Home() {
                   <div className="o-block__container u-centered">
                     <div className="o-inner">
                       <a className="o-button o-button--fill o-button--red" href={JSONData.externalLinks.donate} target="_blank" data-event-id="donate" data-label="section_why">Donate now</a>
+                      <Share share_class='c-share' title='Share the message' location='section_why' />
                     </div>
                   </div>
                 </div>
@@ -397,6 +397,7 @@ export default function Home() {
           <div className="o-section o-section--grey">
             <div className="o-block">
               <div className="o-block__container">
+                <Share share_class='c-share c-share--banner' title='Help share the message' location='section_footer' />
               </div>
             </div>
           </div>

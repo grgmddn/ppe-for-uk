@@ -28,8 +28,12 @@
       height: auto;
     }
 
-    ul {
+    ul, li {
       list-style: none;
+    }
+
+    h1 {
+      margin: 0;
     }
   }
 }

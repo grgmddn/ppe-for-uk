@@ -33,8 +33,8 @@ export default function Home() {
   return (
     <>
       <Head />
-      <Banner />
       <main className='o-site'>
+        <Banner />
         <div className="o-site__inner">
           <PageHeader />
           <section className="o-section c-masthead c-masthead--centered">

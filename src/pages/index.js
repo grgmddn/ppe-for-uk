@@ -10,13 +10,11 @@ import JSONData from '../../data/manifest.json'
 import Head from '../components/head'
 import PageHeader from '../components/pageHeader'
 import Banner from '../components/banner'
+import PageFooter from '../components/pageFooter'
 
 // <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %>
-// <%= require('../components/banner.html')({ siteData: siteData }) %>
-// <%= require('../components/pageHeader.html')({ siteData: siteData }) %>
 // <%= require('../components/share.html')({ siteData: siteData, location: 'section_why' }) %>
 // <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message', location: 'section_footer' }) %>
-// <%= require('../components/pageFooter.html')({ siteData: siteData }) %>
 
 export default function Home() {
   const buildDate = new Date()
@@ -29,7 +27,7 @@ export default function Home() {
     <>
       <Head />
       <Banner />
-      <main>
+      <main className='o-site'>
         <div className="o-site__inner">
           <PageHeader />
           <section className="o-section c-masthead c-masthead--centered">
@@ -395,6 +393,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <PageFooter />
         </div>
       </main>
     </>

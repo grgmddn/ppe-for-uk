@@ -3,8 +3,15 @@ import React from 'react'
 //styles
 import '../styles/main.scss';
 
-//data
+//data and assets
 import JSONData from '../../data/manifest.json'
+import arshib0ld from '../images/challenge/arshib0ld.jpg'
+import mannyprime from '../images/challenge/mannyprime.jpg'
+import friends from '../images/k.jpg'
+import xinjie from '../images/team/xinjie.jpeg'
+import george from '../images/team/george.jpeg'
+import tara from '../images/team/tara.png'
+import video from '../assets/video/esme.mp4'
 
 //components
 import Head from '../components/head'
@@ -64,19 +71,19 @@ export default function Home() {
               <div className="o-block o-block--centered o-block--verticalCentered c-imageBanner">
                 <div className="o-block__container o-block__container--3 c-imageBanner__item">
                   <div className="o-inner">
-                    <img alt="@arshib0ld with DIY plastic wrapper PPE via @PPEforNHS Instagram" src="../images/challenge/94965793_249058596453308_5857159278614306724_n.jpg" className="o-asset" />
+                    <img alt="@arshib0ld with DIY plastic wrapper PPE via @PPEforNHS Instagram" src={arshib0ld} className="o-asset" />
                   </div>
                 </div>
                 <div className="o-block__container o-block__container--4 c-imageBanner__item">
                   <div className="o-inner">
                     <video autoPlay={true} loop muted poster="" className="o-asset">
-                      <source src="../assets/video/esme.mp4" type="" className="o-video__source" />
+                      <source src={video} type="" className="o-video__source" />
                     </video>
                   </div>
                 </div>
                 <div className="o-block__container o-block__container--3 c-imageBanner__item">
                   <div className="o-inner">
-                    <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src="../images/challenge/94709192_861930514322472_7348341589978922574_n.jpg" className="o-asset" />
+                    <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src={mannyprime} className="o-asset" />
                   </div>
                 </div>
               </div>
@@ -118,7 +125,7 @@ export default function Home() {
                   </div>
                   <div className="o-block__container o-block__container--5">
                     <div className="o-inner">
-                      <img alt="Some of our closest friends treating covid-19 patients. Please help us protect them." src="../images/k.jpg" className="o-asset u-mp-2" />
+                      <img alt="Some of our closest friends treating covid-19 patients. Please help us protect them." src={friends} className="o-asset u-mp-2" />
                       <div className="o-sp__2"></div>
                     </div>
                   </div>
@@ -275,21 +282,21 @@ export default function Home() {
                       <ul className="o-block c-list__items">
                         <li className="o-block__container o-block__container--4 o-title o-title--small c-list__item">
                           <div className="o-inner">
-                            <img alt="Xinjie Ma, founder at rct studio" className="c-list__itemImage" src="../images/team/xinjie.jpeg" />
+                            <img alt="Xinjie Ma, founder at rct studio" className="c-list__itemImage" src={xinjie} />
                             <h5 className="o-title__headline c-list__itemTitle">Xinjie Ma</h5>
                             <p>Xinjie is co-founder @<a className="o-inlineLink" href="https://rct.studio?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">rctstudio</a>, studied @<a className="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>. <a className="o-inlineLink" href="http://www.forbeschina.com/entrepreneur/44597" target="_blank">China</a> & <a className="o-inlineLink" href="https://www.forbes.com/profile/rct-studio/" target="_blank">Asia</a> @Forbes30Under30.</p>
                           </div>
                         </li>
                         <li className="o-block__container o-block__container--4 o-title o-title--small c-list__item">
                           <div className="o-inner">
-                            <img alt="George Madden, founder at pilot" className="c-list__itemImage" src="../images/team/george.jpeg" />
+                            <img alt="George Madden, founder at pilot" className="c-list__itemImage" src={george} />
                             <h5 className="o-title__headline c-list__itemTitle">George Madden</h5>
                             <p>George is founder @<a className="o-inlineLink" href="https://pricetracker.pilot.money?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">pilot</a>, studied @<a className="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>, served @<a className="o-inlineLink" href="https://www.army.mod.uk/who-we-are/corps-regiments-and-units/infantry/london-regiment/" target="_blank">BritishArmyReserve</a>.</p>
                           </div>
                         </li>
                         <li className="o-block__container o-block__container--4 o-title o-title--small c-list__item">
                           <div className="o-inner">
-                            <img alt="Dr. Tara H Verity, GP" className="c-list__itemImage" src="../images/team/tara.png" />
+                            <img alt="Dr. Tara H Verity, GP" className="c-list__itemImage" src={tara} />
                             <h5 className="o-title__headline c-list__itemTitle">Dr. Tara H. Verity, MB BChir, MRCGP, DCH, DRCOG</h5>
                             <p>Tara is a General Practitioner (GP) at <a className="o-inlineLink" href="https://www.caddingtonsurgery.co.uk/" target="_blank">Caddington Surgery</a>. Qualified 1991 @<a className="o-inlineLink" href="https://www.medschl.cam.ac.uk/" target="_blank">Cambridge</a>, worked in hospitals and General Practice in inner London.</p>
                           </div>

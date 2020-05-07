@@ -2,9 +2,6 @@ import React, { Component } from 'react'
 import Cookies from 'js-cookie';
 import 'reset-css';
 
-//styles
-import '../styles/main.scss'
-
 //data and assets
 import JSONData from '../../data/manifest.json'
 import arshib0ld from '../images/challenge/arshib0ld.jpg'

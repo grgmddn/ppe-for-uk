@@ -1,5 +1,9 @@
 import React from 'react'
 
+//styles
+import '../styles/main.scss'
+
+//components
 import Head from '../components/head'
 import PageHeader from '../components/pageHeader'
 import Banner from '../components/banner'

@@ -16,8 +16,6 @@ import video from '../assets/video/esme.mp4'
 import Layout from '../components/layout'
 import Share from '../components/share'
 
-// <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %>
-
 class Home extends Component {
   constructor() {
     super()

@@ -14,6 +14,7 @@ export default function Layout({ children }) {
     <>
         <Head />
         <main className='o-site'>
+            {/* <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %> */}
             <Banner />
             <div className="o-site__inner">
                 <PageHeader />

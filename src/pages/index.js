@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Cookies from 'js-cookie';
+import 'reset-css';
 
 //styles
 import '../styles/main.scss'
@@ -27,9 +28,12 @@ class Home extends Component {
   constructor() {
     super()
 
-    this.setCookieConsent = this.setCookieConsent.bind(this);
+    this.setCookieConsent = this.setCookieConsent.bind(this)
+    this.scrollTo = this.scrollTo.bind(this)
+    this.readMoreClick = this.readMoreClick.bind(this)
 
     const buildDate = new Date()
+    this.runTime = buildDate
     this.weekday = buildDate.toLocaleString('en-US', { weekday: 'long' })
     this.date = buildDate.getDate()
     this.month = buildDate.toLocaleString('en-US', { month: 'long' })
@@ -37,41 +41,59 @@ class Home extends Component {
   }
 
   componentDidMount() {
+    console.log(`Application started on ${this.runTime}`)
     this.setCookieConsent()
   }
 
   setCookieConsent() {
     let key = 'cookie_consent_accepted';
-    let cookieConsentBanner = document.getElementById('cookieConsent');
-    let cookieConsentAcceptButton = document.getElementById('cookieConsentAccept');
+    let cookieConsentBanner = document.getElementById('cookieConsent')
+    let cookieConsentAcceptButton = document.getElementById('cookieConsentAccept')
   
     if (cookieConsentBanner && cookieConsentAcceptButton) {
   
       if (Cookies.get(key)) {
   
-        cookieConsentBanner.classList.add('is-hidden');
+        cookieConsentBanner.classList.add('is-hidden')
   
       } else {
   
-        cookieConsentBanner.classList.remove('is-hidden');
+        cookieConsentBanner.classList.remove('is-hidden')
   
         cookieConsentAcceptButton.addEventListener('click', () => {
   
-          Cookies.set(key, true, { expires: 180 });
+          Cookies.set(key, true, { expires: 180 })
   
           if (Cookies.get(key)) {
-            cookieConsentBanner.classList.add('is-hidden');
+            cookieConsentBanner.classList.add('is-hidden')
           } else {
-            console.warn('Unable set cookies.');
+            console.warn('Unable set cookies.')
           }
         });
   
       }
   
     } else {
-      console.warn('No cookie consent banner!');
+      console.warn('No cookie consent banner!')
     }
   };
+
+  scrollTo(element) {
+
+    let offset = document.getElementsByClassName('c-pageHeader')[0].offsetHeight;
+    let count = (element.getBoundingClientRect().top + window.scrollY) - offset;
+  
+    return window.scroll({
+      top: count,
+      left: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  readMoreClick(e) {
+    e.preventDefault();
+    this.scrollTo(document.getElementById('what-is-this-campaign'))
+  }
 
   render() {
     return (
@@ -91,7 +113,7 @@ class Home extends Component {
                           <h2 className="o-title__headline c-masthead__headline">Help get <span className="c-nhs">NHS</span> staff the protective equipment they need in the fight against COVID-19.</h2>
                           <div className="c-masthead__buttons">
                             <a className="o-button o-button--fill o-button--red o-button--masthead" href={JSONData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_masthead">Donate</a>
-                            <a className="o-button o-button--red o-button--masthead" href="#why-this-campaign" id="read-more" data-event-id="read-more">Read more</a>
+                            <a className="o-button o-button--red o-button--masthead" href="#why-this-campaign" id="read-more" data-event-id="read-more" onClick={e => this.readMoreClick(e)}>Read more</a>
                           </div>
                         </div>
                       </div>

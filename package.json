@@ -19,6 +19,10 @@
     "url": "git+https://github.com/grgmddn/ppe-for-uk.git"
   },
   "author": "George Madden",
+  "contributors": [{ "name" : "Léa Subrenat"
+    , "email" : "leasubrenat@protonmail.com"
+    , "url" : "https://www.linkedin.com/in/subrenatlea/"
+    }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/grgmddn/ppe-for-uk/issues"

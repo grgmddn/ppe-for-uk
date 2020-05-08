@@ -6,7 +6,6 @@
   .c-cta {
     $c: &;
 
-    background: transparent;
     padding: ($base-em * 2) 0;
     position: relative;
     @include zIndex(4);
@@ -38,6 +37,7 @@
       }
     }
     &--challenge {
+      overflow: hidden;
 
       #{$c}__section {
         margin-bottom: $base-em;

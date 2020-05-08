@@ -4,24 +4,21 @@ import React from 'react'
 import '../styles/main.scss'
 
 //components
-import Head from '../components/head'
-import PageHeader from '../components/pageHeader'
-import Banner from '../components/banner'
-import PageFooter from '../components/pageFooter'
+import PageHeader from './pageHeader'
+import Banner from './banner'
+import PageFooter from './pageFooter'
+
+// require('../components/gtm/gtmBody.html')({ siteData: siteData })
 
 export default function Layout({ children }) {
   return (
-    <>
-        <Head />
-        <main className='o-site'>
-            {/* <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %> */}
-            <Banner />
-            <div className="o-site__inner">
-                <PageHeader />
-                {children}
-                <PageFooter />
-            </div>
-        </main>
-    </>
+    <main className='o-site'>
+      <Banner />
+      <div className="o-site__inner">
+        <PageHeader />
+        {children}
+        <PageFooter />
+      </div>
+    </main>
   )
 }

@@ -4,7 +4,7 @@
 @media all {
 
   .o-inner {
-    margin: 0 $base-em;
+    margin: 0 ($base-em / 2);
   }
 }
 @media (min-width: $viewport-mobile) {
@@ -16,6 +16,6 @@
 @media (min-width: $viewport-tablet) {
 
   .o-inner {
-    margin: 0 $base-em*2;
+    margin: 0 $base-em;
   }
 }

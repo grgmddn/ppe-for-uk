@@ -48,30 +48,54 @@
         padding: ($base-em * 2) $base-em ($base-em * 2);
         font-size: $small;
         line-height: 1.5em;
+        background-color: $brandPink;
+        border-radius: 6px;
+      }
 
-        &:before {
-          //margin: 0 auto;
-          width: 2rem;
-          height: 2rem;
-          text-align: center;
-          line-height: 2rem;
-          font-size: $base-em;
-          margin-bottom: 1rem;
-          border-radius: 2rem;
-          background-color: $brand;
-          color: $white;
-          content: counter(countz);
-          display: block;
-        }
+      @at-root ol#{&} {
 
-        &:nth-child(even) {
-          //background-color: $lightGrey;
+        #{$c}__item {
+
+          &:before {
+            //margin: 0 auto;
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            font-size: $base-em;
+            margin-bottom: 1rem;
+            border-radius: 2rem;
+            background-color: $brand;
+            color: $white;
+            content: counter(countz);
+            display: block;
+          }
         }
       }
       #{$c}__itemTitle {
         display: inline-block;
         font-weight: 700;
         margin-bottom: 1rem;
+      }
+    }
+    &#{$c}--boxes#{$c}--red {
+
+      #{$c}__item {
+        color: $white;
+        background-color: $brand;
+      }
+    }
+    &#{$c}--boxes#{$c}--white {
+
+      #{$c}__item {
+        background-color: $white;
+      }
+    }
+    &#{$c}--boxes#{$c}--dark {
+
+      #{$c}__item {
+        background-color: $dark;
+        color: $white;
       }
     }
     &--faq {
@@ -108,10 +132,26 @@
         margin-top: ($base-em * 0.5);
       }
     }
+    &--floating {
+      background-color: $white;
+      border-radius: 8px;
+      padding: ($base-em * 2) 0;
+      //filter: drop-shadow(0px 6px 6px rgba(0,0,0,0.22));
+    }
   }
   @media (min-width: $screen-sm) {}
   @media (max-width: $screen-md - 1) {
-    
+
+    &--boxes {
+
+      #{$c}__item {
+        margin-bottom: $base-em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
     &--image {
       #{$c}__item {
         margin-bottom: ($base-em * 2);
@@ -122,14 +162,33 @@
     
     &--boxes {
       display: flex;
+      flex-direction: row;
 
       #{$c}__item {
-        width: colWidth(4);
         float: left;
         padding: ($base-em * 2);
 
         &:before {}
       }
+    }
+    &--boxesx2 {
+      
+      #{$c}__item {
+        width: colWidth(6);
+
+        &:before {}
+      }
+    }
+    &--boxesx3 {
+      
+      #{$c}__item {
+        width: colWidth(4);
+
+        &:before {}
+      }
+    }
+    &--faq {
+      border-radius: 6px;
     }
   }
   @media (min-width: $screen-lg) {}  

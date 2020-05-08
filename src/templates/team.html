@@ -49,7 +49,7 @@
                       <p class="o-title__byline">Our open roles are the most urgent people that we need to help us get PPE into the frontlines as quickly as possible.</p>
                       <p class="o-title__byline">To apply to volunteer, please complete the form below and we will be in touch with you soon. Don't see your role? We are actively seeking out passionate individuals who can help bolster the campaign, so please do complete the form below.</p>
                       <div class="o-sp__2"></div>
-                      <a class="o-button o-button--fill o-button--red" href="https://airtable.com/shrtCNiwmyonFzCXA" target="_blank" data-event-id="join" data-label="section_triage">Apply to Volunteer</a>
+                      <a class="o-button o-button--fill o-button--red" href="https://airtable.com/shrtCNiwmyonFzCXA" target="_blank" data-event-id="join" data-label="team_volunteer">Apply to Volunteer</a>
                     </div>
                   </div>
                   <div class="o-sp__4"></div>
@@ -141,21 +141,48 @@
                       </div>
                     </li>
                   </ul>
-                  <div class="o-sp__2"></div>
-                </div>
-              </div>
-            </div>
-            <div class="o-block o-block--centered">
-              <div class="o-block__inner">
-                <div class="o-block__container">
-                  <div class="o-inner u-centered">
-                    <a class="o-button o-button--red" href="/team">Meet the team</a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+      </div>
+
+      <section class="o-section c-cta c-cta--centered" id="cta">
+        <div class="o-block o-block--centered">
+          <div class="o-block__inner">
+            <div class="o-block__container">
+              <div class="c-cta__section c-cta__section--lead">
+                <div class="o-title o-title--large c-cta__title">
+                  <div class="o-inner">
+                    <h2 class="o-title__headline c-cta__headline">Let's protect our nation's <span class="c-nhs">NHS</span> staff.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-cta__section">
+                <div class="o-inner">
+                  <div class="o-title o-title--small">
+                      <p class="o-title__headline">Your donation has the power to help save lives.</p>
+                      <p class="o-title__byline">Every frontline NHS worker deserves to be properly protected against COVID-19.</p>
+                    </div>
+                    <div class="o-sp__2"></div>
+                    <a class="o-button o-button--fill o-button--red" href="<%= siteData.externalLinks.donate %>" target="_blank" data-event-id="donate" data-label="team_cta">Make a secure donation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="o-section o-section--grey">
+        <div class="o-block">
+          <div class="o-block__inner">
+            <div class="o-block__container">
+              <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message', location: 'section_footer' }) %>
+            </div>
+          </div>
+        </div>
       </div>
 
       <%= require('../components/pageFooter.html')({ siteData: siteData }) %>

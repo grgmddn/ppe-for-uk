@@ -7,8 +7,8 @@
     display: block;
     margin: auto;
     z-index: $zIndex-3;
-    background-color: $brandPink;
-    color: $brand;
+    background-color: transparent;
+    color: $black;
 
     #{$c}__overlay {
       margin: 0 auto;
@@ -46,6 +46,18 @@
       #{$c}__title {
         text-align: center;
       }
+      #{$c}__byline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &--pink {
+      background-color: $brandPink;
+      color: $brand;
+    }
+    &--lead {
+      background-color: $brandPink;
+      color: $black;
     }
   }
   @media (min-width: $viewport-mobile) {}
@@ -73,10 +85,6 @@
     #{$c}__headline {}
     #{$c}__byline {
       margin-bottom: 2.5rem;
-      width: colWidth(8);
-      //font-size: $medium;
-      //line-height: 1.8em;
-      //max-width: colWidth(8);
     }
     #{$c}__buttons {
       display: inline-block;
@@ -89,6 +97,19 @@
     #{$c}__title {}
     #{$c}__headline {}
     #{$c}__byline {}
+
+    &--centered {
+
+      #{$c}__title {
+        width: colWidth(8);
+      }
+      #{$c}__headline {
+        //width: colWidth(8);
+      }
+      #{$c}__byline {
+        //width: colWidth(8);
+      }
+    }
   }
   @media (min-width: $viewport-desktop-lg) {
     #{$c}__overlay {

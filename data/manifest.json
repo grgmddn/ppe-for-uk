@@ -42,5 +42,15 @@
   "externalLinks": {
     "crowdfund":"https://www.crowdfunder.co.uk/ppefornhsuk",
     "donate": "https://www.crowdfunder.co.uk/checkout/ppefornhsuk/details/1785001?donate_amount=20"
-  }
+  },
+  "pages": [
+    {
+      "template": "templates/team.html",
+      "publicUrl": "team"
+    },
+    {
+      "template": "templates/challenge.html",
+      "publicUrl": "challenge"
+    }
+  ]
 }

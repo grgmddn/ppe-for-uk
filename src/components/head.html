@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8">
-  <title><%= siteData.siteTitle %></title>
+  <title><%= typeof pageTitle != 'undefined' ? pageTitle + ' | ' + siteData.siteTitle : siteData.siteTitle %></title>
   <%= require('../components/gtm/gtmHead.html')({ siteData: siteData }) %>
   <meta name="description" content="<%= siteData.description %>">
   <meta name="viewport" content="width=device-width">

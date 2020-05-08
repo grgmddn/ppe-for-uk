@@ -11,13 +11,16 @@
     width: 100%;
     position: relative;
 
-    &:before, &:after {
-      display: table;
-      content: " ";
-      box-sizing: border-box;
-    }
-    &:after {
-      clear: both;
+    #{$o}__inner {
+      margin: 0 ($base-em / 2);
+
+      &:before, &:after {
+        display: table;
+        content: " ";
+      }
+      &:after {
+        clear: both;
+      }
     }
 
     #{$o}__container {
@@ -37,18 +40,28 @@
         }
       }
     }
+    &--grey {
+
+      #{$o}__container {
+        background-color: $lightGrey;
+      }
+    }
   }
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {
 
-    &:before,
-    &:after {
-      display: table;
-      content: " ";
-    }
-    &:after {
-      clear: both;
-    }
+    #{$o}__inner {
+      margin: 0 $base-em;
+
+      &:before,
+      &:after {
+        display: table;
+        content: " ";
+      }
+      &:after {
+        clear: both;
+      }
+    }    
 
     #{$o}__container {
       display: inline-block;
@@ -97,17 +110,23 @@
       }
     }
     &--centered {
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-box-pack: center!important;
-      -ms-flex-pack: center!important;
-      justify-content: center!important;
+
+      #{$o}__inner {
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center!important;
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+      }
     }
     &--verticalCentered {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+      #{$o}__inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
     &--sticky {
       position: sticky;
@@ -124,18 +143,57 @@
         margin-bottom: 0;
       }
     }
+    &--fullWidth {
+      max-width: unset;
+    }
+    &--grey {
+      display: flex;             /* primary flex container */
+      flex-direction: row;       /* horizontal alignment of flex items
+                                        (default value; can be omitted) */
+      align-items: stretch;      /* will apply equal heights to flex items
+                                        (default value; can be omitted) */
+      height: 100%;
+
+      #{$o}__container {
+        background-color: $lightGrey;
+        overflow: hidden;
+        display: flex;             /* nested flex container */
+        flex-direction: column;    /* vertical alignment of flex items */
+        justify-content: center;   /* center flex items vertically */
+        align-items: center;       /* center flex items horizontally */
+
+        &:first-child {
+          border-top-left-radius: 6px;
+          border-bottom-left-radius: 6px;
+        }
+        &:last-child {
+          border-top-right-radius: 6px;
+          border-bottom-right-radius: 6px;
+        }
+      }
+    }
   }
   @media (min-width: $viewport-desktop) {
 
     max-width: 1080px;
-
+    
+    &--fullWidth {
+      max-width: unset;
+    }
   }
   @media (min-width: $viewport-desktop-lg) {
 
-    max-width: 1080px;
-
+    max-width: 1290px;
+    
+    &--fullWidth {
+      max-width: unset;
+    }
   }
   @include mobileLandscape {
     max-width: 540px;
+    
+    &--fullWidth {
+      max-width: unset;
+    }
   }
 }

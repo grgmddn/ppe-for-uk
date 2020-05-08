@@ -161,6 +161,9 @@
         //border-top-left-radius: 0;
       }
     }
+    &#{$o}--inline {
+      display: inline-block;
+    }
   }
   @media (min-width: $viewport-tablet) {
 

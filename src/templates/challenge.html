@@ -1,0 +1,156 @@
+<!doctype html>
+<% var buildDate = new Date(process.env.BUILD_DATE) %>
+<html>
+  <%= require('../components/head.html')({ siteData: siteData, pageTitle: 'DIY PPE Challenge' }) %>
+
+  <body class="o-site">
+    <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %>
+
+    <%= require('../components/banner.html')({ siteData: siteData }) %>
+
+    <div class="o-site__inner">
+
+      <%= require('../components/pageHeader.html')({ siteData: siteData }) %>
+
+      <section class="o-section c-masthead c-masthead--centered c-masthead--pink">
+        <div class="c-masthead__overlay">
+            
+          <div class="o-block o-block--centered">
+            <div class="o-block__inner">
+              <div class="o-block__container o-block__container--9">
+                <div class="o-title o-title--large c-masthead__title c-masthead__title--lead">
+                  <div class="o-inner">
+                    <h2 class="o-title__headline c-masthead__headline">Make your own DIY #PPEforNHS and help save lives!</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="o-section c-cta c-cta--challenge">
+        <div class="c-cta__section c-cta__section--lead">
+          <div class="o-block o-block--centered o-block--verticalCentered c-imageBanner">
+            <div class="o-block__inner">
+              <div class="o-block__container o-block__container--2 c-imageBanner__item">
+                <div class="o-inner">
+                  <a class="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
+                    <img alt="@arshib0ld with DIY plastic wrapper PPE via @PPEforNHS Instagram" src="<%= require('../images/challenge/94658772_908598212917559_7588077742037153577_n.jpg').default %>" class="o-asset__source">
+                  </a>
+                </div>
+              </div>
+              <div class="o-block__container o-block__container--2 c-imageBanner__item">
+                <div class="o-inner">
+                  <a class="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
+                    <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src="<%= require('../images/challenge/94709192_861930514322472_7348341589978922574_n.jpg').default %>" class="o-asset__source">
+                  </a>
+                </div>
+              </div>
+              <div class="o-block__container o-block__container--3 c-imageBanner__item">
+                <div class="o-inner">
+                  <a class="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
+                    <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src="<%= require('../images/challenge/IMG_3484.png').default %>" class="o-asset__source">
+                  </a>
+                </div>
+              </div>
+              <div class="o-block__container o-block__container--2 c-imageBanner__item u-visuallyHiddenMobile">
+                <div class="o-inner">
+                  <a class="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
+                    <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src="<%= require('../images/challenge/94702495_127679072219870_916061611952460755_n.jpg').default %>" class="o-asset__source">
+                  </a>
+                </div>
+              </div>
+              <div class="o-block__container o-block__container--2 c-imageBanner__item u-visuallyHiddenMobile">
+                <div class="o-inner">
+                  <a class="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
+                    <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src="<%= require('../images/challenge/IMG_3494.png').default %>" class="o-asset__source">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="c-tour">
+
+        <section class="o-section c-tour__item c-tourItem c-tourItem--red" id="challenge-steps">
+          <div class="c-tourItem__inner">
+            <div class="o-block">
+              <div class="o-block__inner">
+                <header class="o-title o-title--centered c-tourItem__title">
+                  <div class="o-inner">
+                    <h3 class="o-title__headline c-tourItem__headline">How to join in</h3>
+                  </div>
+                </header>
+              </div>
+            </div>
+
+            <div class="o-block">
+              <div class="o-block__inner">
+                <div class="o-block__container">
+                  <ol class="c-list c-list--boxes">
+                    <li class="c-list__item o-inner">
+                      <h4 class="c-list__itemTitle">Build your DIY protection</h4>
+                      <p>Grab anything around the house and get building your own 'protective equipment'. The more creative the better!</p>
+                    </li>
+                    <li class="c-list__item o-inner">
+                      <h4 class="c-list__itemTitle">Share, tag & nominate</h4>
+                      <p>Share your creation on Twitter or Instagram and nominate 5 friends to one-up you. Don't forget to tag us @PPEforNHS to be featured!</p>
+                    </li>
+                    <li class="c-list__item o-inner">
+                      <h4 class="c-list__itemTitle">Donate to protect NHS workers</h4>
+                      <p>Donate £5 and help protect a frontline worker for 2 days.</p>
+                    </li>
+                  </ol>
+                  <div class="o-sp__2"></div>
+                </div>
+                <div class="o-block__container u-centered">
+                  <div class="o-inner">
+                    <p class="o-note">No social media? No problem. <a href="https://airtable.com/shrKg1W55hKYItIDo" target="_blank" class="o-inlineLink" data-event-id="contact" data-label="challenge_contact">Send us your creation here</a>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <section class="o-section c-cta" id="cta">
+        <div class="o-block o-block--centered o-block--verticalCentered">
+          <div class="o-block__inner">
+            <div class="o-block__container o-block__container--5">
+              <div class="c-cta__section c-cta__section--lead">
+                <div class="o-title c-cta__title">
+                  <div class="o-inner">
+                    <h2 class="o-title__headline c-cta__headline">Your donation will help get Personal Protective Equipment to those who need it most.</h2>
+                    <div class="o-sp__2"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-cta__section">
+                <div class="o-inner">
+                  <a class="o-button o-button--fill o-button--red o-button--inline" href="<%= siteData.externalLinks.donate %>" target="_blank" data-event-id="donate" data-label="challenge_cta">Make a secure donation now</a>
+                </div>
+              </div>
+            </div>
+            <div class="o-block__container o-block__container--3">
+              <div class="c-cta__section">
+                <div class="o-inner">
+                  <figure class="o-asset o-asset--shadow">
+                    <img alt="Some of our closest friends treating covid-19 patients. Please help us protect them." src="<%= require('../images/k.jpg').default %>" class="o-asset__source">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>        
+      
+      <%= require('../components/pageFooter.html')({ siteData: siteData }) %>
+    </div>
+  </body>
+</html>

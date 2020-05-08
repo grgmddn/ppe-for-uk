@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+
+  <%= require('../components/head.html')({ siteData: siteData, pageTitle: 'Team' }) %>
+
+  <body class="o-site">
+    <%= require('../components/gtm/gtmBody.html')({ siteData: siteData }) %>
+
+    <%= require('../components/banner.html')({ siteData: siteData }) %>
+
+    <div class="o-site__inner">
+
+      <%= require('../components/pageHeader.html')({ siteData: siteData }) %>
+
+      <section class="o-section c-masthead c-masthead--centered">
+        <div class="c-masthead__overlay">
+            
+            <div class="o-block o-block--centered">
+              <div class="o-block__container">
+                <div class="o-title o-title--large c-masthead__title">
+                  <div class="o-inner">
+                    <h2 class="o-title__headline c-masthead__headline">Meet the team</h2>
+                    <p class="o-title__byline c-masthead__byline">We're a diverse group with an eclectic set of skills, currently sprinkled across 4 different timezones and counting. We are particularly proud of our student volunteers.</p>
+
+                    <% teamData.members.forEach(function(member) { %>
+                      <a href="<%= member.link ? member.link : '#' %>" target="_blank" class="o-asset o-asset--circle">
+                        <div alt="<%= member.name %>" style="display: block; height: 100%; background-image: url(<%= member.photo %>); background-position: center; background-size: cover; background-repeat: no-repeat;" class="o-asset__source"></div>
+                      </a>
+                    <% }) %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+      <div class="c-tour">
+
+        <section class="o-section c-tour__item c-tourItem c-tourItem--grey" id="volunteers">
+          <div class="c-tourItem__inner">
+            <div class="o-block o-block--centered">
+              <div class="o-block__inner">
+                <div class="o-block__container o-block__container--6">
+                  <div class="o-title o-title c-masthead__title">
+                    <div class="o-inner">
+                      <h2 class="o-title__headline">Join us</h2>
+                      <p class="o-title__byline">Our open roles are the most urgent people that we need to help us get PPE into the frontlines as quickly as possible.</p>
+                      <p class="o-title__byline">To apply to volunteer, please complete the form below and we will be in touch with you soon. Don't see your role? We are actively seeking out passionate individuals who can help bolster the campaign, so please do complete the form below.</p>
+                      <div class="o-sp__2"></div>
+                      <a class="o-button o-button--fill o-button--red" href="https://airtable.com/shrtCNiwmyonFzCXA" target="_blank" data-event-id="join" data-label="team_volunteer">Apply to Volunteer</a>
+                    </div>
+                  </div>
+                  <div class="o-sp__4"></div>
+                </div>
+                <div class="o-block__container o-block__container--6">
+                  <div class="o-inner">
+                    <div class="c-list c-list--bullets c-list--floating">
+                      <div class="o-inner">
+                        <div class="o-title o-title--small o-note c-list__title">
+                          <h4 class="o-title__headline">Our most urgent roles</h4>
+                        </div>
+                        <ul class="c-list__items">
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Operations: Supply Chain Lead 📦</h5>
+                            <p>We're looking for an experienced supply chain management professional.</p>
+                          </li>
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Operations: Supply Chain 🤙</h5>
+                            <p>We are looking for Chinese (Mandarin) speakers to help stay in constant contact with factories & suppliers in China, keeping our operations team and NHS colleagues up-to-date.</p>
+                          </li>
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Operations: QA (China) 🥽</h5>
+                            <p>We need Chinese (Mandarin) speakers to work with busy suppliers in ensuring the quality of equipment before it leaves the factory.</p>
+                          </li>
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Marketing: Outreach 📢</h5>
+                            <p>We need volunteers to help reach out to a broad range of individuals and organisations.</p>
+                          </li>
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Marketing: Content Writers 👩‍💻</h5>
+                            <p>Our marketing team is looking for experienced copywriters to help us create blog content and hone our messaging.</p>
+                          </li>
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Marketing: Motion Graphics 🚀</h5>
+                            <p>Our marketing team is looking for a motion graphics designer to help take our communications to the next level.</p>
+                          </li>
+                          <li class="o-title o-title--small c-list__item">
+                            <h5 class="o-title__headline c-list__itemTitle">Product: Frontend Engineer 🏎</h5>
+                            <p>We are looking for a frontend engineer familiar with Webpack, Gatsby, React & SCSS. Experience with AWS is also beneficial. The ideal candidate will be comfortable working with both technical and non-technical team members, and be able to build fast with little management or design support.</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="o-section c-tour__item c-tourItem" id="leadership">
+          <div class="c-tourItem__inner">
+            <div class="o-block o-block--centered">
+              <div class="o-block__inner">
+                <div class="o-block__container o-block__container--8">
+                  <header class="o-title o-title--centered c-tourItem__title">
+                    <div class="o-inner">
+                      <h3 class="o-title__headline">Leadership</h3>
+                    </div>
+                  </header>
+                </div>
+                <div class="o-block__container o-block__container--12">
+                  <ul class="c-list c-list--boxes c-list--boxesx2 c-list--boxesImage c-list--white">
+                    <li class="c-list__item o-inner u-centered">
+                      <figure class="o-asset o-asset--circle c-list__itemImage">
+                        <img alt="Xinjie Ma, co-founder of rct studio" src="<%= require('../images/team/cropped/xinjie.jpg').default %>" class="o-asset__source">
+                      </figure>
+                      <div class="c-list__itemBody o-title o-title--small">
+                        <h4 class="c-list__itemTitle o-title__headline">Xinjie Ma</h4>
+                        <p class="o-title__byline">Co-founder @<a class="o-inlineLink" href="https://rct.studio?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">rctstudio</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>. <a class="o-inlineLink" href="http://www.forbeschina.com/entrepreneur/44597" target="_blank">China</a> & <a class="o-inlineLink" href="https://www.forbes.com/profile/rct-studio/" target="_blank">Asia</a> @Forbes30Under30.</p>
+                      </div>
+                    </li>
+                    <li class="c-list__item o-inner u-centered">
+                      <figure class="o-asset o-asset--circle c-list__itemImage">
+                        <img alt="George Madden, founder of pilot" src="<%= require('../images/team/cropped/george.jpeg').default %>" class="o-asset__source">
+                      </figure>
+                      <div class="c-list__itemBody o-title o-title--small">
+                        <h4 class="c-list__itemTitle o-title__headline">George Madden</h4>
+                        <p class="o-title__byline">Founder @<a class="o-inlineLink" href="https://pricetracker.pilot.money?utm_medium=referral&utm_source=ppefornhs.com" target="_blank">pilot</a>, studied @<a class="o-inlineLink" href="https://www.arts.ac.uk/" target="_blank">ArtsLondon</a>, served @<a class="o-inlineLink" href="https://www.army.mod.uk/who-we-are/corps-regiments-and-units/infantry/london-regiment/" target="_blank">BritishArmyReserve</a>.</p>
+                      </div>
+                    </li>
+                    <li class="c-list__item o-inner u-centered">
+                      <figure class="o-asset o-asset--circle c-list__itemImage">
+                        <img alt="Dr. Tara H Verity, GP" src="<%= require('../images/team/tara.png').default %>" class="o-asset__source">
+                      </figure>
+                      <div class="c-list__itemBody o-title o-title--small">
+                        <h4 class="c-list__itemTitle o-title__headline">Dr. Tara H. Verity, MB BChir, MRCGP, DCH, DRCOG</h4>
+                        <p class="o-title__byline">General Practitioner (GP) @<a class="o-inlineLink" href="https://www.caddingtonsurgery.co.uk/" target="_blank">Caddington Surgery</a>. Qualified 1991 @<a class="o-inlineLink" href="https://www.medschl.cam.ac.uk/" target="_blank">Cambridge</a>, worked in hospitals and General Practice in inner London.</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="o-section c-cta c-cta--centered" id="cta">
+        <div class="o-block o-block--centered">
+          <div class="o-block__inner">
+            <div class="o-block__container">
+              <div class="c-cta__section c-cta__section--lead">
+                <div class="o-title o-title--large c-cta__title">
+                  <div class="o-inner">
+                    <h2 class="o-title__headline c-cta__headline">Let's protect our nation's <span class="c-nhs">NHS</span> staff.</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="c-cta__section">
+                <div class="o-inner">
+                  <div class="o-title o-title--small">
+                      <p class="o-title__headline">Your donation has the power to help save lives.</p>
+                      <p class="o-title__byline">Every frontline NHS worker deserves to be properly protected against COVID-19.</p>
+                    </div>
+                    <div class="o-sp__2"></div>
+                    <a class="o-button o-button--fill o-button--red" href="<%= siteData.externalLinks.donate %>" target="_blank" data-event-id="donate" data-label="team_cta">Make a secure donation</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="o-section o-section--grey">
+        <div class="o-block">
+          <div class="o-block__inner">
+            <div class="o-block__container">
+              <%= require('../components/share.html')({ siteData: siteData, modifier: 'banner', title: 'Help share the message', location: 'section_footer' }) %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <%= require('../components/pageFooter.html')({ siteData: siteData }) %>
+
+    </div>
+  </body>
+</html>

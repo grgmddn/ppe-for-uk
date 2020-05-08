@@ -59,7 +59,7 @@
     @include clearFix;
     
     #{$c}__brand {
-      font-size: $medium;
+      font-size: $base-em;
     }
     #{$c}__left {
       float: left;

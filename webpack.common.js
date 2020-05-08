@@ -13,6 +13,16 @@ const fetch = require('node-fetch');
 const SiteMapPlugin = require('sitemap-webpack-plugin').default;
 
 const manifest = require(path.join(__dirname, config.manifest));
+const team = require(path.join(__dirname, './data/team.json'));
+
+const minify = {
+  collapseWhitespace: true,
+  removeComments: true,
+  removeRedundantAttributes: true,
+  removeScriptTypeAttributes: true,
+  removeStyleLinkTypeAttributes: true,
+  useShortDoctype: true
+};
 
 //  Method for getting JSON data from an API
 /*
@@ -25,19 +35,37 @@ const getData = url => {
     });
 };
 */
-
-const minify = {
-  collapseWhitespace: true,
-  removeComments: true,
-  removeRedundantAttributes: true,
-  removeScriptTypeAttributes: true,
-  removeStyleLinkTypeAttributes: true,
-  useShortDoctype: true
-};
-
-let isProduction = () => {
+const isProduction = () => {
   if (process.env.NODE_ENV === 'production') { return true; } else { return false; }
 };
+
+let sitemapPaths = [
+  {
+    path: '/',
+    lastMod: new Date().toISOString(),
+    changeFreq: 'daily',
+    priority: '1.0'
+  }
+];
+
+const initPages = manifest.pages.map((page) => {
+
+  sitemapPaths.push({
+    path: page.publicUrl,
+    lastMod: new Date().toISOString()
+  });
+
+  return new HtmlWebpackPlugin({
+    filename: page.publicUrl + '/index.html',
+    template: path.join(__dirname, config.src, page.template),
+    templateParameters: {
+      siteData: manifest,
+      teamData: team
+    },
+    inject: 'body',
+    minify: isProduction() ? minify : false
+  })
+});
 
 module.exports = (env, argv) => new Promise(function(resolve, reject) {
 
@@ -58,40 +86,40 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
       'process.env.NODE_ENV': isProduction() ? JSON.stringify('production') : JSON.stringify('development')
     }),
 
+    new webpack.DefinePlugin({
+      'process.env.BUILD_DATE': JSON.stringify(new Date())
+    }),
+
     //  new webpack.DefinePlugin({ 'process.env.API_DATA': JSON.stringify(response) }),
 
     new CleanWebpackPlugin({
-        path: isProduction() ? [path.join(__dirname, config.dist), path.join(__dirname, config.cache)] : [path.join(__dirname, config.cache)]}),
+      path: isProduction() ? [path.join(__dirname, config.dist), path.join(__dirname, config.cache)] : [path.join(__dirname, config.cache)]
+    }),
 
     new HtmlWebpackPlugin({
       template: path.join(__dirname, config.src, './templates/index.html'),
       inject: 'body',
       minify: isProduction() ? minify : false,
       templateParameters: {
-        siteData: manifest
+        siteData: manifest,
+        teamData: team
       }
     }),
 
+  ].concat(initPages);
+
+  plugins.push(
     new MiniCssExtractPlugin({
       filename: isProduction() ? '[name].[hash].css' : '[name].css',
       chunkFilename: isProduction() ? '[id].[hash].css' : '[id].css'
-    })
-
-  ];
+    }));
 
   if (isProduction) {
     plugins.push(new UglifyJSPlugin());
   }
 
   if (isProduction) {
-    plugins.push(new SiteMapPlugin(manifest.siteUrl, [
-      {
-        path: '/',
-        lastMod: new Date().toISOString(),
-        changeFreq: 'daily',
-        priority: '1.0'
-      }
-     ], {
+    plugins.push(new SiteMapPlugin(manifest.siteUrl, sitemapPaths, {
       fileName: 'sitemap.xml',
       priority: '0.8'
     }));
@@ -175,7 +203,7 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
           test: /\.(jpe?g|gif)$/i,
           loader: 'file-loader',
           options: {
-            name: isProduction() ? '[contenthash].[ext]' : '[path][name].[ext]'
+            name: isProduction() ? 'assets/images/[contenthash].[ext]' : '[path][name].[ext]'
           }
         }, {
           test: /\.png$/,
@@ -185,7 +213,7 @@ module.exports = (env, argv) => new Promise(function(resolve, reject) {
           }
         },  {
           test: /\.mp4$/,
-          use: 'file-loader?name=videos/[name].[ext]',
+          use: 'file-loader?name=assets/videos/[contenthash].[ext]',
         }
       ]
     },

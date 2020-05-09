@@ -10,8 +10,8 @@
   "manifest": "./data/manifest.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --config webpack.common.js --inline --hot --open",
-    "build": "NODE_ENV=production webpack --mode production -p --config webpack.common.js",
+    "start": "gatsby develop",
+    "build": "NODE_ENV=production gatsby build",
     "deploy": ""
   },
   "repository": {

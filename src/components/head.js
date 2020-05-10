@@ -38,9 +38,7 @@ export default function Head(props) {
         <meta name="twitter:description" content={siteData.description} />
         {twitterImageMeta}
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-        <script src="https://cdn6.heysavvy.com/wc/savvy.min.js" />
       </Helmet>
-      <savvy-smart-form id="Thm4BPQ59vXRtF0mSXh2"></savvy-smart-form>
     </>
   )
 }

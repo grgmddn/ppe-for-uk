@@ -138,8 +138,8 @@ class Home extends Component {
                       <h2 className="o-title__headline c-masthead__headline">Help get <span className="c-nhs">NHS</span> staff the protective equipment they need to fight COVID-19.</h2>
                       <p className="o-title__byline c-masthead__byline">#PPEForNHS is a not-for-profit campaign supplying the UK's frontline healthcare workers with Personal Protective Equipment.</p>
                       <div className="c-masthead__buttons">
-                        <a className="o-button o-button--fill o-button--red o-button--masthead" href={siteData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_masthead">Donate</a>
-                        <a className="o-button o-button--red o-button--masthead" href="#why-this-campaign" id="read-more" data-event-id="read-more">How can I help?</a>
+                        <a className="o-button o-button--fill o-button--red o-button--inline" href={siteData.externalLinks.donate} target="_blank" data-event-id="donate" data-label="section_masthead">Donate</a>
+                        <a className="o-button o-button--red o-button--inline" href="#why-this-campaign" id="read-more" data-event-id="read-more">How can I help?</a>
                       </div>
                     </div>
                   </div>

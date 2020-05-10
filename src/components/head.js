@@ -2,8 +2,6 @@ import React from 'react'
 import siteData from '../../data/manifest.json'
 import { Helmet } from 'react-helmet'
 
-// require('../components/gtm/gtmHead.html')({ siteData: siteData })
-
 export default function Head(props) {
   const imageMeta = siteData.previewImageUrl
     ? <meta property="og:image" content={siteData.previewImageUrl} />

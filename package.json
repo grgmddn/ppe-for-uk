@@ -19,10 +19,13 @@
     "url": "git+https://github.com/grgmddn/ppe-for-uk.git"
   },
   "author": "George Madden",
-  "contributors": [{ "name" : "Léa Subrenat"
-    , "email" : "leasubrenat@protonmail.com"
-    , "url" : "https://www.linkedin.com/in/subrenatlea/"
-    }],
+  "contributors": [
+    {
+      "name": "Léa Subrenat",
+      "email": "leasubrenat@protonmail.com",
+      "url": "https://www.linkedin.com/in/subrenatlea/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/grgmddn/ppe-for-uk/issues"
@@ -55,11 +58,13 @@
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
+    "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "gatsby": "^2.21.19",
+    "gatsby-plugin-google-tagmanager": "^2.3.1",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sass": "^2.3.1",
     "js-cookie": "^2.2.1",

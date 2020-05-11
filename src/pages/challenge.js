@@ -4,14 +4,11 @@ import React from 'react'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
-//data and assets
+//data
 import siteData from '../../data/manifest.json'
-import largebodiesofwater2 from '../assets/images/challenge/largebodiesofwater2.jpg'
-import mannyprime from '../assets/images/challenge/mannyprime.jpg'
-import mannyprime2 from '../assets/images/challenge/IMG_3484.png'
-import han_taylorr from '../assets/images/challenge/han_taylorr.jpg'
-import tsiresydomingos from '../assets/images/challenge/IMG_3494.png'
-import friends from '../assets/images/k.jpg'
+
+//components
+import Image from '../components/image'
 
 export default function Challenge() {
     return (
@@ -40,35 +37,35 @@ export default function Challenge() {
                             <div className="o-block__container o-block__container--2 c-imageBanner__item">
                                 <div className="o-inner">
                                     <a className="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
-                                        <img alt="@beigelstirrer with DIY PPE via @PPEforNHS Instagram" src={largebodiesofwater2} className="o-asset__source" />
+                                        <Image alt="@beigelstirrer with DIY PPE via @PPEforNHS Instagram" filename='largebodiesofwater2.jpg' class="o-asset__source" />
                                     </a>
                                 </div>
                             </div>
                             <div className="o-block__container o-block__container--2 c-imageBanner__item">
                                 <div className="o-inner">
                                     <a className="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
-                                        <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src={mannyprime} className="o-asset__source" />
+                                        <Image alt="@manny.prime with PPE via @PPEforNHS Instagram" filename='mannyprime.jpg' class="o-asset__source" />
                                     </a>
                                 </div>
                             </div>
                             <div className="o-block__container o-block__container--3 c-imageBanner__item">
                                 <div className="o-inner">
                                     <a className="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
-                                        <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src={mannyprime2} className="o-asset__source" />
+                                        <Image alt="@manny.prime with PPE via @PPEforNHS Instagram" filename='IMG_3484.png' class="o-asset__source" />
                                     </a>
                                 </div>
                             </div>
                             <div className="o-block__container o-block__container--2 c-imageBanner__item u-visuallyHiddenMobile">
                                 <div className="o-inner">
                                     <a className="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
-                                        <img alt="@han_taylorr with PPE via @PPEforNHS Instagram" src={han_taylorr} className="o-asset__source" />
+                                        <Image alt="@han_taylorr with PPE via @PPEforNHS Instagram" filename='han_taylorr.jpg' class="o-asset__source" />
                                     </a>
                                 </div>
                             </div>
                             <div className="o-block__container o-block__container--2 c-imageBanner__item u-visuallyHiddenMobile">
                                 <div className="o-inner">
                                     <a className="o-asset o-asset--shadow" href="https://instagram.com/ppefornhs" target="_blank">
-                                        <img alt="@tsiresydomingos with PPE via @PPEforNHS Instagram" src={tsiresydomingos} className="o-asset__source" />
+                                        <Image alt="@tsiresydomingos with PPE via @PPEforNHS Instagram" filename='IMG_3494.png' class="o-asset__source" />
                                     </a>
                                 </div>
                             </div>
@@ -142,7 +139,7 @@ export default function Challenge() {
                             <div className="c-cta__section">
                                 <div className="o-inner">
                                     <figure className="o-asset o-asset--shadow">
-                                        <img alt="Some of our closest friends treating covid-19 patients. Please help us protect them." src={friends} className="o-asset__source" />
+                                        <Image alt="Some of our closest friends treating covid-19 patients. Please help us protect them." filename='k.jpg' class="o-asset__source" />
                                     </figure>
                                 </div>
                             </div>

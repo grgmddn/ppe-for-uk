@@ -4,15 +4,14 @@ import 'reset-css';
 
 //data and assets
 import siteData from '../../data/manifest.json'
-import arshib0ld from '../assets/images/challenge/arshib0ld.jpg'
-import mannyprime from '../assets/images/challenge/mannyprime.jpg'
-import friends from '../assets/images/k.jpg'
-import xinjie from '../assets/images/team/xinjie.jpg'
-import george from '../assets/images/team/george.png'
+
+//video
 import esmeVideo from '../assets/video/esme.mp4'
 import esmePoster from '../assets/video/esme-poster.png'
 import introVideo from '../assets/video/introduction/version-1.mp4'
 import introPoster from '../assets/video/introduction/version-1-poster.png'
+
+//SVGs
 import airtable from '../assets/images/sponsors/Airtable_Logo.svg'
 import intercom from '../assets/images/sponsors/Intercom_Logo.svg'
 import slack from '../assets/images/sponsors/Slack_Logo.svg'
@@ -21,6 +20,7 @@ import slack from '../assets/images/sponsors/Slack_Logo.svg'
 import Layout from '../components/layout'
 import Share from '../components/share'
 import Head from '../components/head'
+import Image from '../components/image'
 
 class Home extends Component {
   constructor() {
@@ -216,7 +216,7 @@ class Home extends Component {
                   </div>
                   <div className="o-block__container o-block__container--3">
                     <div className="o-inner">
-                      <img alt="Some of our closest friends treating covid-19 patients. Please help us protect them." src={friends} className="o-asset u-mp-2" />
+                      {/* <Image alt="Some of our closest friends treating covid-19 patients. Please help us protect them." filename='k.jpg' class="o-asset u-mp-2" /> */}
                       <div className="o-sp__2"></div>
                     </div>
                   </div>
@@ -284,7 +284,7 @@ class Home extends Component {
                 <div className="o-block__inner">
                   <div className="o-block__container o-block__container--2 c-imageBanner__item">
                     <div className="o-inner">
-                      <img alt="@arshib0ld with DIY plastic wrapper PPE via @PPEforNHS Instagram" src={arshib0ld} className="o-asset o-asset--shadow" />
+                      <Image alt="@arshib0ld with DIY plastic wrapper PPE via @PPEforNHS Instagram" filename='arshib0ld.jpg' class="o-asset o-asset--shadow" />
                     </div>
                   </div>
                   <div className="o-block__container o-block__container--3 c-imageBanner__item">
@@ -296,7 +296,7 @@ class Home extends Component {
                   </div>
                   <div className="o-block__container o-block__container--2 c-imageBanner__item">
                     <div className="o-inner">
-                      <img alt="@manny.prime with PPE via @PPEforNHS Instagram" src={mannyprime} className="o-asset o-asset--shadow" />
+                      <Image alt="@manny.prime with PPE via @PPEforNHS Instagram" filename='mannyprime.jpg' class="o-asset o-asset--shadow" />
                     </div>
                   </div>
                 </div>
@@ -349,7 +349,7 @@ class Home extends Component {
                     <ul className="c-list c-list--boxes c-list--boxesx2 c-list--boxesImage c-list--white">
                       <li className="c-list__item o-inner">
                         <figure className="o-asset o-asset--circle c-list__itemImage">
-                          <img alt="Xinjie Ma, co-founder of rct studio" src={xinjie} className="o-asset__source" />
+                          <Image alt="Xinjie Ma, co-founder of rct studio" filename='xinjie.jpg' class="o-asset__source" />
                         </figure>
                         <div className="c-list__itemBody o-title o-title--small">
                           <h4 className="c-list__itemTitle o-title__headline">Xinjie Ma</h4>
@@ -359,7 +359,7 @@ class Home extends Component {
                       </li>
                       <li className="c-list__item o-inner">
                         <figure className="o-asset o-asset--circle c-list__itemImage">
-                          <img alt="George Madden, founder of pilot" src={george} className="o-asset__source" />
+                          <Image alt="George Madden, founder of pilot" filename='george.png' class="o-asset__source" />
                         </figure>
                         <div className="c-list__itemBody o-title o-title--small">
                           <h4 className="c-list__itemTitle o-title__headline">George Madden</h4>

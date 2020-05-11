@@ -1,16 +1,14 @@
 import React from 'react'
 
-//data and assets
+//data
 import teamData from '../../data/team.json'
 import siteData from '../../data/manifest.json'
-import xinjie from '../assets/images/team/xinjie.jpg'
-import george from '../assets/images/team/george.png'
-import tara from '../assets/images/team/tara.png'
 
 //components
 import Layout from '../components/layout'
 import Share from '../components/share'
 import Head from '../components/head'
+import Image from '../components/image'
 
 export default function Team() {
     return (
@@ -31,7 +29,7 @@ export default function Team() {
                                                 return (
                                                     <a key={member.name} href={member.link ? member.link : '#'} target="_blank" className="c-avatars__item u-centered" style={{display: 'inline-block'}}>
                                                         <figure className="o-asset o-asset--circle">
-                                                            <div id={member.photo} alt={member.name} className="o-asset__source team-member" />
+                                                            <Image filename={member.photo} alt={member.name} class="o-asset__source team-member" />
                                                         </figure>
                                                         <span style={{display: 'block'}}>{member.name}</span>
                                                     </a>
@@ -117,7 +115,7 @@ export default function Team() {
                                     <ul className="c-list c-list--boxes c-list--boxesx2 c-list--boxesImage c-list--white">
                                         <li className="c-list__item o-inner u-centered">
                                             <figure className="o-asset o-asset--circle c-list__itemImage">
-                                                <img alt="Xinjie Ma, co-founder of rct studio" src={xinjie} className="o-asset__source" />
+                                                <Image alt="Xinjie Ma, co-founder of rct studio" filename='xinjie.jpg' class="o-asset__source" />
                                             </figure>
                                             <div className="c-list__itemBody o-title o-title--small">
                                                 <h4 className="c-list__itemTitle o-title__headline">Xinjie Ma</h4>
@@ -126,7 +124,7 @@ export default function Team() {
                                         </li>
                                         <li className="c-list__item o-inner u-centered">
                                             <figure className="o-asset o-asset--circle c-list__itemImage">
-                                                <img alt="George Madden, founder of pilot" src={george} className="o-asset__source" />
+                                                <Image alt="George Madden, founder of pilot" filename='george.png' class="o-asset__source" />
                                             </figure>
                                             <div className="c-list__itemBody o-title o-title--small">
                                                 <h4 className="c-list__itemTitle o-title__headline">George Madden</h4>
@@ -135,7 +133,7 @@ export default function Team() {
                                         </li>
                                         <li className="c-list__item o-inner u-centered">
                                             <figure className="o-asset o-asset--circle c-list__itemImage">
-                                                <img alt="Dr. Tara H Verity, GP" src={tara} className="o-asset__source" />
+                                                <Image alt="Dr. Tara H Verity, GP" filename='tara.png' class="o-asset__source" />
                                             </figure>
                                             <div className="c-list__itemBody o-title o-title--small">
                                                 <h4 className="c-list__itemTitle o-title__headline">Dr. Tara H. Verity, MB BChir, MRCGP, DCH, DRCOG</h4>

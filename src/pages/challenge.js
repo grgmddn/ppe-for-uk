@@ -6,12 +6,12 @@ import Head from '../components/head'
 
 //data and assets
 import siteData from '../../data/manifest.json'
-import largebodiesofwater2 from '../images/challenge/largebodiesofwater2.jpg'
-import mannyprime from '../images/challenge/mannyprime.jpg'
-import mannyprime2 from '../images/challenge/IMG_3484.png'
-import han_taylorr from '../images/challenge/han_taylorr.jpg'
-import tsiresydomingos from '../images/challenge/IMG_3494.png'
-import friends from '../images/k.jpg'
+import largebodiesofwater2 from '../assets/images/challenge/largebodiesofwater2.jpg'
+import mannyprime from '../assets/images/challenge/mannyprime.jpg'
+import mannyprime2 from '../assets/images/challenge/IMG_3484.png'
+import han_taylorr from '../assets/images/challenge/han_taylorr.jpg'
+import tsiresydomingos from '../assets/images/challenge/IMG_3494.png'
+import friends from '../assets/images/k.jpg'
 
 export default function Challenge() {
     return (

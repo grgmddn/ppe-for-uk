@@ -8,9 +8,9 @@ import Head from '../components/head'
 //data and assets
 import teamData from '../../data/team.json'
 import siteData from '../../data/manifest.json'
-import xinjie from '../images/team/cropped/xinjie.jpg'
-import george from '../images/team/cropped/george.jpeg'
-import tara from '../images/team/cropped/tara.png'
+import xinjie from '../assets/images/team/cropped/xinjie.jpg'
+import george from '../assets/images/team/cropped/george.jpeg'
+import tara from '../assets/images/team/cropped/tara.png'
 
 export default function Team() {
     return (

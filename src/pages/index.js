@@ -4,11 +4,11 @@ import 'reset-css';
 
 //data and assets
 import siteData from '../../data/manifest.json'
-import arshib0ld from '../images/challenge/arshib0ld.jpg'
-import mannyprime from '../images/challenge/mannyprime.jpg'
-import friends from '../images/k.jpg'
-import xinjie from '../images/team/cropped/xinjie.jpg'
-import george from '../images/team/cropped/george.jpeg'
+import arshib0ld from '../assets/images/challenge/arshib0ld.jpg'
+import mannyprime from '../assets/images/challenge/mannyprime.jpg'
+import friends from '../assets/images/k.jpg'
+import xinjie from '../assets/images/team/cropped/xinjie.jpg'
+import george from '../assets/images/team/cropped/george.jpeg'
 import esmeVideo from '../assets/video/esme.mp4'
 import esmePoster from '../assets/video/esme-poster.png'
 import introVideo from '../assets/video/introduction/version-1.mp4'

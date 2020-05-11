@@ -1,7 +1,7 @@
 import React from 'react'
 
 //styles
-import '../styles/main.scss'
+import '../assets/styles/main.scss'
 
 //components
 import PageHeader from './pageHeader'

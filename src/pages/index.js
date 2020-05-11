@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Cookies from 'js-cookie';
 import 'reset-css';
+import { Link } from 'gatsby'
 
 //data
 import siteData from '../../data/manifest.json'
@@ -324,7 +325,7 @@ class Home extends Component {
                 <div className="o-block__inner">
                   <div className="o-block__container">
                     <div className="o-inner">
-                      <a className="o-button o-button--fill o-button--red o-button--inline" href="/challenge" data-event-id="challenge" data-label="section_challenge">Find out more &rarr;</a>
+                      <Link className="o-button o-button--fill o-button--red o-button--inline" to="/challenge" data-event-id="challenge" data-label="section_challenge">Find out more &rarr;</Link>
                     </div>
                   </div>
                 </div>
@@ -376,7 +377,7 @@ class Home extends Component {
                 <div className="o-block__inner">
                   <div className="o-block__container">
                     <div className="o-inner u-centered">
-                      <a className="o-button o-button--red" href="/team">Meet the team</a>
+                      <Link className="o-button o-button--red" to="/team">Meet the team</Link>
                     </div>
                   </div>
                 </div>

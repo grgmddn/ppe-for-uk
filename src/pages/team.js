@@ -8,41 +8,37 @@ import Head from '../components/head'
 //data and assets
 import teamData from '../../data/team.json'
 import siteData from '../../data/manifest.json'
-import xinjie from '../assets/images/team/cropped/xinjie.jpg'
-import george from '../assets/images/team/cropped/george.jpeg'
-import tara from '../assets/images/team/cropped/tara.png'
+import xinjie from '../assets/images/team/xinjie.jpg'
+import george from '../assets/images/team/george.png'
+import tara from '../assets/images/team/tara.png'
 
 export default function Team() {
     return (
         <Layout>
             <Head title='Team' />
-            <section className="o-section c-masthead c-masthead--centered">
+            <section className="o-section c-masthead c-masthead--">
                 <div className="c-masthead__overlay">
 
                     <div className="o-block o-block--centered">
-                        <div className="o-block__container">
-                            <div className="o-title o-title--large c-masthead__title">
-                                <div className="o-inner">
-                                    <h2 className="o-title__headline c-masthead__headline">Meet the team</h2>
-                                    <p className="o-title__byline c-masthead__byline">
-                                        We're a diverse group with an eclectic set of skills, currently sprinkled across 4 different timezones and counting. We are particularly proud of our student volunteers.
-                                    </p>
+                        <div className="o-block__inner">
+                            <div className="o-block__container">
+                                <div className="o-title o-title--large o-title--centered c-masthead__title">
+                                    <div className="o-inner">
+                                        <h2 className="o-title__headline c-masthead__headline">Meet the team</h2>
 
-                                    {teamData.members.map(member => {
-                                        const divStyle = {
-                                            display: 'block',
-                                            height: '100%',
-                                            backgroundPosition: 'center',
-                                            backgroundSize: 'cover',
-                                            backgroundRepeat: 'no-repeat',
-                                            backgroundImage: 'url(' + member.photo + ')'
-                                        }
-                                        return (
-                                            <a key={member.name} href={member.link ? member.link : '#'} target="_blank" className="o-asset o-asset--circle">
-                                                <div alt={member.name} style={divStyle} className="o-asset__source" />
-                                            </a>
-                                        )
-                                    })}
+                                        <div className="c-avatars">
+                                            {teamData.members.map(member => {
+                                                return (
+                                                    <a key={member.name} href={member.link ? member.link : '#'} target="_blank" className="c-avatars__item u-centered" style={{display: 'inline-block'}}>
+                                                        <figure className="o-asset o-asset--circle">
+                                                            <div id={member.photo} alt={member.name} className="o-asset__source team-member" />
+                                                        </figure>
+                                                        <span style={{display: 'block'}}>{member.name}</span>
+                                                    </a>
+                                                )
+                                            })}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -95,14 +91,6 @@ export default function Team() {
                                                     <li className="o-title o-title--small c-list__item">
                                                         <h5 className="o-title__headline c-list__itemTitle">Marketing: Content Writers 👩‍💻</h5>
                                                         <p>Our marketing team is looking for experienced copywriters to help us create blog content and hone our messaging.</p>
-                                                    </li>
-                                                    <li className="o-title o-title--small c-list__item">
-                                                        <h5 className="o-title__headline c-list__itemTitle">Marketing: Motion Graphics 🚀</h5>
-                                                        <p>Our marketing team is looking for a motion graphics designer to help take our communications to the next level.</p>
-                                                    </li>
-                                                    <li className="o-title o-title--small c-list__item">
-                                                        <h5 className="o-title__headline c-list__itemTitle">Product: Frontend Engineer 🏎</h5>
-                                                        <p>We are looking for a frontend engineer familiar with Webpack, Gatsby, React & SCSS. Experience with AWS is also beneficial. The ideal candidate will be comfortable working with both technical and non-technical team members, and be able to build fast with little management or design support.</p>
                                                     </li>
                                                 </ul>
                                             </div>

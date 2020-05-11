@@ -1,7 +1,7 @@
 @import "_base";
 
 @media all {
- 
+
   .o-site {
     $o: &;
 
@@ -23,12 +23,14 @@
       color: inherit;
       text-decoration: none;
     }
+
     img {
       max-width: 100%;
       height: auto;
     }
 
-    ul, li {
+    ul,
+    li {
       list-style: none;
     }
 
@@ -36,8 +38,47 @@
       margin: 0;
     }
 
-    .c-masthead__buttons > a.o-button {
+    .c-masthead__buttons>a.o-button {
       margin: 0 2px;
     }
+  }
+
+  // team images. Temporary workaround, to be changed later
+  .team-member {
+    display: block;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  #amy {
+    background-image: url(../images/team/amy.jpeg)
+  }
+  #xinjie {
+    background-image: url(../images/team/xinjie.jpg)
+  }
+  #george {
+    background-image: url(../images/team/george.png)
+  }
+  #carol {
+    background-image: url(../images/team/carol.jpg)
+  }
+  #lea {
+    background-image: url(../images/team/lea.jpg)
+  }
+  #nkhanise {
+    background-image: url(../images/team/nkhanise.jpg)
+  }
+  #sunnii {
+    background-image: url(../images/team/sunnii.jpg)
+  }
+  #dale {
+    background-image: url(../images/team/dale.jpg)
+  }
+  #charlotte {
+    background-image: url(../images/team/charlotte.jpg)
+  }
+  #imran {
+    background-image: url(../images/team/imran.jpeg)
   }
 }

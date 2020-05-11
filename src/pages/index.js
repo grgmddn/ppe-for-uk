@@ -7,8 +7,8 @@ import siteData from '../../data/manifest.json'
 import arshib0ld from '../assets/images/challenge/arshib0ld.jpg'
 import mannyprime from '../assets/images/challenge/mannyprime.jpg'
 import friends from '../assets/images/k.jpg'
-import xinjie from '../assets/images/team/cropped/xinjie.jpg'
-import george from '../assets/images/team/cropped/george.jpeg'
+import xinjie from '../assets/images/team/xinjie.jpg'
+import george from '../assets/images/team/george.png'
 import esmeVideo from '../assets/video/esme.mp4'
 import esmePoster from '../assets/video/esme-poster.png'
 import introVideo from '../assets/video/introduction/version-1.mp4'
@@ -341,7 +341,7 @@ class Home extends Component {
                     <header className="o-title o-title--centered c-tourItem__title">
                       <div className="o-inner">
                         <h3 className="o-title__headline">A growing team of volunteers</h3>
-                        <p className="o-title__byline">What started out as a small group of concerned citizens helping healthcare workers find protective equipment has quickly grown into a team on a mission to get every frontline NHS worker the protective equipment they need to fight COVID-19.</p>
+                        <p className="o-title__byline">What started out as a small group helping health & social care workers find protective equipment has quickly grown into a team on a mission to end the protective equipment crisis.</p>
                       </div>
                     </header>
                   </div>

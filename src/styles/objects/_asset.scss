@@ -24,6 +24,9 @@
       text-indent: -9999px;
       @include zIndex(8);
     }
+    #{$o}__caption {
+      display: block;
+    }
 
     &--circle {
       width: ($base-em * 4);

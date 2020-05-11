@@ -28,7 +28,6 @@ class Home extends Component {
 
     this.setCookieConsent = this.setCookieConsent.bind(this)
     this.scrollTo = this.scrollTo.bind(this)
-    this.readMoreClick = this.readMoreClick.bind(this)
     this.initVideo = this.initVideo.bind(this)
 
     const buildDate = new Date()
@@ -91,7 +90,7 @@ class Home extends Component {
 
   scrollTo(element) {
 
-    let offset = document.getElementsByclassNameName('c-pageHeader')[0].offsetHeight;
+    let offset = document.getElementsByClassName('c-pageHeader')[0].offsetHeight;
     let count = (element.getBoundingClientRect().top + window.scrollY) - offset;
 
     return window.scroll({
@@ -100,11 +99,6 @@ class Home extends Component {
       behavior: 'smooth'
     });
   };
-
-  readMoreClick(e) {
-    e.preventDefault();
-    this.scrollTo(document.getElementById('what-is-this-campaign'))
-  }
 
   initVideo() {
     const player = document.getElementById('video');

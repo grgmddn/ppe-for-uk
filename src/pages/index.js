@@ -217,7 +217,7 @@ class Home extends Component {
                   </div>
                   <div className="o-block__container o-block__container--3">
                     <div className="o-inner">
-                      {/* <Image alt="Some of our closest friends treating covid-19 patients. Please help us protect them." filename='k.jpg' class="o-asset u-mp-2" /> */}
+                      <Image alt="Some of our closest friends treating covid-19 patients. Please help us protect them." filename='k.jpg' class="o-asset u-mp-2" />
                       <div className="o-sp__2"></div>
                     </div>
                   </div>

@@ -12,21 +12,27 @@
 
       <%= require('../components/pageHeader.html')({ siteData: siteData }) %>
 
-      <section class="o-section c-masthead c-masthead--centered">
+      <section class="o-section c-masthead c-masthead--">
         <div class="c-masthead__overlay">
             
             <div class="o-block o-block--centered">
-              <div class="o-block__container">
-                <div class="o-title o-title--large c-masthead__title">
-                  <div class="o-inner">
-                    <h2 class="o-title__headline c-masthead__headline">Meet the team</h2>
-                    <p class="o-title__byline c-masthead__byline">We're a diverse group with an eclectic set of skills, currently sprinkled across 4 different timezones and counting. We are particularly proud of our student volunteers.</p>
+              <div class="o-block__inner">
+                <div class="o-block__container">
+                  <div class="o-title o-title--large o-title--centered c-masthead__title">
+                    <div class="o-inner">
+                      <h2 class="o-title__headline c-masthead__headline">Meet the team</h2>
+                      <p class="o-title__byline c-masthead__byline">We're a diverse group with an eclectic set of skills.</p>
 
-                    <% teamData.members.forEach(function(member) { %>
-                      <a href="<%= member.link ? member.link : '#' %>" target="_blank" class="o-asset o-asset--circle">
-                        <div alt="<%= member.name %>" style="display: block; height: 100%; background-image: url(<%= member.photo %>); background-position: center; background-size: cover; background-repeat: no-repeat;" class="o-asset__source"></div>
-                      </a>
-                    <% }) %>
+                      <div class="c-avatars">
+                        <% teamData.members.forEach(function(member) { %>
+                          <a href="<%= member.link ? member.link : '#' %>" target="_blank" class="c-avatars__item u-centered" style="display: inline-block;">
+                            <figure class="o-asset o-asset--circle">
+                              <div alt="<%= member.name %>" style="display: block; height: 100%; background-image: url(assets/images/team/<%= member.photo %>); background-position: center; background-size: cover; background-repeat: no-repeat;" class="o-asset__source"></div>
+                            </figure>
+                            <span style="display: block"><%= member.name %></span>
+                          </a>
+                        <% }) %>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -82,14 +88,6 @@
                             <h5 class="o-title__headline c-list__itemTitle">Marketing: Content Writers 👩‍💻</h5>
                             <p>Our marketing team is looking for experienced copywriters to help us create blog content and hone our messaging.</p>
                           </li>
-                          <li class="o-title o-title--small c-list__item">
-                            <h5 class="o-title__headline c-list__itemTitle">Marketing: Motion Graphics 🚀</h5>
-                            <p>Our marketing team is looking for a motion graphics designer to help take our communications to the next level.</p>
-                          </li>
-                          <li class="o-title o-title--small c-list__item">
-                            <h5 class="o-title__headline c-list__itemTitle">Product: Frontend Engineer 🏎</h5>
-                            <p>We are looking for a frontend engineer familiar with Webpack, Gatsby, React & SCSS. Experience with AWS is also beneficial. The ideal candidate will be comfortable working with both technical and non-technical team members, and be able to build fast with little management or design support.</p>
-                          </li>
                         </ul>
                       </div>
                     </div>
@@ -115,7 +113,7 @@
                   <ul class="c-list c-list--boxes c-list--boxesx2 c-list--boxesImage c-list--white">
                     <li class="c-list__item o-inner u-centered">
                       <figure class="o-asset o-asset--circle c-list__itemImage">
-                        <img alt="Xinjie Ma, co-founder of rct studio" src="<%= require('../images/team/cropped/xinjie.jpg').default %>" class="o-asset__source">
+                        <img alt="Xinjie Ma, co-founder of rct studio" src="<%= require('../assets/images/team/xinjie.jpg').default %>" class="o-asset__source">
                       </figure>
                       <div class="c-list__itemBody o-title o-title--small">
                         <h4 class="c-list__itemTitle o-title__headline">Xinjie Ma</h4>
@@ -124,7 +122,7 @@
                     </li>
                     <li class="c-list__item o-inner u-centered">
                       <figure class="o-asset o-asset--circle c-list__itemImage">
-                        <img alt="George Madden, founder of pilot" src="<%= require('../images/team/cropped/george.jpeg').default %>" class="o-asset__source">
+                        <img alt="George Madden, founder of pilot" src="<%= require('../assets/images/team/george.png').default %>" class="o-asset__source">
                       </figure>
                       <div class="c-list__itemBody o-title o-title--small">
                         <h4 class="c-list__itemTitle o-title__headline">George Madden</h4>
@@ -133,7 +131,7 @@
                     </li>
                     <li class="c-list__item o-inner u-centered">
                       <figure class="o-asset o-asset--circle c-list__itemImage">
-                        <img alt="Dr. Tara H Verity, GP" src="<%= require('../images/team/tara.png').default %>" class="o-asset__source">
+                        <img alt="Dr. Tara H Verity, GP" src="<%= require('../assets/images/team/tara.png').default %>" class="o-asset__source">
                       </figure>
                       <div class="c-list__itemBody o-title o-title--small">
                         <h4 class="c-list__itemTitle o-title__headline">Dr. Tara H. Verity, MB BChir, MRCGP, DCH, DRCOG</h4>

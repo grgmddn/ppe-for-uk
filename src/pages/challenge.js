@@ -1,13 +1,11 @@
 import React from 'react'
 
-//components
-import Layout from '../components/layout'
-import Head from '../components/head'
-
 //data
 import siteData from '../../data/manifest.json'
 
 //components
+import Layout from '../components/layout'
+import Head from '../components/head'
 import Image from '../components/image'
 
 export default function Challenge() {

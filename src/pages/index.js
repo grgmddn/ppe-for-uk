@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Cookies from 'js-cookie';
 import 'reset-css';
 
-//data and assets
+//data
 import siteData from '../../data/manifest.json'
 
 //video

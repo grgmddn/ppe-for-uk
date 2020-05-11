@@ -1,16 +1,16 @@
 import React from 'react'
 
-//components
-import Layout from '../components/layout'
-import Share from '../components/share'
-import Head from '../components/head'
-
 //data and assets
 import teamData from '../../data/team.json'
 import siteData from '../../data/manifest.json'
 import xinjie from '../assets/images/team/xinjie.jpg'
 import george from '../assets/images/team/george.png'
 import tara from '../assets/images/team/tara.png'
+
+//components
+import Layout from '../components/layout'
+import Share from '../components/share'
+import Head from '../components/head'
 
 export default function Team() {
     return (

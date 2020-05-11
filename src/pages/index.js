@@ -132,7 +132,7 @@ class Home extends Component {
                       <h2 className="o-title__headline c-masthead__headline">Help get <span className="c-nhs">NHS</span> staff the protective equipment they need to fight COVID-19.</h2>
                       <p className="o-title__byline c-masthead__byline">#PPEForNHS is a not-for-profit campaign supplying the UK's frontline healthcare workers with Personal Protective Equipment.</p>
                       <div className="c-masthead__buttons">
-                        <a className="o-button o-button--fill o-button--red o-button--inline" href={siteData.externalLinks.donate} target="_blank" data-event-id="donate" data-label="section_masthead">Donate</a>
+                        <a className="o-button o-button--fill o-button--red o-button--inline" href={siteData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_masthead">Donate</a>
                         <a className="o-button o-button--red o-button--inline" href="#why-this-campaign" id="read-more" data-event-id="read-more">How can I help?</a>
                       </div>
                     </div>
@@ -174,7 +174,7 @@ class Home extends Component {
                         <h4 className="o-title__headline c-tourItem__headline">Support us</h4>
                         <p className="o-title__byline">Your donation to the #PPEforNHS campaign helps frontline healthcare workers across the UK get the protection they deserve.</p>
                       </header>
-                      <a className="o-button o-button--fill o-button--red o-button--inline" href={siteData.externalLinks.donate} target="_blank" data-event-id="donate" data-label="section_triage">Make a secure donation</a>
+                      <a className="o-button o-button--fill o-button--red o-button--inline" href={siteData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_triage">Go to donation page</a>
                     </div>
                   </div>
                   <div className="o-block__container o-block__container--4">
@@ -256,7 +256,7 @@ class Home extends Component {
                         <p className="o-title__byline">Every penny raised is going directly towards getting PPE to frontline health workers.</p>
                       </div>
                       <div className="o-sp__2"></div>
-                      <a className="o-button o-button--fill o-button--red" href={siteData.externalLinks.donate} target="_blank" data-event-id="donate" data-label="section_why">Make a secure donation</a>
+                      <a className="o-button o-button--fill o-button--red" href={siteData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_why">Go to donation page</a>
                     </div>
                   </div>
                 </div>
@@ -500,7 +500,7 @@ class Home extends Component {
                       <p className="o-title__byline">Every frontline NHS worker deserves to be properly protected against COVID-19.</p>
                     </div>
                     <div className="o-sp__2"></div>
-                    <a className="o-button o-button--fill o-button--red" href={siteData.externalLinks.donate} target="_blank" data-event-id="donate" data-label="section_cta">Make a secure donation</a>
+                    <a className="o-button o-button--fill o-button--red" href={siteData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_cta">Go to donation page</a>
                   </div>
                 </div>
               </div>

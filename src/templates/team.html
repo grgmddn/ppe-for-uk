@@ -21,13 +21,12 @@
                   <div class="o-title o-title--large o-title--centered c-masthead__title">
                     <div class="o-inner">
                       <h2 class="o-title__headline c-masthead__headline">Meet the team</h2>
-                      <p class="o-title__byline c-masthead__byline">We're a diverse group with an eclectic set of skills.</p>
 
                       <div class="c-avatars">
                         <% teamData.members.forEach(function(member) { %>
                           <a href="<%= member.link ? member.link : '#' %>" target="_blank" class="c-avatars__item u-centered" style="display: inline-block;">
                             <figure class="o-asset o-asset--circle">
-                              <div alt="<%= member.name %>" style="display: block; height: 100%; background-image: url(assets/images/team/<%= member.photo %>); background-position: center; background-size: cover; background-repeat: no-repeat;" class="o-asset__source"></div>
+                              <div alt="<%= member.name %>" style="display: block; height: 100%; background-image: url(<%= require('../assets/images/team/' + member.photo).default %>); background-position: center; background-size: cover; background-repeat: no-repeat;" class="o-asset__source"></div>
                             </figure>
                             <span style="display: block"><%= member.name %></span>
                           </a>

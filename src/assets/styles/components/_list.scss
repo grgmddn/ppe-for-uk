@@ -45,16 +45,27 @@
       #{$c}__item {
         box-sizing: border-box;
         //border: 1px solid $lightGrey;
-        padding: ($base-em * 2) $base-em ($base-em * 2);
         font-size: $small;
-        line-height: 1.5em;
+
+        & a {
+          //@include dropShadow;
+          position: relative;
+
+          &:hover {
+            top: -2px;
+          }
+        }
+      }
+      #{$c}__itemInner{
+        padding: ($base-em * 2) $base-em ($base-em * 2);
         background-color: $brandPink;
         border-radius: 6px;
+        display: block;
       }
 
       @at-root ol#{&} {
 
-        #{$c}__item {
+        #{$c}__itemInner {
 
           &:before {
             //margin: 0 auto;
@@ -73,27 +84,27 @@
         }
       }
       #{$c}__itemTitle {
-        display: inline-block;
+        display: block;
         font-weight: 700;
         margin-bottom: 1rem;
       }
     }
     &#{$c}--boxes#{$c}--red {
 
-      #{$c}__item {
+      #{$c}__itemInner {
         color: $white;
         background-color: $brand;
       }
     }
     &#{$c}--boxes#{$c}--white {
 
-      #{$c}__item {
+      #{$c}__itemInner {
         background-color: $white;
       }
     }
     &#{$c}--boxes#{$c}--dark {
 
-      #{$c}__item {
+      #{$c}__itemInner {
         background-color: $dark;
         color: $white;
       }
@@ -162,18 +173,26 @@
     
     &--boxes {
       display: flex;
-      flex-direction: row;
+      //flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
 
       #{$c}__item {
         float: left;
+        display: flex;
+        margin-bottom: ($base-em * 2);
+      }
+      #{$c}__itemInner {
         padding: ($base-em * 2);
-
-        &:before {}
+        //display: flex;
+        //flex-direction: column;
+        width: 100%;
       }
     }
     &--boxesx2 {
       
       #{$c}__item {
+        flex: 0 0 50%;
         width: colWidth(6);
 
         &:before {}
@@ -182,6 +201,7 @@
     &--boxesx3 {
       
       #{$c}__item {
+        flex: 1 1 33.3333%;
         width: colWidth(4);
 
         &:before {}

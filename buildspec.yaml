@@ -7,7 +7,7 @@ phases:
       - npm install
   build:
     commands:
-      - GATSBY_ACTIVE_ENV=${PipelineName} npm run build
+      - npm run build
 artifacts:
   files: 
     - '**/*'

@@ -69,6 +69,10 @@
       height: ($base-em * 6);
       border-radius: ($base-em * 3);
     }
+    &#{$o}--circle#{$o}--small {
+      width: ($base-em * 4);
+      height: ($base-em * 4);
+    }
     &--logo {
       margin: 0 auto;
     }

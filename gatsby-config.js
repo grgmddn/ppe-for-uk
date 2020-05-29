@@ -28,6 +28,8 @@ module.exports = {
             path: `${__dirname}/src/assets/images`,
             name: 'images',
           },
-        }
+        },
+        `gatsby-plugin-twitter`,
+        `gatsby-plugin-anchor-links`
     ]
 }

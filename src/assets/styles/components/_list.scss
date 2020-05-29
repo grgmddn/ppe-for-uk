@@ -44,28 +44,79 @@
 
       #{$c}__item {
         box-sizing: border-box;
-        //border: 1px solid $lightGrey;
         font-size: $small;
+        margin-bottom: $base-em;
+        position: relative;
+      }
+      #{$c}__item--button {
+        text-align: center;
 
-        & a {
-          //@include dropShadow;
-          position: relative;
+        #{$c}__itemInner {
+          border: 1px solid transparent;
+        }
+        #{$c}__itemImage {
+          display: block;
+          width: 50%;
+          margin: 0 auto $base-em;
+        }
+        #{$c}__itemAnchor {
+          display: block;
+          position: absolute;
+          @include zIndex(8);
+        }
 
-          &:hover {
-            top: -2px;
+        &:hover {
+          outline: 3px solid transparent;
+
+          #{$c}__itemTitle {
+            text-decoration: underline;
+          }
+          #{$c}__itemLink {
+            border-style: solid;
+          }
+        }
+        &:active:hover,
+        &:active:hover:focus,
+        &:active:focus,
+        &:active {
+          top: 2px;
+          outline: 3px solid transparent;
+
+          #{$c}__itemInner {
+            border: 1px solid $warning;
+            border-color: $warning;
+            outline: 3px solid transparent;
           }
         }
       }
-      #{$c}__itemInner{
+      #{$c}__itemInner {
         padding: ($base-em * 2) $base-em ($base-em * 2);
         background-color: $brandPink;
         border-radius: 6px;
         display: block;
+        overflow: hidden;
+      }
+      #{$c}__itemBody {
+        //padding: ($base-em * 2) $base-em ($base-em * 2);
+      }
+      a#{$c}__itemInner {
+        position: relative;
+
+        &:hover {
+          
+        }
+        #{$c}__itemTitle {
+          text-decoration: underline;
+        }
+      }
+      #{$c}__itemLink {
+        color: $brand;
+        border-bottom: 1px dotted $brand;
       }
 
       @at-root ol#{&} {
 
-        #{$c}__itemInner {
+        #{$c}__itemBody {
 
           &:before {
             //margin: 0 auto;
@@ -89,6 +140,15 @@
         margin-bottom: 1rem;
       }
     }
+    &#{$c}--boxes#{$c}--image {
+
+      #{$c}__itemInner {
+        padding: 0;
+      }
+      #{$c}__itemBody {
+        padding: ($base-em * 2) $base-em ($base-em * 2);
+      }
+    }
     &#{$c}--boxes#{$c}--red {
 
       #{$c}__itemInner {
@@ -100,6 +160,12 @@
 
       #{$c}__itemInner {
         background-color: $white;
+      }
+    }
+    &#{$c}--boxes#{$c}--grey {
+
+      #{$c}__itemInner {
+        background-color: $lightGrey;
       }
     }
     &#{$c}--boxes#{$c}--dark {
@@ -139,9 +205,8 @@
     }
     &--image {
 
-      #{$c}__itemTitle {
-        margin-top: ($base-em * 0.5);
-      }
+      #{$c}__itemTitle {}
+      #{$c}__itemImage {}
     }
     &--floating {
       background-color: $white;
@@ -150,26 +215,34 @@
       //filter: drop-shadow(0px 6px 6px rgba(0,0,0,0.22));
     }
   }
-  @media (min-width: $screen-sm) {}
-  @media (max-width: $screen-md - 1) {
+  @media (min-width: $screen-sm) {
 
     &--boxes {
 
-      #{$c}__item {
-        margin-bottom: $base-em;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-    &--image {
       #{$c}__item {
         margin-bottom: ($base-em * 2);
       }
     }
   }
-  @media (min-width: $screen-md) {
+  @media (max-width: $screen-md - 1) {
+
+    &--boxes {
+
+      #{$c}__item {
+
+        &:last-child {
+          //margin-bottom: 0;
+        }
+      }
+    }
+    &--image {
+
+      #{$c}__item {
+        margin-bottom: ($base-em * 2);
+      }
+    }
+  }
+  @media (min-width: $viewport-tablet) {
     
     &--boxes {
       display: flex;
@@ -182,11 +255,30 @@
         display: flex;
         margin-bottom: ($base-em * 2);
       }
+      #{$c}__item--button {
+        
+        #{$c}__itemInner {
+          display: flex;
+          flex-direction: column;
+          //justify-content: center;
+          justify-content: space-between;
+        }
+        #{$c}__itemImage {
+          display: inline-block;
+          //margin: 0 ($base-em * 2) ($base-em * 2);
+          //flex-grow: 1;
+          align-self: flex-start;
+        }
+      }
       #{$c}__itemInner {
-        padding: ($base-em * 2);
-        //display: flex;
-        //flex-direction: column;
         width: 100%;
+        padding: ($base-em * 2);
+      }
+      #{$c}__itemBody {
+        
+      }
+      #{$c}__itemLink {
+        //flex-grow: 1;
       }
     }
     &--boxesx2 {
@@ -205,6 +297,15 @@
         width: colWidth(4);
 
         &:before {}
+      }
+    }
+    &#{$c}--boxes#{$c}--image {
+
+      #{$c}__itemInner {
+        padding: 0;
+      }
+      #{$c}__itemBody {
+        padding: ($base-em * 2);
       }
     }
     &--faq {

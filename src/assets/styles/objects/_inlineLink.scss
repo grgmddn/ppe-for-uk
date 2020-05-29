@@ -3,6 +3,7 @@
 
   @media all {
     border-bottom: 1px dotted $black;
+    position: relative;
 
     &:hover {
       border-style: solid;
@@ -18,6 +19,8 @@
     &:active {
       color: $grey;
       border-color: $grey;
+      top: 1px;
+      outline: 1px solid $warning;
     }
   }
   @media (min-width: $viewport-mobile) {}

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Cookies from 'js-cookie';
 import 'reset-css';
 import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 //data
 import siteData from '../../data/manifest.json'
@@ -146,7 +147,7 @@ class Faq extends Component {
                 <div className="c-cta__section c-cta__section--lead">
                   <div className="o-title o-title--large c-cta__title">
                     <div className="o-inner">
-                      <h2 className="o-title__headline c-cta__headline">Let's protect our nation's <span className="c-nhs">NHS</span> staff.</h2>
+                      <h2 className="o-title__headline c-cta__headline">Let's protect our nation's NHS staff.</h2>
                     </div>
                   </div>
                 </div>
@@ -155,10 +156,10 @@ class Faq extends Component {
                   <div className="o-inner">
                     <div className="o-title o-title--small">
                       <p className="o-title__headline">Your donation has the power to help save lives.</p>
-                      <p className="o-title__byline">Every frontline NHS worker deserves to be properly protected against COVID-19.</p>
+                      <p className="o-title__byline">Every frontline NHS worker deserves to be properly protected against Covid-19.</p>
                     </div>
                     <div className="o-sp__2"></div>
-                    <a className="o-button o-button--fill o-button--red" href={siteData.externalLinks.crowdfund} target="_blank" data-event-id="donate" data-label="section_cta">Go to donation page</a>
+                    <AnchorLink className="o-button o-button--fill o-button--red" to="/#donate" target="_blank" data-event-id="donate" data-label="section_cta">Donate PPE</AnchorLink>
                   </div>
                 </div>
               </div>
@@ -166,7 +167,7 @@ class Faq extends Component {
           </div>
         </section>
 
-        <Share location='section_footer' />
+        <Share location='faq_footer' />
       </Layout>
     )
   }

@@ -13,6 +13,9 @@
     &--grey {
       background-color: $lightGrey;
     }
+    &--pink {
+      background-color: $brandPink;
+    }
   }
   @media (min-width: $viewport-mobile) {}
   @media (min-width: $viewport-tablet) {
@@ -22,7 +25,7 @@
     }
     &--pullTop {
       margin-top: -($base-em * 4);
-      padding: 0;
+      padding-top: 0 !important;
       @include zIndex(4);
     }
   }

@@ -8,14 +8,14 @@
 
     width: 100%;
     position: relative;
-    position: sticky;
+    //position: sticky;
     top: 0;
     z-index: $zIndex-8;
     //height: 5rem;
-    line-height: 3rem;
+    line-height: 5rem;
     box-sizing: border-box;
-    background-color: $brand;
-    color: $white;
+    background-color: $brandPink;
+    color: $black;
 
     @include antialias;
 
@@ -35,7 +35,13 @@
       position: relative;
       text-decoration: none;
       float: left;
-      font-weight: 500;
+      background-image: url("../images/logo_mark.svg");
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 3rem;
+      padding-left: 4rem;
+      font-size: $small;
+      @include fontDisplay;
     }
     #{$c}__navigation {}
     #{$c}__breadcrumbs {
@@ -60,6 +66,8 @@
     
     #{$c}__brand {
       font-size: $base-em;
+      background-size: 2rem;
+      padding-left: 2.6rem;
     }
     #{$c}__left {
       float: left;
@@ -77,6 +85,15 @@
 
   .c-pageHeader {
     $c: &;
+
+    //height: 9rem;
+    //line-height: 9rem;
+
+    #{$c}__brand {
+      //background-size: 7rem;
+      //width: 9rem;
+      //height: 9rem;
+    }
 
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import siteData from '../../data/manifest.json'
 import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 export default function PageHeader() {
   return (
@@ -14,7 +15,7 @@ export default function PageHeader() {
           </div>
           <div className="c-pageHeader__right u-visuallyHiddenMobile">
             <div className="o-inner">
-              <a className="o-button o-button--small o-button--fill" href="https://www.crowdfunder.co.uk/ppefornhsuk" target="_blank" data-event-id="donate" data-label="header">Donate</a>
+              <AnchorLink className="o-button o-button--small o-button--fill o-button--red" to="/#donate" target="_blank" data-event-id="donate" data-label="header">Donate PPE</AnchorLink>
             </div>
           </div>
         </div>

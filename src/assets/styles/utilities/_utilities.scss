@@ -1,0 +1,32 @@
+.u-visuallyHidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+@media (max-width: $viewport-tablet - 1) {
+
+  .u-visuallyHiddenMobile {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+@media (min-width: $viewport-tablet) {
+
+  .u-visuallyHiddenTablet {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+.u-centered {
+  text-align: center !important;
+}
+
+.u-srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

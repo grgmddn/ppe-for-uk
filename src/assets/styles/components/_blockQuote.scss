@@ -1,0 +1,38 @@
+//  component: blockQuote
+// --------------------------------------------------
+.c-blockQuote {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+    margin: 0 auto;
+
+    #{$c}__name {
+      font-size: $base-em;
+    }
+    #{$c}__role {
+      font-weight: 500;
+    }
+    #{$c}__source {
+      line-height: 2em;
+      display: block;
+    }
+    #{$c}__headline {
+      line-height: 1.5em;
+      @include fontBase;
+      font-size: $small;
+      margin-bottom: ($base-em * 1.5);
+    }
+  }
+  @media (min-width: $screen-sm) {
+    text-align: center;
+
+    #{$c}__headline {
+      font-size: $medium;
+    }
+  }
+  @media (min-width: $screen-md) {
+    margin: 0 auto;
+  }
+  @media (min-width: $screen-lg) {}  
+}

@@ -1,0 +1,69 @@
+.c-navigation { 
+    $c: &;
+
+  @media all {
+
+    list-style: none;
+    white-space: nowrap;
+    line-height: inherit;
+
+    @include antialias;
+
+    #{$c}__item {
+      width: auto;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    #{$c}__button-wrapper {
+      line-height: 3rem;
+      box-sizing: border-box;
+      cursor: pointer;
+      background-color: transparent;
+      text-align: left;
+      text-decoration: none;
+      padding: 0;
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &.is-active {
+        text-decoration: underline;
+      }
+    }
+    #{$c}__headline {
+      margin-bottom: $base-em;
+      @include fontDisplay;
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {}
+  @media (max-width: ($viewport-desktop - 1)) {}
+  @media (min-width: $viewport-desktop) {
+
+    #{$c}__item {
+
+      &:first-child {
+
+        #{$c}__button-wrapper {
+          margin-left: 0;
+        }
+      }
+      &:last-child {
+
+        #{$c}__button-wrapper {
+          margin-right: 0;
+        }
+      }
+    }
+    #{$c}__button-wrapper {
+      margin: 0 auto;
+      padding: 0;
+      line-height: inherit;
+
+      &:hover {}
+    }
+  }
+  @media (min-width: $viewport-desktop-lg) {}
+}

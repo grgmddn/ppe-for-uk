@@ -1,0 +1,198 @@
+// --------------------------------------------------
+//  Button
+// --------------------------------------------------
+.o-button {
+  $o: &;
+
+  @media all {
+    display: block;
+    padding: 0;
+    margin: 0;
+    //outline: none;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    color: $white;
+    font-size: $base-em;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1.375em;
+    display: block;
+    padding: 0.6875em 1.275em 0.6875em;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $white;
+    letter-spacing: 0.02em;
+    border-radius: 0;
+    line-height: 1em;
+    line-height: ($base-em * 3.4);
+    text-transform: none;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+
+    @include enable;
+    @include antialias;
+
+    &:hover {
+    	color: $white;
+    	background-color: $nhsBlue;
+      border-color: $nhsBlue;
+    }
+    &:active:hover,
+    &:active:hover:focus,
+    &:active:focus,
+    &:active {
+      top: 2px;
+      background-color: $black;
+      border-color: $warning;
+      color: $white;
+      outline: 3px solid transparent;
+    }
+    &[disabled] {
+      cursor: not-allowed;
+      background-color: red;
+      
+      &:active:hover {
+        cursor: not-allowed;
+        background-color: inherit;
+        border-color: inherit;
+        color: inherit;
+      }
+    }
+    &#{$o}--red {
+      background-color: transparent;
+      color: $brand;
+      border-color: $brand;
+
+      &:hover {
+        color: $white;
+        background-color: $nhsBlue;
+        border-color: $nhsBlue;
+      }
+    }
+    &#{$o}--small {
+      font-size: $pico;
+      border-radius: 2px;
+    }
+    &#{$o}--large {
+      font-size: $small;
+    }
+    &#{$o}--fill {
+      background-color: $white;
+      color: $brand;
+      border-color: $white;
+
+      &:hover {
+        background-color: $nhsBlue;
+        color: $white;
+        border-color: $nhsBlue;
+      }
+    }
+    &#{$o}--fill#{$o}--red {
+      background-color: $brand;
+      color: $white;
+      border-color: $brand;
+
+      &:hover {
+        background-color: $nhsBlue;
+        color: $white;
+        border-color: $nhsBlue;
+      }
+      &:active:hover,
+      &:active:hover:focus,
+      &:active:focus,
+      &:active {
+        background-color: $black;
+        border-color: $warning;
+        color: $white;
+      }
+    }
+    &#{$o}--fill#{$o}--blue {
+      background-color: $nhsBlue;
+      color: $white;
+      border-color: $nhsBlue;
+
+      &:hover {
+        background-color: $brand;
+        color: $white;
+        border-color: $brand;
+      }
+      &:active:hover,
+      &:active:hover:focus,
+      &:active:focus,
+      &:active {
+        background-color: $black;
+        border-color: $warning;
+        color: $white;
+      }
+    }
+    &#{$o}--masthead {
+      
+      &:hover {
+        background-color: $brand;
+        color: $white;
+        border-color: $brand;
+      }
+    }
+  }
+  @media (min-width: $viewport-mobile) {
+
+    &#{$o}--large {
+      font-size: $small;
+    }
+  }
+  @media (max-width: $viewport-tablet - 1) {
+    
+    &#{$o}--masthead {
+      width: calc(50% - #{$base-em / 2});
+      display: inline-block;
+      float: left;
+
+      &:first-child {
+        //border-bottom-right-radius: 0;
+        //border-top-right-radius: 0;
+        margin-right: ($base-em / 2);
+      }
+      &:last-child {
+        margin-left: ($base-em / 2);
+        //border-bottom-left-radius: 0;
+        //border-top-left-radius: 0;
+      }
+    }
+    &#{$o}--inline {
+      display: inline-block;
+    }
+  }
+  @media (min-width: $viewport-tablet) {
+
+    display: inline-block;
+    //line-height: 1em;
+
+    + #{$o} {
+      margin-top: 0;
+    }
+
+    &#{$o}--small {
+      line-height: 1em;
+    }
+    &#{$o}--large {
+      font-size: $medium;
+    }
+    &#{$o}--device {
+      font-size: $base-em;
+    }
+    &#{$o}--masthead {
+      width: auto;
+      display: inline-block;
+      float: none;
+      margin-right: $base-em;
+    }
+  }
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+  @include mobileLandscape {
+    width: auto;
+  }
+}

@@ -1,0 +1,324 @@
+//  component: list
+// --------------------------------------------------
+.c-list {
+  $c: &;
+
+  @media all {
+    box-sizing: border-box;
+    
+
+    #{$c}__item {
+      box-sizing: border-box;
+    }
+    #{$c}__itemTitle {
+      display: inline-block;
+    }
+
+    &--bullets {
+
+      #{$c}__item {
+        box-sizing: border-box;
+        margin: 1rem 1rem 0 1.5rem;
+        position: relative;
+
+        &:before {
+          width: 0.67rem;
+          height: 0.67rem;
+          //border-radius: 1rem;
+          background-color: $black;
+          content: "";
+          display: block;
+          position: absolute;
+          left: 0;
+          margin-left: -1.5rem;
+          margin-top: 0.4rem;
+        }
+        #{$c}__itemTitle {
+          line-height: 1rem;
+          margin-bottom: 0.5rem;
+          @include fontDisplay;
+        }
+      } 
+    }
+    &--boxes {
+
+      #{$c}__item {
+        box-sizing: border-box;
+        font-size: $small;
+        margin-bottom: $base-em;
+        position: relative;
+      }
+      #{$c}__item--button {
+        text-align: center;
+
+        #{$c}__itemInner {
+          border: 1px solid transparent;
+        }
+        #{$c}__itemImage {
+          display: block;
+          width: 50%;
+          margin: 0 auto $base-em;
+        }
+        #{$c}__itemAnchor {
+          display: block;
+          position: absolute;
+          @include zIndex(8);
+        }
+
+        &:hover {
+          outline: 3px solid transparent;
+
+          #{$c}__itemTitle {
+            text-decoration: underline;
+          }
+          #{$c}__itemLink {
+            border-style: solid;
+          }
+        }
+        &:active:hover,
+        &:active:hover:focus,
+        &:active:focus,
+        &:active {
+          top: 2px;
+          outline: 3px solid transparent;
+
+          #{$c}__itemInner {
+            border: 1px solid $warning;
+            border-color: $warning;
+            outline: 3px solid transparent;
+          }
+        }
+      }
+      #{$c}__itemInner {
+        padding: ($base-em * 2) $base-em ($base-em * 2);
+        background-color: $brandPink;
+        border-radius: 6px;
+        display: block;
+        overflow: hidden;
+      }
+      #{$c}__itemBody {
+        //padding: ($base-em * 2) $base-em ($base-em * 2);
+      }
+      a#{$c}__itemInner {
+        position: relative;
+
+        &:hover {
+          
+        }
+        #{$c}__itemTitle {
+          text-decoration: underline;
+        }
+      }
+      #{$c}__itemLink {
+        color: $brand;
+        border-bottom: 1px dotted $brand;
+      }
+
+      @at-root ol#{&} {
+
+        #{$c}__itemBody {
+
+          &:before {
+            //margin: 0 auto;
+            width: 2rem;
+            height: 2rem;
+            text-align: center;
+            line-height: 2rem;
+            font-size: $base-em;
+            margin-bottom: 1rem;
+            border-radius: 2rem;
+            background-color: $brand;
+            color: $white;
+            content: counter(countz);
+            display: block;
+          }
+        }
+      }
+      #{$c}__itemTitle {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+    }
+    &#{$c}--boxes#{$c}--image {
+
+      #{$c}__itemInner {
+        padding: 0;
+      }
+      #{$c}__itemBody {
+        padding: ($base-em * 2) $base-em ($base-em * 2);
+      }
+    }
+    &#{$c}--boxes#{$c}--red {
+
+      #{$c}__itemInner {
+        color: $white;
+        background-color: $brand;
+      }
+    }
+    &#{$c}--boxes#{$c}--white {
+
+      #{$c}__itemInner {
+        background-color: $white;
+      }
+    }
+    &#{$c}--boxes#{$c}--grey {
+
+      #{$c}__itemInner {
+        background-color: $lightGrey;
+      }
+    }
+    &#{$c}--boxes#{$c}--dark {
+
+      #{$c}__itemInner {
+        background-color: $dark;
+        color: $white;
+      }
+    }
+    &--faq {
+      background-color: $lightGrey;
+      padding: 2rem 0;
+
+      #{$c}__title {
+        margin-bottom: 2rem;
+      }
+      #{$c}__item {
+        min-height: 1rem;
+        position: relative;
+        box-sizing: border-box;
+        padding: ($base-em * 0.5) 0;
+        //background-color: $lightGrey;
+        //border: 1px solid $grey;
+        margin-bottom: ($base-em * 0.5);
+        line-height: 2em;
+        vertical-align: center;
+        border-bottom: 1px solid $grey;
+
+        &:first-child {
+          //border-top: none;
+        }
+        &:last-child {
+          border-bottom: none;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &--image {
+
+      #{$c}__itemTitle {}
+      #{$c}__itemImage {}
+    }
+    &--floating {
+      background-color: $white;
+      border-radius: 8px;
+      padding: ($base-em * 2) 0;
+      //filter: drop-shadow(0px 6px 6px rgba(0,0,0,0.22));
+    }
+  }
+  @media (min-width: $screen-sm) {
+
+    &--boxes {
+
+      #{$c}__item {
+        margin-bottom: ($base-em * 2);
+      }
+    }
+  }
+  @media (max-width: $screen-md - 1) {
+
+    &--boxes {
+
+      #{$c}__item {
+
+        &:last-child {
+          //margin-bottom: 0;
+        }
+      }
+    }
+    &--image {
+
+      #{$c}__item {
+        margin-bottom: ($base-em * 2);
+      }
+    }
+  }
+  @media (min-width: $viewport-tablet) {
+    
+    &--boxes {
+      display: flex;
+      //flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      #{$c}__item {
+        float: left;
+        display: flex;
+        margin-bottom: ($base-em * 2);
+      }
+      #{$c}__item--button {
+        
+        #{$c}__itemInner {
+          display: flex;
+          flex-direction: column;
+          //justify-content: center;
+          justify-content: space-between;
+        }
+        #{$c}__itemImage {
+          display: inline-block;
+          //margin: 0 ($base-em * 2) ($base-em * 2);
+          //flex-grow: 1;
+          align-self: flex-start;
+        }
+      }
+      #{$c}__itemInner {
+        width: 100%;
+        padding: ($base-em * 2);
+      }
+      #{$c}__itemBody {
+        
+      }
+      #{$c}__itemLink {
+        //flex-grow: 1;
+      }
+    }
+    &--boxesx2 {
+      
+      #{$c}__item {
+        flex: 0 0 50%;
+        width: colWidth(6);
+
+        &:before {}
+      }
+    }
+    &--boxesx3 {
+      
+      #{$c}__item {
+        flex: 1 1 33.3333%;
+        width: colWidth(4);
+
+        &:before {}
+      }
+    }
+    &#{$c}--boxes#{$c}--image {
+
+      #{$c}__itemInner {
+        padding: 0;
+      }
+      #{$c}__itemBody {
+        padding: ($base-em * 2);
+      }
+    }
+    &--faq {
+      border-radius: 6px;
+    }
+  }
+  @media (min-width: $screen-lg) {}  
+}
+
+ol.c-list {
+  counter-reset: countz;
+
+  li {
+    counter-increment: countz;
+  }
+}

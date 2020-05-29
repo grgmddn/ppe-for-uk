@@ -1,0 +1,34 @@
+.o-section {
+  $o: &;
+
+  @media all {
+    background-color: transparent;
+    width: 100%;
+    //overflow: hidden;
+    position: relative;
+
+    &--centered {
+      text-align: center;
+    }
+    &--grey {
+      background-color: $lightGrey;
+    }
+    &--pink {
+      background-color: $brandPink;
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {
+
+    &--pushBottom {
+      padding-bottom: ($base-em * 2);
+    }
+    &--pullTop {
+      margin-top: -($base-em * 4);
+      padding-top: 0 !important;
+      @include zIndex(4);
+    }
+  }
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+}

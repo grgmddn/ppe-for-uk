@@ -10,8 +10,8 @@
   "manifest": "./data/manifest.json",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development --config webpack.common.js --inline --hot --open",
-    "build": "NODE_ENV=production webpack --mode production -p --config webpack.common.js",
+    "start": "gatsby develop",
+    "build": "NODE_ENV=production GATSBY_ACTIVE_ENV=${PipelineName} gatsby build",
     "deploy": ""
   },
   "repository": {
@@ -19,43 +19,37 @@
     "url": "git+https://github.com/grgmddn/ppe-for-uk.git"
   },
   "author": "George Madden",
+  "contributors": [
+    {
+      "name": "Léa Subrenat",
+      "email": "leasubrenat@protonmail.com",
+      "url": "https://www.linkedin.com/in/subrenatlea/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/grgmddn/ppe-for-uk/issues"
   },
   "homepage": "https://github.com/grgmddn/ppe-for-uk#readme",
   "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "autoprefixer": "^9.7.6",
-    "babel-loader": "^8.1.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.5.0",
-    "ejs-loader": "^0.3.6",
-    "eslint": "^6.8.0",
-    "eslint-loader": "^4.0.0",
-    "file-loader": "^6.0.0",
-    "html-loader": "^1.1.0",
-    "html-webpack-plugin": "^4.0.4",
-    "mini-css-extract-plugin": "^0.9.0",
-    "node-fetch": "^2.6.0",
-    "node-sass": "^4.13.1",
-    "postcss-loader": "^3.0.0",
-    "resolve-url-loader": "^3.1.1",
-    "sass-loader": "^8.0.2",
-    "sitemap-webpack-plugin": "^0.7.1",
-    "style-loader": "^1.1.3",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "underscore-template-loader": "^1.0.0",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3",
-    "webpack-merge": "^4.2.2"
+    "node-sass": "^4.14.1"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "gatsby": "^2.21.22",
+    "gatsby-image": "^2.4.3",
+    "gatsby-plugin-anchor-links": "^1.1.1",
+    "gatsby-plugin-google-tagmanager": "^2.3.1",
+    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-sass": "^2.3.1",
+    "gatsby-plugin-sharp": "^2.6.2",
+    "gatsby-plugin-twitter": "^2.3.2",
+    "gatsby-source-filesystem": "^2.3.1",
+    "gatsby-transformer-sharp": "^2.5.2",
     "js-cookie": "^2.2.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
     "reset-css": "^5.0.1"
   }
 }

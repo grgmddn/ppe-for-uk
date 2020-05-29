@@ -1,0 +1,30 @@
+.o-inlineLink {
+  $o: &;
+
+  @media all {
+    border-bottom: 1px dotted $black;
+    position: relative;
+
+    &:hover {
+      border-style: solid;
+    }
+
+    &#{$o}--red {
+      color: $brand;
+      border-color: $brand;
+    }
+    &:active:hover,
+    &:active:hover:focus,
+    &:active:focus,
+    &:active {
+      color: $grey;
+      border-color: $grey;
+      top: 1px;
+      outline: 1px solid $warning;
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {}
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+}

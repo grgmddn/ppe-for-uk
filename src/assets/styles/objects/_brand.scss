@@ -1,0 +1,22 @@
+.o-brand {
+  $o: &;
+
+  @media all {
+    color: inherit;
+    font-size: $base-em;
+    letter-spacing: 0.02em;
+    line-height: inherit;
+    text-decoration: none;
+    min-height: 3rem;
+    background-image: url("../images/logo_mark.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 3rem;
+    padding-left: 4rem;
+    @include fontDisplay;
+
+    &--noText {
+      text-indent: -9999px;
+    }
+  }
+}

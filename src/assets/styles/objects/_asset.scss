@@ -1,0 +1,82 @@
+.o-asset {
+  $o: &;
+
+  @media all {
+    background-color: transparent;
+    width: 100%;
+    display: block;
+    border-radius: ($base-em / 4);
+    position: relative;
+    overflow: hidden;
+
+    #{$o}__source {
+      max-width: 100%;
+      display: block;
+      position: relative;
+    }
+    #{$o}__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-indent: -9999px;
+      @include zIndex(8);
+    }
+    #{$o}__caption {
+      display: block;
+    }
+
+    &--circle {
+      width: ($base-em * 4);
+      height: ($base-em * 4);
+      border-radius: ($base-em * 2);
+      background-color: $black;
+      display: inline-block;
+    }
+    &--shadow {
+      filter: drop-shadow(2px 6px 6px rgba(0,0,0,0.5));
+    }
+    &--logo {
+      max-width: ($base-em * 10);
+      margin: $base-em auto;
+    }
+    &--video {
+
+      #{$o}__overlay {
+        visibility: visible;
+        background-repeat: no-repeat;
+        background-size: ($base-em * 4);
+        background-position: center;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iNiIgeT0iNCIgd2lkdGg9IjE0IiBoZWlnaHQ9IjE1IiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTIgMEM1LjM3MyAwIDAgNS4zNzMgMCAxMkMwIDE4LjYyNyA1LjM3MyAyNCAxMiAyNEMxOC42MjcgMjQgMjQgMTguNjI3IDI0IDEyQzI0IDUuMzczIDE4LjYyNyAwIDEyIDBaTTkgMThWNkwxOSAxMkw5IDE4WiIgZmlsbD0iI0ZGMEYyOCIvPgo8L3N2Zz4K")
+      }
+
+      &.is-playing {
+
+        #{$o}__overlay {
+          visibility: hidden;
+        }
+      }
+    }
+  }
+  @media (min-width: $viewport-mobile) {}
+  @media (min-width: $viewport-tablet) {
+    border-radius: ($base-em / 2);
+
+    &--circle {
+      width: ($base-em * 6);
+      height: ($base-em * 6);
+      border-radius: ($base-em * 3);
+    }
+    &#{$o}--circle#{$o}--small {
+      width: ($base-em * 4);
+      height: ($base-em * 4);
+    }
+    &--logo {
+      margin: 0 auto;
+    }
+  }
+  @media (min-width: $viewport-desktop) {}
+  @media (min-width: $viewport-desktop-lg) {}
+}

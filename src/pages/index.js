@@ -376,41 +376,6 @@ class Home extends Component {
             </div>
           </section>
 
-          <section className="o-section o-section--pushBottom c-tour__item c-tourItem c-tourItem--grey" id="locations">
-            <div className="c-tourItem__inner">
-
-              <div className="o-block o-block--centered">
-                <div className="o-block__inner">
-                  <div className="o-block__container o-block__container--8">
-                    <div className="o-inner">
-                      <header className="o-title o-title--centered c-tourItem__title">
-                        <h3 className="o-title__headline c-tourItem__headline">Where your PPE is going</h3>
-                      </header>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="o-block">
-                <div className="o-block__inner">
-                  <div className="o-block__container">
-                    <ul className="c-list c-list--boxes c-list--boxesx2 c-list--white">
-                      <li className="c-list__item">
-                        <div className="o-inner c-list__itemInner">
-                          <div className="o-title o-title--small c-list__itemBody">
-                            <h4 className="o-title__headline c-list__itemTitle">Woodside Nursing and Residential Care Home</h4>
-                            <p className="o-title__byline">4,000 pieces of PPE on the way 🚚</p>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </section>
-
           <section className="o-section c-tour__item c-tourItem c-tourItem--pink">
             <div className="c-tourItem__inner">
 

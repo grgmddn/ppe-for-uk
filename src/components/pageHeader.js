@@ -15,7 +15,6 @@ export default function PageHeader() {
           </div>
           <div className="c-pageHeader__right u-visuallyHiddenMobile">
             <div className="o-inner">
-              <AnchorLink className="o-button o-button--small o-button--fill o-button--red" to="/#donate" target="_blank" data-event-id="donate" data-label="header">Donate PPE</AnchorLink>
             </div>
           </div>
         </div>

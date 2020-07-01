@@ -21,10 +21,10 @@
   @media (min-width: $viewport-tablet) {
 
     &--pushBottom {
-      padding-bottom: ($base-em * 2);
+      padding-bottom: ($base-em * 4);
     }
     &--pullTop {
-      margin-top: -($base-em * 4);
+      margin-top: -($base-em * 6);
       padding-top: 0 !important;
       @include zIndex(4);
     }

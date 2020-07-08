@@ -17,9 +17,6 @@ class Faq extends Component {
   constructor() {
     super()
 
-    this.setCookieConsent = this.setCookieConsent.bind(this)
-    this.scrollTo = this.scrollTo.bind(this)
-
     const buildDate = new Date()
     this.runTime = buildDate
     this.weekday = buildDate.toLocaleString('en-US', { weekday: 'long' })
@@ -27,51 +24,6 @@ class Faq extends Component {
     this.month = buildDate.toLocaleString('en-US', { month: 'long' })
     this.year = buildDate.getFullYear()
   }
-
-  setCookieConsent() {
-    let key = 'cookie_consent_accepted';
-    let cookieConsentBanner = document.getElementById('cookieConsent')
-    let cookieConsentAcceptButton = document.getElementById('cookieConsentAccept')
-
-    if (cookieConsentBanner && cookieConsentAcceptButton) {
-
-      if (Cookies.get(key)) {
-
-        cookieConsentBanner.classList.add('is-hidden')
-
-      } else {
-
-        cookieConsentBanner.classList.remove('is-hidden')
-
-        cookieConsentAcceptButton.addEventListener('click', () => {
-
-          Cookies.set(key, true, { expires: 180 })
-
-          if (Cookies.get(key)) {
-            cookieConsentBanner.classList.add('is-hidden')
-          } else {
-            console.warn('Unable set cookies.')
-          }
-        });
-
-      }
-
-    } else {
-      console.warn('No cookie consent banner!')
-    }
-  };
-
-  scrollTo(element) {
-
-    let offset = document.getElementsByClassName('c-pageHeader')[0].offsetHeight;
-    let count = (element.getBoundingClientRect().top + window.scrollY) - offset;
-
-    return window.scroll({
-      top: count,
-      left: 0,
-      behavior: 'smooth'
-    });
-  };
 
   render() {
     return (
@@ -139,33 +91,6 @@ class Faq extends Component {
           </section>
 
         </div>
-
-        <section className="o-section c-cta c-cta--centered" id="cta">
-          <div className="o-block o-block--centered">
-            <div className="o-block__inner">
-              <div className="o-block__container">
-                <div className="c-cta__section c-cta__section--lead">
-                  <div className="o-title o-title--large c-cta__title">
-                    <div className="o-inner">
-                      <h2 className="o-title__headline c-cta__headline">Let's protect our nation's NHS staff.</h2>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="c-cta__section">
-                  <div className="o-inner">
-                    <div className="o-title o-title--small">
-                      <p className="o-title__headline">Your donation has the power to help save lives.</p>
-                      <p className="o-title__byline">Every frontline NHS worker deserves to be properly protected against Covid-19.</p>
-                    </div>
-                    <div className="o-sp__2"></div>
-                    <AnchorLink className="o-button o-button--fill o-button--red" to="/#donate" target="_blank" data-event-id="donate" data-label="section_cta">Donate PPE</AnchorLink>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         <Share location='faq_footer' />
       </Layout>

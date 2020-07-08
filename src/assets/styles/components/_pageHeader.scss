@@ -10,13 +10,12 @@
     position: relative;
     //position: sticky;
     top: 0;
-    z-index: $zIndex-8;
     //height: 5rem;
     line-height: 5rem;
     box-sizing: border-box;
     background-color: $brandPink;
     color: $black;
-
+    @include zIndex(6);
     @include antialias;
 
     #{$c}__left {

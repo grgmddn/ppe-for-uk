@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Cookies from 'js-cookie';
 import 'reset-css';
 import { Link } from 'gatsby'
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
@@ -7,17 +6,6 @@ import { AnchorLink } from 'gatsby-plugin-anchor-links';
 //data
 import siteData from '../../data/manifest.json'
 import productsData from '../../data/products.json'
-
-//video
-import esmeVideo from '../assets/video/esme.mp4'
-import esmePoster from '../assets/video/esme-poster.png'
-import introVideo from '../assets/video/introduction/version-1.mp4'
-import introPoster from '../assets/video/introduction/version-1-poster.png'
-
-//SVGs
-import airtable from '../assets/images/sponsors/Airtable_Logo.svg'
-import intercom from '../assets/images/sponsors/Intercom_Logo.svg'
-import slack from '../assets/images/sponsors/Slack_Logo.svg'
 
 //components
 import Layout from '../components/layout'
@@ -29,7 +17,6 @@ class Home extends Component {
   constructor() {
     super()
 
-    this.setCookieConsent = this.setCookieConsent.bind(this)
     this.scrollTo = this.scrollTo.bind(this)
     this.initVideo = this.initVideo.bind(this)
 
@@ -43,46 +30,12 @@ class Home extends Component {
 
   componentDidMount() {
     console.log(`Application started on ${this.runTime}`)
-    this.setCookieConsent()
 
     if (document.getElementById('video')) {
       console.log('has video');
       this.initVideo();
     }
   }
-
-  setCookieConsent() {
-    let key = 'cookie_consent_accepted';
-    let cookieConsentBanner = document.getElementById('cookieConsent')
-    let cookieConsentAcceptButton = document.getElementById('cookieConsentAccept')
-
-    if (cookieConsentBanner && cookieConsentAcceptButton) {
-
-      if (Cookies.get(key)) {
-
-        cookieConsentBanner.classList.add('is-hidden')
-
-      } else {
-
-        cookieConsentBanner.classList.remove('is-hidden')
-
-        cookieConsentAcceptButton.addEventListener('click', () => {
-
-          Cookies.set(key, true, { expires: 180 })
-
-          if (Cookies.get(key)) {
-            cookieConsentBanner.classList.add('is-hidden')
-          } else {
-            console.warn('Unable set cookies.')
-          }
-        });
-
-      }
-
-    } else {
-      console.warn('No cookie consent banner!')
-    }
-  };
 
   scrollTo(element) {
 
@@ -150,7 +103,7 @@ class Home extends Component {
                     <Image alt="Some of our closest friends treating Covid-19 patients. Please help us protect them." filename="k.jpg" class="o-asset o-asset--shadow" />
                   </div>
                 </div>
-                <div className="o-block__container o-block__container--3 c-imageBanner__item u-visuallyHiddenMobile">
+                <div className="o-block__container o-block__container--3 c-imageBanner__item">
                   <div className="o-inner">
                     <Image alt="" filename="8ee0a921-f6d0-4bb8-97f3-78cf8059aa60-1.jpeg" class="o-asset o-asset--shadow" />
                   </div>
@@ -247,7 +200,7 @@ class Home extends Component {
                       <header className="o-title o-title--centered c-tourItem__title">
                         <h3 className="o-title__headline c-tourItem__headline">Got Questions?</h3>
                       </header>
-                      <Link className="o-button o-button--red" to="/faq">Read our FAQs</Link>
+                      <Link className="o-button o-button--red o-button--inline" to="/faq">Read our FAQs</Link>
                     </div>
                   </div>
                 </div>

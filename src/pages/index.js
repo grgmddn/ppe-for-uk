@@ -150,7 +150,7 @@ class Home extends Component {
                     <Image alt="Some of our closest friends treating Covid-19 patients. Please help us protect them." filename="k.jpg" class="o-asset o-asset--shadow" />
                   </div>
                 </div>
-                <div className="o-block__container o-block__container--3 c-imageBanner__item u-visuallyHiddenMobile">
+                <div className="o-block__container o-block__container--3 c-imageBanner__item">
                   <div className="o-inner">
                     <Image alt="" filename="8ee0a921-f6d0-4bb8-97f3-78cf8059aa60-1.jpeg" class="o-asset o-asset--shadow" />
                   </div>
@@ -247,7 +247,7 @@ class Home extends Component {
                       <header className="o-title o-title--centered c-tourItem__title">
                         <h3 className="o-title__headline c-tourItem__headline">Got Questions?</h3>
                       </header>
-                      <Link className="o-button o-button--red" to="/faq">Read our FAQs</Link>
+                      <Link className="o-button o-button--red o-button--inline" to="/faq">Read our FAQs</Link>
                     </div>
                   </div>
                 </div>

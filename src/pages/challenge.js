@@ -129,37 +129,6 @@ export default function Challenge() {
         </section>
       </div>
 
-      <section className="o-section c-cta" id="cta">
-        <div className="o-block o-block--centered o-block--verticalCentered">
-          <div className="o-block__inner">
-            <div className="o-block__container o-block__container--5">
-              <div className="c-cta__section c-cta__section--lead">
-                <div className="o-title c-cta__title">
-                  <div className="o-inner">
-                    <h2 className="o-title__headline c-cta__headline">Your donation will help get Personal Protective Equipment to those who need it most.</h2>
-                    <div className="o-sp__2"></div>
-                  </div>
-                </div>
-              </div>
-              <div className="c-cta__section">
-                <div className="o-inner">
-                  <AnchorLink className="o-button o-button--fill o-button--red" to="/#donate" target="_blank" data-event-id="donate" data-label="section_cta">Donate PPE</AnchorLink>
-                </div>
-              </div>
-            </div>
-            <div className="o-block__container o-block__container--3">
-              <div className="c-cta__section">
-                <div className="o-inner">
-                  <figure className="o-asset o-asset--shadow">
-                    <Image alt="Some of our closest friends treating covid-19 patients. Please help us protect them." filename='k.jpg' class="o-asset__source" />
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Share location='challenge_footer' />
     </Layout>
   )

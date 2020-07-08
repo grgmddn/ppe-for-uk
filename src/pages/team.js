@@ -100,33 +100,6 @@ export default function Team() {
         </section>
       </div>
 
-      <section className="o-section c-cta c-cta--centered" id="cta">
-        <div className="o-block o-block--centered">
-          <div className="o-block__inner">
-            <div className="o-block__container">
-              <div className="c-cta__section c-cta__section--lead">
-                <div className="o-title o-title--large c-cta__title">
-                  <div className="o-inner">
-                    <h2 className="o-title__headline c-cta__headline">Let's protect our nation's NHS staff.</h2>
-                  </div>
-                </div>
-              </div>
-
-              <div className="c-cta__section">
-                <div className="o-inner">
-                  <div className="o-title o-title--small">
-                    <p className="o-title__headline">Your donation has the power to help save lives.</p>
-                    <p className="o-title__byline">Every frontline NHS worker deserves to be properly protected against Covid-19.</p>
-                  </div>
-                  <div className="o-sp__2"></div>
-                  <AnchorLink className="o-button o-button--fill o-button--red" to="/#donate">Donate PPE</AnchorLink>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <Share location='team_footer' />
     </Layout>
   )
